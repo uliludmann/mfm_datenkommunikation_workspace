@@ -1,0 +1,208 @@
+\hypertarget{group___u_s_a_r_t___private___macros}{}\section{U\+S\+A\+RT Private Macros}
+\label{group___u_s_a_r_t___private___macros}\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___u_s_a_r_t___private___macros_gad6548de2566d9aeb45458fa915f6d509}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}(\+\_\+\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+\_\+) $<$ 6000001\+U)
+\begin{DoxyCompactList}\small\item\em Check U\+S\+A\+RT Baud rate. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t___private___macros_ga7a724f758480c009bc3e591d12fd0343}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS}(\+\_\+\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT frame number of stop bits is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t___private___macros_gadf7f983b8108bdd3fafb9e299d72a5cf}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY}(\+\_\+\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT frame parity is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t___private___macros_ga1ce858404f8b2b6befe4b920cc20e5c9}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE}(\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+) \& 0x\+F\+F\+F\+F\+F\+F\+F3\+U) == 0x00\+U) \&\& ((\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+) != 0x00\+U))
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT communication mode is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t___private___macros_gacbbea45fe9da2990a6da839373b4efaa}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK}(\+\_\+\+\_\+\+C\+L\+O\+C\+K\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT clock state is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t___private___macros_gadf1beba58ae096520a8b3807cfa660b1}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY}(\+\_\+\+\_\+\+C\+P\+O\+L\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+C\+P\+O\+L\+\_\+\+\_\+) == \hyperlink{group___u_s_a_r_t___clock___polarity_ga5afb62c05704ca0e750ca8f4bb5ccc7d}{U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+T\+Y\+\_\+\+L\+OW}) $\vert$$\vert$ ((\+\_\+\+\_\+\+C\+P\+O\+L\+\_\+\+\_\+) == \hyperlink{group___u_s_a_r_t___clock___polarity_ga3b3e3d798d4797a220346f6b14d257ee}{U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+T\+Y\+\_\+\+H\+I\+GH}))
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT frame polarity is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t___private___macros_ga6cd720e6cc78786d5117b6f01691685a}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE}(\+\_\+\+\_\+\+C\+P\+H\+A\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+C\+P\+H\+A\+\_\+\+\_\+) == \hyperlink{group___u_s_a_r_t___clock___phase_gab050873df3eb3844f973e61681e02e6a}{U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+S\+E\+\_\+1\+E\+D\+GE}) $\vert$$\vert$ ((\+\_\+\+\_\+\+C\+P\+H\+A\+\_\+\+\_\+) == \hyperlink{group___u_s_a_r_t___clock___phase_ga080cff411c6cefbb511162fcc91c43ec}{U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+S\+E\+\_\+2\+E\+D\+GE}))
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT frame phase is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t___private___macros_ga56c70252e8ad4e58e739fe14c9f7f807}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT}(\+\_\+\+\_\+\+L\+A\+S\+T\+B\+I\+T\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT frame last bit clock pulse setting is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_s_a_r_t___private___macros_gad6548de2566d9aeb45458fa915f6d509}\label{group___u_s_a_r_t___private___macros_gad6548de2566d9aeb45458fa915f6d509}} 
+\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}!U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}{IS\_USART\_BAUDRATE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+\_\+) $<$ 6000001\+U)}
+
+
+
+Check U\+S\+A\+RT Baud rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+B\+A\+U\+D\+R\+A\+T\+E$<$/strong$>$} & Baudrate specified by the user. The maximum Baud Rate is derived from the maximum clock on F0 (i.\+e. 48 M\+Hz) divided by the smallest oversampling used on the U\+S\+A\+RT (i.\+e. 8) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Test} & result (T\+R\+UE or F\+A\+L\+SE). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t___private___macros_gacbbea45fe9da2990a6da839373b4efaa}\label{group___u_s_a_r_t___private___macros_gacbbea45fe9da2990a6da839373b4efaa}} 
+\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK}!U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK}{IS\_USART\_CLOCK}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+C\+L\+O\+C\+K\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_CLOCK\_\_) == \hyperlink{group___u_s_a_r_t___clock_ga7c889a9b9716214fc680eb75ca18c009}{USART\_CLOCK\_DISABLE}) || \(\backslash\)
+                                   ((\_\_CLOCK\_\_) == \hyperlink{group___u_s_a_r_t___clock_gac055ca6ca9647277e3f89a5df9529730}{USART\_CLOCK\_ENABLE}))
+\end{DoxyCode}
+
+
+Ensure that U\+S\+A\+RT clock state is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+C\+L\+O\+C\+K$<$/strong$>$} & U\+S\+A\+RT clock state. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries C\+L\+O\+CK} is valid) or R\+E\+S\+ET ({\bfseries C\+L\+O\+CK} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t___private___macros_ga56c70252e8ad4e58e739fe14c9f7f807}\label{group___u_s_a_r_t___private___macros_ga56c70252e8ad4e58e739fe14c9f7f807}} 
+\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT}!U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT}{IS\_USART\_LASTBIT}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+L\+A\+S\+T\+B\+I\+T\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_LASTBIT\_\_) == \hyperlink{group___u_s_a_r_t___last___bit_gac96499244ffa44ff6fa739da9cc9d53f}{USART\_LASTBIT\_DISABLE}) || \(\backslash\)
+                                       ((\_\_LASTBIT\_\_) == \hyperlink{group___u_s_a_r_t___last___bit_gae851e2151668c666028dc10f20f4f676}{USART\_LASTBIT\_ENABLE}))
+\end{DoxyCode}
+
+
+Ensure that U\+S\+A\+RT frame last bit clock pulse setting is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+L\+A\+S\+T\+B\+I\+T$<$/strong$>$} & U\+S\+A\+RT frame last bit clock pulse setting. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries L\+A\+S\+T\+B\+IT} is valid) or R\+E\+S\+ET ({\bfseries L\+A\+S\+T\+B\+IT} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t___private___macros_ga1ce858404f8b2b6befe4b920cc20e5c9}\label{group___u_s_a_r_t___private___macros_ga1ce858404f8b2b6befe4b920cc20e5c9}} 
+\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE}!U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE}{IS\_USART\_MODE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~((((\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+) \& 0x\+F\+F\+F\+F\+F\+F\+F3\+U) == 0x00\+U) \&\& ((\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+) != 0x00\+U))}
+
+
+
+Ensure that U\+S\+A\+RT communication mode is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+M\+O\+D\+E$<$/strong$>$} & U\+S\+A\+RT communication mode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries M\+O\+DE} is valid) or R\+E\+S\+ET ({\bfseries M\+O\+DE} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t___private___macros_gadf7f983b8108bdd3fafb9e299d72a5cf}\label{group___u_s_a_r_t___private___macros_gadf7f983b8108bdd3fafb9e299d72a5cf}} 
+\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY}!U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY}{IS\_USART\_PARITY}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_PARITY\_\_) == \hyperlink{group___u_s_a_r_t___parity_ga85bfcbeb5ba1c34bbcda3f3e3b994846}{USART\_PARITY\_NONE}) || \(\backslash\)
+                                     ((\_\_PARITY\_\_) == \hyperlink{group___u_s_a_r_t___parity_gae7630824c78a39366b7e5b4c55996200}{USART\_PARITY\_EVEN}) || \(\backslash\)
+                                     ((\_\_PARITY\_\_) == \hyperlink{group___u_s_a_r_t___parity_ga184f3e22cb30ea94b797b02e94e774a1}{USART\_PARITY\_ODD}))
+\end{DoxyCode}
+
+
+Ensure that U\+S\+A\+RT frame parity is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+P\+A\+R\+I\+T\+Y$<$/strong$>$} & U\+S\+A\+RT frame parity. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries P\+A\+R\+I\+TY} is valid) or R\+E\+S\+ET ({\bfseries P\+A\+R\+I\+TY} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t___private___macros_ga6cd720e6cc78786d5117b6f01691685a}\label{group___u_s_a_r_t___private___macros_ga6cd720e6cc78786d5117b6f01691685a}} 
+\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE}!U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE}{IS\_USART\_PHASE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+C\+P\+H\+A\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+C\+P\+H\+A\+\_\+\+\_\+) == \hyperlink{group___u_s_a_r_t___clock___phase_gab050873df3eb3844f973e61681e02e6a}{U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+S\+E\+\_\+1\+E\+D\+GE}) $\vert$$\vert$ ((\+\_\+\+\_\+\+C\+P\+H\+A\+\_\+\+\_\+) == \hyperlink{group___u_s_a_r_t___clock___phase_ga080cff411c6cefbb511162fcc91c43ec}{U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+S\+E\+\_\+2\+E\+D\+GE}))}
+
+
+
+Ensure that U\+S\+A\+RT frame phase is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+C\+P\+H\+A$<$/strong$>$} & U\+S\+A\+RT frame phase. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries C\+P\+HA} is valid) or R\+E\+S\+ET ({\bfseries C\+P\+HA} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t___private___macros_gadf1beba58ae096520a8b3807cfa660b1}\label{group___u_s_a_r_t___private___macros_gadf1beba58ae096520a8b3807cfa660b1}} 
+\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY}!U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY}{IS\_USART\_POLARITY}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+C\+P\+O\+L\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+C\+P\+O\+L\+\_\+\+\_\+) == \hyperlink{group___u_s_a_r_t___clock___polarity_ga5afb62c05704ca0e750ca8f4bb5ccc7d}{U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+T\+Y\+\_\+\+L\+OW}) $\vert$$\vert$ ((\+\_\+\+\_\+\+C\+P\+O\+L\+\_\+\+\_\+) == \hyperlink{group___u_s_a_r_t___clock___polarity_ga3b3e3d798d4797a220346f6b14d257ee}{U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+T\+Y\+\_\+\+H\+I\+GH}))}
+
+
+
+Ensure that U\+S\+A\+RT frame polarity is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+C\+P\+O\+L$<$/strong$>$} & U\+S\+A\+RT frame polarity. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries C\+P\+OL} is valid) or R\+E\+S\+ET ({\bfseries C\+P\+OL} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t___private___macros_ga7a724f758480c009bc3e591d12fd0343}\label{group___u_s_a_r_t___private___macros_ga7a724f758480c009bc3e591d12fd0343}} 
+\index{U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS}!U\+S\+A\+R\+T Private Macros@{U\+S\+A\+R\+T Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS}{IS\_USART\_STOPBITS}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_STOPBITS\_\_) == \hyperlink{group___u_s_a_r_t___stop___bits_ga82aae3118e9cd59bb270c028e21c23b4}{USART\_STOPBITS\_1})   || \(\backslash\)
+                                         ((\_\_STOPBITS\_\_) == \hyperlink{group___u_s_a_r_t___stop___bits_gaf8d022e62f55ceb7b5e03eea336b5c45}{USART\_STOPBITS\_2}))
+\end{DoxyCode}
+
+
+Ensure that U\+S\+A\+RT frame number of stop bits is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+S\+T\+O\+P\+B\+I\+T\+S$<$/strong$>$} & U\+S\+A\+RT frame number of stop bits. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries S\+T\+O\+P\+B\+I\+TS} is valid) or R\+E\+S\+ET ({\bfseries S\+T\+O\+P\+B\+I\+TS} is invalid) \\
+\hline
+\end{DoxyRetVals}

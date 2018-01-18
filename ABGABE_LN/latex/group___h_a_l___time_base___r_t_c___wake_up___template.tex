@@ -1,0 +1,153 @@
+\hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template}{}\section{H\+AL Time\+Base R\+TC Wake\+Up Template}
+\label{group___h_a_l___time_base___r_t_c___wake_up___template}\index{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_ga5da1cd82e5ae713267918a9c85b4dc77}\label{group___h_a_l___time_base___r_t_c___wake_up___template_ga5da1cd82e5ae713267918a9c85b4dc77}} 
+\#define {\bfseries R\+T\+C\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+H\+SE}
+\item 
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_gac483fb44f1611ddb407a4aacec7ae4e7}\label{group___h_a_l___time_base___r_t_c___wake_up___template_gac483fb44f1611ddb407a4aacec7ae4e7}} 
+\#define {\bfseries R\+T\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV}~49U
+\item 
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_ga433a49865e4af2e0972e6bbbea894d51}\label{group___h_a_l___time_base___r_t_c___wake_up___template_ga433a49865e4af2e0972e6bbbea894d51}} 
+\#define {\bfseries R\+T\+C\+\_\+\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV}~4U
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___h_a_l___time_base___r_t_c___wake_up___template_gab86b9dd0d7b4eacfe38086e1fa4c2312}{R\+T\+C\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles W\+A\+KE UP T\+I\+M\+ER interrupt request. \end{DoxyCompactList}\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___h_a_l___time_base___r_t_c___wake_up___template_ga879cdb21ef051eb81ec51c18147397d5}{H\+A\+L\+\_\+\+Init\+Tick} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the R\+T\+C\+\_\+\+W\+K\+UP as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. Wakeup Time base = ((R\+T\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV + 1) $\ast$ (R\+T\+C\+\_\+\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV + 1)) / R\+T\+C\+\_\+\+C\+L\+O\+CK = 1ms Wakeup Time = Wakeup\+Timebase $\ast$ Wake\+Up\+Counter (0 + 1) = 1 ms. \end{DoxyCompactList}\item 
+void \hyperlink{group___h_a_l___time_base___r_t_c___wake_up___template_gaaf651af2afe688a991c657f64f8fa5f9}{H\+A\+L\+\_\+\+Suspend\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \hyperlink{group___h_a_l___time_base___r_t_c___wake_up___template_ga24e0ee9dae1ec0f9d19200f5575ff790}{H\+A\+L\+\_\+\+Resume\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+void \hyperlink{group___h_a_l___time_base___r_t_c___wake_up___template_gac9ed5d6224b5c86f2845a9c1af7d94de}{H\+A\+L\+\_\+\+R\+T\+C\+Ex\+\_\+\+Wake\+Up\+Timer\+Event\+Callback} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\begin{DoxyCompactList}\small\item\em Wake Up Timer Event Callback in non blocking mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_ga66edbb38f0b45759c28ecd5aede14478}\label{group___h_a_l___time_base___r_t_c___wake_up___template_ga66edbb38f0b45759c28ecd5aede14478}} 
+\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} {\bfseries h\+R\+T\+C\+\_\+\+Handle}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_ga879cdb21ef051eb81ec51c18147397d5}\label{group___h_a_l___time_base___r_t_c___wake_up___template_ga879cdb21ef051eb81ec51c18147397d5}} 
+\index{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}!H\+A\+L\+\_\+\+Init\+Tick@{H\+A\+L\+\_\+\+Init\+Tick}}
+\index{H\+A\+L\+\_\+\+Init\+Tick@{H\+A\+L\+\_\+\+Init\+Tick}!H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Init\+Tick()}{HAL\_InitTick()}}
+{\footnotesize\ttfamily \hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Tick\+Priority }\end{DoxyParamCaption})}
+
+
+
+This function configures the R\+T\+C\+\_\+\+W\+K\+UP as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. Wakeup Time base = ((R\+T\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV + 1) $\ast$ (R\+T\+C\+\_\+\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV + 1)) / R\+T\+C\+\_\+\+C\+L\+O\+CK = 1ms Wakeup Time = Wakeup\+Timebase $\ast$ Wake\+Up\+Counter (0 + 1) = 1 ms. 
+
+This function configures the R\+T\+C\+\_\+\+A\+L\+A\+R\+MA as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority.
+
+\begin{DoxyNote}{Note}
+This function is called automatically at the beginning of program after reset by H\+A\+L\+\_\+\+Init() or at any time when clock is configured, by H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+Clock\+Config(). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em H\+AL} & status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_ga24e0ee9dae1ec0f9d19200f5575ff790}\label{group___h_a_l___time_base___r_t_c___wake_up___template_ga24e0ee9dae1ec0f9d19200f5575ff790}} 
+\index{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}!H\+A\+L\+\_\+\+Resume\+Tick@{H\+A\+L\+\_\+\+Resume\+Tick}}
+\index{H\+A\+L\+\_\+\+Resume\+Tick@{H\+A\+L\+\_\+\+Resume\+Tick}!H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Resume\+Tick()}{HAL\_ResumeTick()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Resume\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resume Tick increment. 
+
+\begin{DoxyNote}{Note}
+Enable the tick increment by Enabling R\+T\+C\+\_\+\+W\+K\+UP interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_gac9ed5d6224b5c86f2845a9c1af7d94de}\label{group___h_a_l___time_base___r_t_c___wake_up___template_gac9ed5d6224b5c86f2845a9c1af7d94de}} 
+\index{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}!H\+A\+L\+\_\+\+R\+T\+C\+Ex\+\_\+\+Wake\+Up\+Timer\+Event\+Callback@{H\+A\+L\+\_\+\+R\+T\+C\+Ex\+\_\+\+Wake\+Up\+Timer\+Event\+Callback}}
+\index{H\+A\+L\+\_\+\+R\+T\+C\+Ex\+\_\+\+Wake\+Up\+Timer\+Event\+Callback@{H\+A\+L\+\_\+\+R\+T\+C\+Ex\+\_\+\+Wake\+Up\+Timer\+Event\+Callback}!H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+R\+T\+C\+Ex\+\_\+\+Wake\+Up\+Timer\+Event\+Callback()}{HAL\_RTCEx\_WakeUpTimerEventCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+R\+T\+C\+Ex\+\_\+\+Wake\+Up\+Timer\+Event\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+
+
+Wake Up Timer Event Callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when R\+T\+C\+\_\+\+W\+K\+UP interrupt took place, inside \hyperlink{group___h_a_l___time_base___r_t_c___wake_up___template_gab86b9dd0d7b4eacfe38086e1fa4c2312}{R\+T\+C\+\_\+\+I\+R\+Q\+Handler()}. It makes a direct call to H\+A\+L\+\_\+\+Inc\+Tick() to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em hrtc} & \+: R\+TC handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_gaaf651af2afe688a991c657f64f8fa5f9}\label{group___h_a_l___time_base___r_t_c___wake_up___template_gaaf651af2afe688a991c657f64f8fa5f9}} 
+\index{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}!H\+A\+L\+\_\+\+Suspend\+Tick@{H\+A\+L\+\_\+\+Suspend\+Tick}}
+\index{H\+A\+L\+\_\+\+Suspend\+Tick@{H\+A\+L\+\_\+\+Suspend\+Tick}!H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Suspend\+Tick()}{HAL\_SuspendTick()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Suspend\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Suspend Tick increment. 
+
+\begin{DoxyNote}{Note}
+Disable the tick increment by disabling R\+T\+C\+\_\+\+W\+K\+UP interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___wake_up___template_gab86b9dd0d7b4eacfe38086e1fa4c2312}\label{group___h_a_l___time_base___r_t_c___wake_up___template_gab86b9dd0d7b4eacfe38086e1fa4c2312}} 
+\index{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}!R\+T\+C\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+\_\+\+I\+R\+Q\+Handler}}
+\index{R\+T\+C\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+\_\+\+I\+R\+Q\+Handler}!H\+A\+L Time\+Base R\+T\+C Wake\+Up Template@{H\+A\+L Time\+Base R\+T\+C Wake\+Up Template}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+I\+R\+Q\+Handler()}{RTC\_IRQHandler()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles W\+A\+KE UP T\+I\+M\+ER interrupt request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

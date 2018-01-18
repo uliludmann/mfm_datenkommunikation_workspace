@@ -1,0 +1,124 @@
+\hypertarget{group___a_d_c_ex___private___macros}{}\section{A\+D\+C\+Ex Private Macros}
+\label{group___a_d_c_ex___private___macros}\index{A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_d_c_ex___private___macros_gafc2b5a27b9e60b2822591a19cbca11ff}{A\+D\+C\+\_\+\+I\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+AL}(\+\_\+\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Test if the selected A\+DC channel is an internal channel Vref\+Int/\+Temp\+Sensor/\+Vbat Note\+: On S\+T\+M32\+F0, availability of internal channel Vbat depends on devices lines. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c_ex___private___macros_ga27b743f3afcb778ad1885debb677080b}{A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+TH}(\+\_\+\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Select the internal measurement path to be enabled/disabled corresponding to the selected A\+DC internal channel Vref\+Int/\+Temp\+Sensor/\+Vbat. Note\+: On S\+T\+M32\+F0, availability of internal channel Vbat depends on devices lines. \end{DoxyCompactList}\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+X\+T\+T\+R\+IG}(R\+E\+G\+T\+R\+IG)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL}(C\+H\+A\+N\+N\+EL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___a_d_c_ex___private___macros_ga27b743f3afcb778ad1885debb677080b}\label{group___a_d_c_ex___private___macros_ga27b743f3afcb778ad1885debb677080b}} 
+\index{A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}!A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+TH@{A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+TH}}
+\index{A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+TH@{A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+TH}!A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+TH}{ADC\_CHANNEL\_INTERNAL\_PATH}}
+{\footnotesize\ttfamily \#define A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+TH(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(( (\_\_CHANNEL\_\_) == ADC\_CHANNEL\_TEMPSENSOR                                    \(\backslash\)
+  )?                                                                           \(\backslash\)
+   (\hyperlink{group___peripheral___registers___bits___definition_gaec05330012f52f35421531c72819fada}{ADC\_CCR\_TSEN})                                                              \(\backslash\)
+   :                                                                           \(\backslash\)
+   (                                                                           \(\backslash\)
+     ( (\_\_CHANNEL\_\_) == ADC\_CHANNEL\_VREFINT                                    \(\backslash\)
+     )?                                                                        \(\backslash\)
+      (\hyperlink{group___peripheral___registers___bits___definition_gaecc47464aaa52f565d8daa9cf1a86054}{ADC\_CCR\_VREFEN})                                                         \(\backslash\)
+      :                                                                        \(\backslash\)
+      (\hyperlink{group___peripheral___registers___bits___definition_gaaeefa6f00268db0df10fb97112a9f456}{ADC\_CCR\_VBATEN})                                                         \(\backslash\)
+   )                                                                           \(\backslash\)
+ )
+\end{DoxyCode}
+
+
+Select the internal measurement path to be enabled/disabled corresponding to the selected A\+DC internal channel Vref\+Int/\+Temp\+Sensor/\+Vbat. Note\+: On S\+T\+M32\+F0, availability of internal channel Vbat depends on devices lines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+C\+H\+A\+N\+N\+E\+L$<$/strong$>$} & A\+DC channel \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Bit} & of register A\+D\+C\+\_\+\+C\+CR \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c_ex___private___macros_gafc2b5a27b9e60b2822591a19cbca11ff}\label{group___a_d_c_ex___private___macros_gafc2b5a27b9e60b2822591a19cbca11ff}} 
+\index{A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}!A\+D\+C\+\_\+\+I\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+AL@{A\+D\+C\+\_\+\+I\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+AL}}
+\index{A\+D\+C\+\_\+\+I\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+AL@{A\+D\+C\+\_\+\+I\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+AL}!A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+I\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+AL}{ADC\_IS\_CHANNEL\_INTERNAL}}
+{\footnotesize\ttfamily \#define A\+D\+C\+\_\+\+I\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+T\+E\+R\+N\+AL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_CHANNEL\_\_) == ADC\_CHANNEL\_TEMPSENSOR) ||                                 \(\backslash\)
+  ((\_\_CHANNEL\_\_) == ADC\_CHANNEL\_VREFINT)    ||                                 \(\backslash\)
+  ((\_\_CHANNEL\_\_) == ADC\_CHANNEL\_VBAT)                                          \(\backslash\)
+ )
+\end{DoxyCode}
+
+
+Test if the selected A\+DC channel is an internal channel Vref\+Int/\+Temp\+Sensor/\+Vbat Note\+: On S\+T\+M32\+F0, availability of internal channel Vbat depends on devices lines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+C\+H\+A\+N\+N\+E\+L$<$/strong$>$} & A\+DC channel \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c_ex___private___macros_gaba41910dcb2b449c613a5ef638862e77}\label{group___a_d_c_ex___private___macros_gaba41910dcb2b449c613a5ef638862e77}} 
+\index{A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}!I\+S\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL@{I\+S\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL}}
+\index{I\+S\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL@{I\+S\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL}!A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL}{IS\_ADC\_CHANNEL}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL(\begin{DoxyParamCaption}\item[{}]{C\+H\+A\+N\+N\+EL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((CHANNEL) == ADC\_CHANNEL\_0)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_1)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_2)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_3)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_4)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_5)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_6)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_7)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_8)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_9)           || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_10)          || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_11)          || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_12)          || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_13)          || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_14)          || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_15)          || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_TEMPSENSOR)  || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_VREFINT)     || \(\backslash\)
+                                 ((CHANNEL) == ADC\_CHANNEL\_VBAT)          )
+\end{DoxyCode}
+\mbox{\Hypertarget{group___a_d_c_ex___private___macros_gab3f646d603911820b104dd134c42f028}\label{group___a_d_c_ex___private___macros_gab3f646d603911820b104dd134c42f028}} 
+\index{A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}!I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+X\+T\+T\+R\+IG@{I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+X\+T\+T\+R\+IG}}
+\index{I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+X\+T\+T\+R\+IG@{I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+X\+T\+T\+R\+IG}!A\+D\+C\+Ex Private Macros@{A\+D\+C\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+X\+T\+T\+R\+IG}{IS\_ADC\_EXTTRIG}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+X\+T\+T\+R\+IG(\begin{DoxyParamCaption}\item[{}]{R\+E\+G\+T\+R\+IG }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((REGTRIG) == ADC\_EXTERNALTRIGCONV\_T1\_TRGO)  || \(\backslash\)
+                                 ((REGTRIG) == ADC\_EXTERNALTRIGCONV\_T1\_CC4)   || \(\backslash\)
+                                 ((REGTRIG) == ADC\_EXTERNALTRIGCONV\_T2\_TRGO)  || \(\backslash\)
+                                 ((REGTRIG) == ADC\_EXTERNALTRIGCONV\_T3\_TRGO)  || \(\backslash\)
+                                 ((REGTRIG) == ADC\_EXTERNALTRIGCONV\_T15\_TRGO) || \(\backslash\)
+                                 ((REGTRIG) == ADC\_SOFTWARE\_START))
+\end{DoxyCode}

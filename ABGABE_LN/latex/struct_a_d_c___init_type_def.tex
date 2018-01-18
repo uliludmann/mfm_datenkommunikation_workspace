@@ -1,0 +1,146 @@
+\hypertarget{struct_a_d_c___init_type_def}{}\section{A\+D\+C\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_a_d_c___init_type_def}\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+
+
+Structure definition of A\+DC initialization and regular group.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+adc.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_ab791f8fac403d508e1c53b6f27cf1f24}{Clock\+Prescaler}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a6613985e603e784c30fb3689f2c6fa5f}{Resolution}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_afe646b2571044212378bf5f722544359}{Data\+Align}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a67902b5cdd3d1aa4af49654409412a08}{Scan\+Conv\+Mode}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a92de48abe9cbd958145ce5bc090ea383}{E\+O\+C\+Selection}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a434598c5a9cc1d6e95df613945d5027c}{Low\+Power\+Auto\+Wait}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_aec71cb32439e31735b089f2736344293}{Low\+Power\+Auto\+Power\+Off}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a768ec42e36553ad0acb7ad029462a59d}{Continuous\+Conv\+Mode}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a9029916649c9ed5db0a3d86c7a0841bb}{Discontinuous\+Conv\+Mode}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a3f4a71424165638d6621d75a351cb5e0}{External\+Trig\+Conv}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_ace2c616b80bb7f1982e8a52131a2732c}{External\+Trig\+Conv\+Edge}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a304c6a7957f73ed08df4f8a5d467958f}{D\+M\+A\+Continuous\+Requests}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_ac20c5da6d0ffd3de9c705eff0f5a13bc}{Overrun}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___init_type_def_a66567dbf0cd76f9d381c9f1d5994c7ed}{Sampling\+Time\+Common}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure definition of A\+DC initialization and regular group. 
+
+\begin{DoxyNote}{Note}
+The setting of these parameters with function H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Init() is conditioned to A\+DC state. A\+DC state can be either\+:
+\begin{DoxyItemize}
+\item For all parameters\+: A\+DC disabled (this is the only possible A\+DC state to modify parameter \textquotesingle{}Clock\+Prescaler\textquotesingle{})
+\item For all parameters except \textquotesingle{}Clock\+Prescaler\textquotesingle{} and \textquotesingle{}resolution\textquotesingle{}\+: A\+DC enabled without conversion on going on regular group. If A\+DC is not in the appropriate state to modify some parameters, these parameters setting is bypassed without error reporting (as it can be the expected behaviour in case of intended action to update another parameter (which fulfills the A\+DC state condition) on the fly). 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_a_d_c___init_type_def_ab791f8fac403d508e1c53b6f27cf1f24}\label{struct_a_d_c___init_type_def_ab791f8fac403d508e1c53b6f27cf1f24}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Clock\+Prescaler@{Clock\+Prescaler}}
+\index{Clock\+Prescaler@{Clock\+Prescaler}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Clock\+Prescaler}{ClockPrescaler}}
+{\footnotesize\ttfamily uint32\+\_\+t Clock\+Prescaler}
+
+Select A\+DC clock source (synchronous clock derived from A\+PB clock or asynchronous clock derived from A\+DC dedicated H\+SI RC oscillator 14\+M\+Hz) and clock prescaler. This parameter can be a value of \hyperlink{group___a_d_c___clock_prescaler}{A\+DC Clock\+Prescaler} Note\+: In case of usage of the A\+DC dedicated H\+SI RC oscillator, it must be preliminarily enabled at R\+CC top level. Note\+: This parameter can be modified only if the A\+DC is disabled \mbox{\Hypertarget{struct_a_d_c___init_type_def_a768ec42e36553ad0acb7ad029462a59d}\label{struct_a_d_c___init_type_def_a768ec42e36553ad0acb7ad029462a59d}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Continuous\+Conv\+Mode@{Continuous\+Conv\+Mode}}
+\index{Continuous\+Conv\+Mode@{Continuous\+Conv\+Mode}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Continuous\+Conv\+Mode}{ContinuousConvMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Continuous\+Conv\+Mode}
+
+Specifies whether the conversion is performed in single mode (one conversion) or continuous mode for regular group, after the selected trigger occurred (software start or external trigger). This parameter can be set to E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE. \mbox{\Hypertarget{struct_a_d_c___init_type_def_afe646b2571044212378bf5f722544359}\label{struct_a_d_c___init_type_def_afe646b2571044212378bf5f722544359}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Data\+Align@{Data\+Align}}
+\index{Data\+Align@{Data\+Align}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Data\+Align}{DataAlign}}
+{\footnotesize\ttfamily uint32\+\_\+t Data\+Align}
+
+Specifies whether the A\+DC data alignment is left or right. This parameter can be a value of \hyperlink{group___a_d_c___data__align}{A\+DC Data\+\_\+align} \mbox{\Hypertarget{struct_a_d_c___init_type_def_a9029916649c9ed5db0a3d86c7a0841bb}\label{struct_a_d_c___init_type_def_a9029916649c9ed5db0a3d86c7a0841bb}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Discontinuous\+Conv\+Mode@{Discontinuous\+Conv\+Mode}}
+\index{Discontinuous\+Conv\+Mode@{Discontinuous\+Conv\+Mode}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Discontinuous\+Conv\+Mode}{DiscontinuousConvMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Discontinuous\+Conv\+Mode}
+
+Specifies whether the conversions sequence of regular group is performed in Complete-\/sequence/\+Discontinuous-\/sequence (main sequence subdivided in successive parts). Discontinuous mode is used only if sequencer is enabled (parameter \textquotesingle{}Scan\+Conv\+Mode\textquotesingle{}). If sequencer is disabled, this parameter is discarded. Discontinuous mode can be enabled only if continuous mode is disabled. If continuous mode is enabled, this parameter setting is discarded. This parameter can be set to E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE Note\+: Number of discontinuous ranks increment is fixed to one-\/by-\/one. \mbox{\Hypertarget{struct_a_d_c___init_type_def_a304c6a7957f73ed08df4f8a5d467958f}\label{struct_a_d_c___init_type_def_a304c6a7957f73ed08df4f8a5d467958f}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!D\+M\+A\+Continuous\+Requests@{D\+M\+A\+Continuous\+Requests}}
+\index{D\+M\+A\+Continuous\+Requests@{D\+M\+A\+Continuous\+Requests}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{D\+M\+A\+Continuous\+Requests}{DMAContinuousRequests}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+M\+A\+Continuous\+Requests}
+
+Specifies whether the D\+MA requests are performed in one shot mode (D\+MA transfer stop when number of conversions is reached) or in Continuous mode (D\+MA transfer unlimited, whatever number of conversions). Note\+: In continuous mode, D\+MA must be configured in circular mode. Otherwise an overrun will be triggered when D\+MA buffer maximum pointer is reached. This parameter can be set to E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE. \mbox{\Hypertarget{struct_a_d_c___init_type_def_a92de48abe9cbd958145ce5bc090ea383}\label{struct_a_d_c___init_type_def_a92de48abe9cbd958145ce5bc090ea383}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!E\+O\+C\+Selection@{E\+O\+C\+Selection}}
+\index{E\+O\+C\+Selection@{E\+O\+C\+Selection}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{E\+O\+C\+Selection}{EOCSelection}}
+{\footnotesize\ttfamily uint32\+\_\+t E\+O\+C\+Selection}
+
+Specifies what E\+OC (End Of Conversion) flag is used for conversion by polling and interruption\+: end of conversion of each rank or complete sequence. This parameter can be a value of \hyperlink{group___a_d_c___e_o_c_selection}{A\+DC E\+O\+C\+Selection}. \mbox{\Hypertarget{struct_a_d_c___init_type_def_a3f4a71424165638d6621d75a351cb5e0}\label{struct_a_d_c___init_type_def_a3f4a71424165638d6621d75a351cb5e0}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!External\+Trig\+Conv@{External\+Trig\+Conv}}
+\index{External\+Trig\+Conv@{External\+Trig\+Conv}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{External\+Trig\+Conv}{ExternalTrigConv}}
+{\footnotesize\ttfamily uint32\+\_\+t External\+Trig\+Conv}
+
+Selects the external event used to trigger the conversion start of regular group. If set to A\+D\+C\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+S\+T\+A\+RT, external triggers are disabled. This parameter can be a value of \hyperlink{group___a_d_c___external__trigger__source___regular}{A\+DC External trigger source Regular} \mbox{\Hypertarget{struct_a_d_c___init_type_def_ace2c616b80bb7f1982e8a52131a2732c}\label{struct_a_d_c___init_type_def_ace2c616b80bb7f1982e8a52131a2732c}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!External\+Trig\+Conv\+Edge@{External\+Trig\+Conv\+Edge}}
+\index{External\+Trig\+Conv\+Edge@{External\+Trig\+Conv\+Edge}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{External\+Trig\+Conv\+Edge}{ExternalTrigConvEdge}}
+{\footnotesize\ttfamily uint32\+\_\+t External\+Trig\+Conv\+Edge}
+
+Selects the external trigger edge of regular group. If trigger is set to A\+D\+C\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+S\+T\+A\+RT, this parameter is discarded. This parameter can be a value of \hyperlink{group___a_d_c___external__trigger__edge___regular}{A\+DC External trigger edge Regular} \mbox{\Hypertarget{struct_a_d_c___init_type_def_aec71cb32439e31735b089f2736344293}\label{struct_a_d_c___init_type_def_aec71cb32439e31735b089f2736344293}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Low\+Power\+Auto\+Power\+Off@{Low\+Power\+Auto\+Power\+Off}}
+\index{Low\+Power\+Auto\+Power\+Off@{Low\+Power\+Auto\+Power\+Off}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Low\+Power\+Auto\+Power\+Off}{LowPowerAutoPowerOff}}
+{\footnotesize\ttfamily uint32\+\_\+t Low\+Power\+Auto\+Power\+Off}
+
+Selects the auto-\/off mode\+: the A\+DC automatically powers-\/off after a conversion and automatically wakes-\/up when a new conversion is triggered (with startup time between trigger and start of sampling). This feature can be combined with automatic wait mode (parameter \textquotesingle{}Low\+Power\+Auto\+Wait\textquotesingle{}). This parameter can be set to E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE. Note\+: If enabled, this feature also turns off the A\+DC dedicated 14 M\+Hz RC oscillator (H\+S\+I14) \mbox{\Hypertarget{struct_a_d_c___init_type_def_a434598c5a9cc1d6e95df613945d5027c}\label{struct_a_d_c___init_type_def_a434598c5a9cc1d6e95df613945d5027c}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Low\+Power\+Auto\+Wait@{Low\+Power\+Auto\+Wait}}
+\index{Low\+Power\+Auto\+Wait@{Low\+Power\+Auto\+Wait}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Low\+Power\+Auto\+Wait}{LowPowerAutoWait}}
+{\footnotesize\ttfamily uint32\+\_\+t Low\+Power\+Auto\+Wait}
+
+Selects the dynamic low power Auto Delay\+: new conversion start only when the previous conversion (for regular group) has been treated by user software, using function H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Get\+Value(). This feature automatically adapts the A\+DC conversions trigs to the speed of the system that reads the data. Moreover, this avoids risk of overrun for low frequency applications. This parameter can be set to E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE. Note\+: Do not use with interruption or D\+MA (H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Start\+\_\+\+I\+T(), H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Start\+\_\+\+D\+M\+A()) since they have to clear immediately the E\+OC flag to free the I\+RQ vector sequencer. Do use with polling\+: 1. Start conversion with H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Start(), 2. Later on, when conversion data is needed\+: use H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Poll\+For\+Conversion() to ensure that conversion is completed and use H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Get\+Value() to retrieve conversion result and trig another conversion. \mbox{\Hypertarget{struct_a_d_c___init_type_def_ac20c5da6d0ffd3de9c705eff0f5a13bc}\label{struct_a_d_c___init_type_def_ac20c5da6d0ffd3de9c705eff0f5a13bc}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Overrun@{Overrun}}
+\index{Overrun@{Overrun}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Overrun}{Overrun}}
+{\footnotesize\ttfamily uint32\+\_\+t Overrun}
+
+Select the behaviour in case of overrun\+: data preserved or overwritten This parameter has an effect on regular group only, including in D\+MA mode. This parameter can be a value of \hyperlink{group___a_d_c___overrun}{A\+DC Overrun} \mbox{\Hypertarget{struct_a_d_c___init_type_def_a6613985e603e784c30fb3689f2c6fa5f}\label{struct_a_d_c___init_type_def_a6613985e603e784c30fb3689f2c6fa5f}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Resolution@{Resolution}}
+\index{Resolution@{Resolution}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Resolution}{Resolution}}
+{\footnotesize\ttfamily uint32\+\_\+t Resolution}
+
+Configures the A\+DC resolution. This parameter can be a value of \hyperlink{group___a_d_c___resolution}{A\+DC Resolution} \mbox{\Hypertarget{struct_a_d_c___init_type_def_a66567dbf0cd76f9d381c9f1d5994c7ed}\label{struct_a_d_c___init_type_def_a66567dbf0cd76f9d381c9f1d5994c7ed}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Sampling\+Time\+Common@{Sampling\+Time\+Common}}
+\index{Sampling\+Time\+Common@{Sampling\+Time\+Common}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Sampling\+Time\+Common}{SamplingTimeCommon}}
+{\footnotesize\ttfamily uint32\+\_\+t Sampling\+Time\+Common}
+
+Sampling time value to be set for the selected channel. Unit\+: A\+DC clock cycles Conversion time is the addition of sampling time and processing time (12.\+5 A\+DC clock cycles at A\+DC resolution 12 bits, 10.\+5 cycles at 10 bits, 8.\+5 cycles at 8 bits, 6.\+5 cycles at 6 bits). Note\+: On S\+T\+M32\+F0 devices, the sampling time setting is common to all channels. On some other S\+T\+M32 devices, this parameter in channel wise and is located into A\+DC channel initialization structure. This parameter can be a value of \hyperlink{group___a_d_c__sampling__times}{A\+DC sampling times} Note\+: In case of usage of internal measurement channels (Vref\+Int/\+Vbat/\+Temp\+Sensor), sampling time constraints must be respected (sampling time can be adjusted in function of A\+DC clock frequency and sampling time setting) Refer to device datasheet for timings values, parameters T\+S\+\_\+vrefint, T\+S\+\_\+vbat, T\+S\+\_\+temp (values rough order\+: 5us to 17us). \mbox{\Hypertarget{struct_a_d_c___init_type_def_a67902b5cdd3d1aa4af49654409412a08}\label{struct_a_d_c___init_type_def_a67902b5cdd3d1aa4af49654409412a08}} 
+\index{A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}!Scan\+Conv\+Mode@{Scan\+Conv\+Mode}}
+\index{Scan\+Conv\+Mode@{Scan\+Conv\+Mode}!A\+D\+C\+\_\+\+Init\+Type\+Def@{A\+D\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Scan\+Conv\+Mode}{ScanConvMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Scan\+Conv\+Mode}
+
+Configures the sequencer of regular group. This parameter can be associated to parameter \textquotesingle{}Discontinuous\+Conv\+Mode\textquotesingle{} to have main sequence subdivided in successive parts. Sequencer is automatically enabled if several channels are set (sequencer cannot be disabled, as it can be the case on other S\+T\+M32 devices)\+: If only 1 channel is set\+: Conversion is performed in single mode. If several channels are set\+: Conversions are performed in sequence mode (ranks defined by each channel number\+: channel 0 fixed on rank 0, channel 1 fixed on rank1, ...). Scan direction can be set to forward (from channel 0 to channel 18) or backward (from channel 18 to channel 0). This parameter can be a value of \hyperlink{group___a_d_c___scan__mode}{A\+DC Scan mode} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__adc_8h}{stm32f0xx\+\_\+hal\+\_\+adc.\+h}\end{DoxyCompactItemize}

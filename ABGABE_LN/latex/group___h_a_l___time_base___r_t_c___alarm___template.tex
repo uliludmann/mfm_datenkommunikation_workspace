@@ -1,0 +1,129 @@
+\hypertarget{group___h_a_l___time_base___r_t_c___alarm___template}{}\section{H\+AL Time\+Base R\+TC Alarm Template}
+\label{group___h_a_l___time_base___r_t_c___alarm___template}\index{H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___alarm___template_ga5da1cd82e5ae713267918a9c85b4dc77}\label{group___h_a_l___time_base___r_t_c___alarm___template_ga5da1cd82e5ae713267918a9c85b4dc77}} 
+\#define {\bfseries R\+T\+C\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+H\+SE}
+\item 
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___alarm___template_gac483fb44f1611ddb407a4aacec7ae4e7}\label{group___h_a_l___time_base___r_t_c___alarm___template_gac483fb44f1611ddb407a4aacec7ae4e7}} 
+\#define {\bfseries R\+T\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV}~49U
+\item 
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___alarm___template_ga433a49865e4af2e0972e6bbbea894d51}\label{group___h_a_l___time_base___r_t_c___alarm___template_ga433a49865e4af2e0972e6bbbea894d51}} 
+\#define {\bfseries R\+T\+C\+\_\+\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV}~4U
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___h_a_l___time_base___r_t_c___alarm___template_ga879cdb21ef051eb81ec51c18147397d5}{H\+A\+L\+\_\+\+Init\+Tick} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the R\+T\+C\+\_\+\+A\+L\+A\+R\+MA as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\item 
+void \hyperlink{group___h_a_l___time_base___r_t_c___alarm___template_gaaf651af2afe688a991c657f64f8fa5f9}{H\+A\+L\+\_\+\+Suspend\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \hyperlink{group___h_a_l___time_base___r_t_c___alarm___template_ga24e0ee9dae1ec0f9d19200f5575ff790}{H\+A\+L\+\_\+\+Resume\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+void \hyperlink{group___h_a_l___time_base___r_t_c___alarm___template_ga11aeff83fd498cddbed3bcddcf017e0a}{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\begin{DoxyCompactList}\small\item\em A\+L\+A\+RM A Event Callback in non blocking mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___alarm___template_ga66edbb38f0b45759c28ecd5aede14478}\label{group___h_a_l___time_base___r_t_c___alarm___template_ga66edbb38f0b45759c28ecd5aede14478}} 
+\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} {\bfseries h\+R\+T\+C\+\_\+\+Handle}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___alarm___template_ga879cdb21ef051eb81ec51c18147397d5}\label{group___h_a_l___time_base___r_t_c___alarm___template_ga879cdb21ef051eb81ec51c18147397d5}} 
+\index{H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}!H\+A\+L\+\_\+\+Init\+Tick@{H\+A\+L\+\_\+\+Init\+Tick}}
+\index{H\+A\+L\+\_\+\+Init\+Tick@{H\+A\+L\+\_\+\+Init\+Tick}!H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Init\+Tick()}{HAL\_InitTick()}}
+{\footnotesize\ttfamily \hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Tick\+Priority }\end{DoxyParamCaption})}
+
+
+
+This function configures the R\+T\+C\+\_\+\+A\+L\+A\+R\+MA as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. 
+
+\begin{DoxyNote}{Note}
+This function is called automatically at the beginning of program after reset by H\+A\+L\+\_\+\+Init() or at any time when clock is configured, by H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+Clock\+Config(). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em H\+AL} & status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___alarm___template_ga24e0ee9dae1ec0f9d19200f5575ff790}\label{group___h_a_l___time_base___r_t_c___alarm___template_ga24e0ee9dae1ec0f9d19200f5575ff790}} 
+\index{H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}!H\+A\+L\+\_\+\+Resume\+Tick@{H\+A\+L\+\_\+\+Resume\+Tick}}
+\index{H\+A\+L\+\_\+\+Resume\+Tick@{H\+A\+L\+\_\+\+Resume\+Tick}!H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Resume\+Tick()}{HAL\_ResumeTick()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Resume\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resume Tick increment. 
+
+\begin{DoxyNote}{Note}
+Enable the tick increment by Enabling R\+TC A\+L\+A\+RM interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___alarm___template_ga11aeff83fd498cddbed3bcddcf017e0a}\label{group___h_a_l___time_base___r_t_c___alarm___template_ga11aeff83fd498cddbed3bcddcf017e0a}} 
+\index{H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}!H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback@{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback}}
+\index{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback@{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback}!H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback()}{HAL\_RTC\_AlarmAEventCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+
+
+A\+L\+A\+RM A Event Callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when R\+T\+C\+\_\+\+A\+L\+A\+RM interrupt took place, inside \hyperlink{group___h_a_l___time_base___r_t_c___alarm___template_gab86b9dd0d7b4eacfe38086e1fa4c2312}{R\+T\+C\+\_\+\+I\+R\+Q\+Handler()}. It makes a direct call to H\+A\+L\+\_\+\+Inc\+Tick() to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em hrtc} & \+: R\+TC handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___time_base___r_t_c___alarm___template_gaaf651af2afe688a991c657f64f8fa5f9}\label{group___h_a_l___time_base___r_t_c___alarm___template_gaaf651af2afe688a991c657f64f8fa5f9}} 
+\index{H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}!H\+A\+L\+\_\+\+Suspend\+Tick@{H\+A\+L\+\_\+\+Suspend\+Tick}}
+\index{H\+A\+L\+\_\+\+Suspend\+Tick@{H\+A\+L\+\_\+\+Suspend\+Tick}!H\+A\+L Time\+Base R\+T\+C Alarm Template@{H\+A\+L Time\+Base R\+T\+C Alarm Template}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Suspend\+Tick()}{HAL\_SuspendTick()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Suspend\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Suspend Tick increment. 
+
+\begin{DoxyNote}{Note}
+Disable the tick increment by disabling R\+TC A\+L\+A\+RM interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

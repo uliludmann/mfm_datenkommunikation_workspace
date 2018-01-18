@@ -1,0 +1,73 @@
+\hypertarget{struct_r_t_c___init_type_def}{}\section{R\+T\+C\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_r_t_c___init_type_def}\index{R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}}
+
+
+R\+TC Configuration Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+rtc.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_r_t_c___init_type_def_a6443afafaf63b709dad618a85502ef08}{Hour\+Format}
+\item 
+uint32\+\_\+t \hyperlink{struct_r_t_c___init_type_def_a765786c156872cccaeb4c34f6200a83b}{Asynch\+Prediv}
+\item 
+uint32\+\_\+t \hyperlink{struct_r_t_c___init_type_def_ae501e595c4cae92e73132b065baf726c}{Synch\+Prediv}
+\item 
+uint32\+\_\+t \hyperlink{struct_r_t_c___init_type_def_a1ac04944c56d427908f5dec0bd80155f}{Out\+Put}
+\item 
+uint32\+\_\+t \hyperlink{struct_r_t_c___init_type_def_a1db55b29ddfca7107f6ef6389e13d423}{Out\+Put\+Polarity}
+\item 
+uint32\+\_\+t \hyperlink{struct_r_t_c___init_type_def_ad01c869fb5e798c037f1d0b04a52d80d}{Out\+Put\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+TC Configuration Structure definition. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_r_t_c___init_type_def_a765786c156872cccaeb4c34f6200a83b}\label{struct_r_t_c___init_type_def_a765786c156872cccaeb4c34f6200a83b}} 
+\index{R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}!Asynch\+Prediv@{Asynch\+Prediv}}
+\index{Asynch\+Prediv@{Asynch\+Prediv}!R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Asynch\+Prediv}{AsynchPrediv}}
+{\footnotesize\ttfamily uint32\+\_\+t Asynch\+Prediv}
+
+Specifies the R\+TC Asynchronous Predivider value. This parameter must be a number between Min\+\_\+\+Data = 0x00 and Max\+\_\+\+Data = 0x7F \mbox{\Hypertarget{struct_r_t_c___init_type_def_a6443afafaf63b709dad618a85502ef08}\label{struct_r_t_c___init_type_def_a6443afafaf63b709dad618a85502ef08}} 
+\index{R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}!Hour\+Format@{Hour\+Format}}
+\index{Hour\+Format@{Hour\+Format}!R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Hour\+Format}{HourFormat}}
+{\footnotesize\ttfamily uint32\+\_\+t Hour\+Format}
+
+Specifies the R\+TC Hour Format. This parameter can be a value of \hyperlink{group___r_t_c___hour___formats}{R\+TC Hour Formats} \mbox{\Hypertarget{struct_r_t_c___init_type_def_a1ac04944c56d427908f5dec0bd80155f}\label{struct_r_t_c___init_type_def_a1ac04944c56d427908f5dec0bd80155f}} 
+\index{R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}!Out\+Put@{Out\+Put}}
+\index{Out\+Put@{Out\+Put}!R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Out\+Put}{OutPut}}
+{\footnotesize\ttfamily uint32\+\_\+t Out\+Put}
+
+Specifies which signal will be routed to the R\+TC output. This parameter can be a value of \hyperlink{group___r_t_c_ex___output__selection___definitions}{R\+T\+C\+Ex Output Selection Definition} \mbox{\Hypertarget{struct_r_t_c___init_type_def_a1db55b29ddfca7107f6ef6389e13d423}\label{struct_r_t_c___init_type_def_a1db55b29ddfca7107f6ef6389e13d423}} 
+\index{R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}!Out\+Put\+Polarity@{Out\+Put\+Polarity}}
+\index{Out\+Put\+Polarity@{Out\+Put\+Polarity}!R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Out\+Put\+Polarity}{OutPutPolarity}}
+{\footnotesize\ttfamily uint32\+\_\+t Out\+Put\+Polarity}
+
+Specifies the polarity of the output signal. This parameter can be a value of \hyperlink{group___r_t_c___output___polarity___definitions}{R\+TC Output Polarity Definitions} \mbox{\Hypertarget{struct_r_t_c___init_type_def_ad01c869fb5e798c037f1d0b04a52d80d}\label{struct_r_t_c___init_type_def_ad01c869fb5e798c037f1d0b04a52d80d}} 
+\index{R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}!Out\+Put\+Type@{Out\+Put\+Type}}
+\index{Out\+Put\+Type@{Out\+Put\+Type}!R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Out\+Put\+Type}{OutPutType}}
+{\footnotesize\ttfamily uint32\+\_\+t Out\+Put\+Type}
+
+Specifies the R\+TC Output Pin mode. This parameter can be a value of \hyperlink{group___r_t_c___output___type___a_l_a_r_m___o_u_t}{R\+TC Output Type A\+L\+A\+RM O\+UT} \mbox{\Hypertarget{struct_r_t_c___init_type_def_ae501e595c4cae92e73132b065baf726c}\label{struct_r_t_c___init_type_def_ae501e595c4cae92e73132b065baf726c}} 
+\index{R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}!Synch\+Prediv@{Synch\+Prediv}}
+\index{Synch\+Prediv@{Synch\+Prediv}!R\+T\+C\+\_\+\+Init\+Type\+Def@{R\+T\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Synch\+Prediv}{SynchPrediv}}
+{\footnotesize\ttfamily uint32\+\_\+t Synch\+Prediv}
+
+Specifies the R\+TC Synchronous Predivider value. This parameter must be a number between Min\+\_\+\+Data = 0x00 and Max\+\_\+\+Data = 0x7\+F\+FF 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__rtc_8h}{stm32f0xx\+\_\+hal\+\_\+rtc.\+h}\end{DoxyCompactItemize}

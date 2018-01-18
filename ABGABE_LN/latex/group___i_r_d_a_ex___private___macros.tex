@@ -1,0 +1,102 @@
+\hypertarget{group___i_r_d_a_ex___private___macros}{}\section{I\+R\+D\+A\+Ex Private Macros}
+\label{group___i_r_d_a_ex___private___macros}\index{I\+R\+D\+A\+Ex Private Macros@{I\+R\+D\+A\+Ex Private Macros}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___i_r_d_a_ex___private___macros_gab905bc46038b12561969148fa4929888}{I\+R\+D\+A\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Report the I\+R\+DA clock source. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a_ex___private___macros_ga15dafbab24754dafb0c2fc3ce081c715}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}(\+\_\+\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA frame length is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___i_r_d_a_ex___private___macros_gab905bc46038b12561969148fa4929888}\label{group___i_r_d_a_ex___private___macros_gab905bc46038b12561969148fa4929888}} 
+\index{I\+R\+D\+A\+Ex Private Macros@{I\+R\+D\+A\+Ex Private Macros}!I\+R\+D\+A\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON@{I\+R\+D\+A\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON}}
+\index{I\+R\+D\+A\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON@{I\+R\+D\+A\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON}!I\+R\+D\+A\+Ex Private Macros@{I\+R\+D\+A\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON}{IRDA\_MASK\_COMPUTATION}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                                \(\backslash\)
+  if ((\_\_HANDLE\_\_)->Init.WordLength == \hyperlink{group___i_r_d_a_ex___word___length_gad005e4d28476758d4e5b56a3d98f7cd4}{IRDA\_WORDLENGTH\_9B})            \(\backslash\)
+  \{                                                                   \(\backslash\)
+     if ((\_\_HANDLE\_\_)->Init.Parity == \hyperlink{group___i_r_d_a___parity_ga930d90dc494068f6e8fd34c2008af6c3}{IRDA\_PARITY\_NONE})               \(\backslash\)
+     \{                                                                \(\backslash\)
+        (\_\_HANDLE\_\_)->Mask = 0x01FFU ;                                \(\backslash\)
+     \}                                                                \(\backslash\)
+     else                                                             \(\backslash\)
+     \{                                                                \(\backslash\)
+        (\_\_HANDLE\_\_)->Mask = 0x00FFU ;                                \(\backslash\)
+     \}                                                                \(\backslash\)
+  \}                                                                   \(\backslash\)
+  else \textcolor{keywordflow}{if} ((\_\_HANDLE\_\_)->Init.WordLength == \hyperlink{group___i_r_d_a_ex___word___length_ga53b28028ae932349fcc40190dd8d7c9a}{IRDA\_WORDLENGTH\_8B})       \(\backslash\)
+  \{                                                                   \(\backslash\)
+     if ((\_\_HANDLE\_\_)->Init.Parity == \hyperlink{group___i_r_d_a___parity_ga930d90dc494068f6e8fd34c2008af6c3}{IRDA\_PARITY\_NONE})               \(\backslash\)
+     \{                                                                \(\backslash\)
+        (\_\_HANDLE\_\_)->Mask = 0x00FFU ;                                \(\backslash\)
+     \}                                                                \(\backslash\)
+     else                                                             \(\backslash\)
+     \{                                                                \(\backslash\)
+        (\_\_HANDLE\_\_)->Mask = 0x007FU ;                                \(\backslash\)
+     \}                                                                \(\backslash\)
+  \}                                                                   \(\backslash\)
+\} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+
+
+Report the I\+R\+DA clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & specifies the I\+R\+DA Handle. \\
+\hline
+{\em $<$strong$>$\+C\+L\+O\+C\+K\+S\+O\+U\+R\+C\+E$<$/strong$>$} & output variable. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+R\+DA} & clocking source, written in {\bfseries C\+L\+O\+C\+K\+S\+O\+U\+R\+CE}.Compute the mask to apply to retrieve the received data according to the word length and to the parity bits activation. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+If P\+CE = 1, the parity bit is not included in the data extracted by the reception A\+P\+I(). This masking operation is not carried out in the case of D\+MA transfers. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & specifies the I\+R\+DA Handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None,the} & mask to apply to the associated U\+A\+RT R\+DR register is stored in ({\bfseries H\+A\+N\+D\+LE})-\/$>$Mask field. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a_ex___private___macros_ga15dafbab24754dafb0c2fc3ce081c715}\label{group___i_r_d_a_ex___private___macros_ga15dafbab24754dafb0c2fc3ce081c715}} 
+\index{I\+R\+D\+A\+Ex Private Macros@{I\+R\+D\+A\+Ex Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}!I\+R\+D\+A\+Ex Private Macros@{I\+R\+D\+A\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}{IS\_IRDA\_WORD\_LENGTH}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_LENGTH\_\_) == \hyperlink{group___i_r_d_a_ex___word___length_ga53b28028ae932349fcc40190dd8d7c9a}{IRDA\_WORDLENGTH\_8B}) || \(\backslash\)
+                                         ((\_\_LENGTH\_\_) == \hyperlink{group___i_r_d_a_ex___word___length_gad005e4d28476758d4e5b56a3d98f7cd4}{IRDA\_WORDLENGTH\_9B}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA frame length is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+L\+E\+N\+G\+T\+H$<$/strong$>$} & I\+R\+DA frame length. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries L\+E\+N\+G\+TH} is valid) or R\+E\+S\+ET ({\bfseries L\+E\+N\+G\+TH} is invalid) \\
+\hline
+\end{DoxyRetVals}

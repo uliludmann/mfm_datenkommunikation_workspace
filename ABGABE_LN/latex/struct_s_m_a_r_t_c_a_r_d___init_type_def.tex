@@ -1,0 +1,156 @@
+\hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def}{}\section{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_s_m_a_r_t_c_a_r_d___init_type_def}\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+
+
+S\+M\+A\+R\+T\+C\+A\+RD Init Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+smartcard.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_aaad609733f3fd8146c8745e953a91b2a}{Baud\+Rate}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}{Word\+Length}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a8394ba239444e3e5fe1ada1c37cb1019}{Stop\+Bits}
+\item 
+uint16\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_ab9ca95a28592c8639b87be21d8ec2026}{Parity}
+\item 
+uint16\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_aabdbacb3ad2d5c4b4594fda17777f292}{Mode}
+\item 
+uint16\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a4ffca0b913184369dd2f21e2a9dcad75}{C\+L\+K\+Polarity}
+\item 
+uint16\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a08eaff81789b11c5af048347c68d6eb4}{C\+L\+K\+Phase}
+\item 
+uint16\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a37ab9d1c5ce9ffc1ad69e0ee74ae9fd6}{C\+L\+K\+Last\+Bit}
+\item 
+uint16\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_aa9e1e2730d3764f6bcc994a41f30c28c}{One\+Bit\+Sampling}
+\item 
+uint8\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a5c9d1e760b400d2502c03b0391606f90}{Prescaler}
+\item 
+uint8\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_af4d18b6718b05eba09981764ec1fc466}{Guard\+Time}
+\item 
+uint16\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a4b40e866ffda1e4a75cd2c6b8fe3063e}{N\+A\+C\+K\+Enable}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a2f228719b83d2c8b7795c08f7f6e1d82}{Time\+Out\+Enable}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_addf8da5ef1eb6f989da4d85e43901c8b}{Time\+Out\+Value}
+\item 
+uint8\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a6a7dfaac82722a408c623a25c47edd03}{Block\+Length}
+\item 
+uint8\+\_\+t \hyperlink{struct_s_m_a_r_t_c_a_r_d___init_type_def_a92419157047aa30996c86f921042656e}{Auto\+Retry\+Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+M\+A\+R\+T\+C\+A\+RD Init Structure definition. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a92419157047aa30996c86f921042656e}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a92419157047aa30996c86f921042656e}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Auto\+Retry\+Count@{Auto\+Retry\+Count}}
+\index{Auto\+Retry\+Count@{Auto\+Retry\+Count}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Auto\+Retry\+Count}{AutoRetryCount}}
+{\footnotesize\ttfamily uint8\+\_\+t Auto\+Retry\+Count}
+
+Specifies the Smart\+Card auto-\/retry count (number of retries in receive and transmit mode). When set to 0, retransmission is disabled. Otherwise, its maximum value is 7 (before signalling an error) \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_aaad609733f3fd8146c8745e953a91b2a}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_aaad609733f3fd8146c8745e953a91b2a}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Baud\+Rate@{Baud\+Rate}}
+\index{Baud\+Rate@{Baud\+Rate}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Baud\+Rate}{BaudRate}}
+{\footnotesize\ttfamily uint32\+\_\+t Baud\+Rate}
+
+Configures the Smart\+Card communication baud rate. The baud rate register is computed using the following formula\+: Baud Rate Register = ((P\+C\+L\+Kx) / ((hsmartcard-\/$>$Init.\+Baud\+Rate))) \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a6a7dfaac82722a408c623a25c47edd03}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a6a7dfaac82722a408c623a25c47edd03}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Block\+Length@{Block\+Length}}
+\index{Block\+Length@{Block\+Length}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Block\+Length}{BlockLength}}
+{\footnotesize\ttfamily uint8\+\_\+t Block\+Length}
+
+Specifies the Smart\+Card Block Length in T=1 Reception mode. This parameter can be any value from 0x0 to 0x\+FF \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a37ab9d1c5ce9ffc1ad69e0ee74ae9fd6}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a37ab9d1c5ce9ffc1ad69e0ee74ae9fd6}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!C\+L\+K\+Last\+Bit@{C\+L\+K\+Last\+Bit}}
+\index{C\+L\+K\+Last\+Bit@{C\+L\+K\+Last\+Bit}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+L\+K\+Last\+Bit}{CLKLastBit}}
+{\footnotesize\ttfamily uint16\+\_\+t C\+L\+K\+Last\+Bit}
+
+Specifies whether the clock pulse corresponding to the last transmitted data bit (M\+SB) has to be output on the S\+C\+LK pin in synchronous mode. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___last___bit}{S\+M\+A\+R\+T\+C\+A\+RD Last Bit} \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a08eaff81789b11c5af048347c68d6eb4}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a08eaff81789b11c5af048347c68d6eb4}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!C\+L\+K\+Phase@{C\+L\+K\+Phase}}
+\index{C\+L\+K\+Phase@{C\+L\+K\+Phase}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+L\+K\+Phase}{CLKPhase}}
+{\footnotesize\ttfamily uint16\+\_\+t C\+L\+K\+Phase}
+
+Specifies the clock transition on which the bit capture is made. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___clock___phase}{S\+M\+A\+R\+T\+C\+A\+RD Clock Phase} \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a4ffca0b913184369dd2f21e2a9dcad75}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a4ffca0b913184369dd2f21e2a9dcad75}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!C\+L\+K\+Polarity@{C\+L\+K\+Polarity}}
+\index{C\+L\+K\+Polarity@{C\+L\+K\+Polarity}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+L\+K\+Polarity}{CLKPolarity}}
+{\footnotesize\ttfamily uint16\+\_\+t C\+L\+K\+Polarity}
+
+Specifies the steady state of the serial clock. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___clock___polarity}{S\+M\+A\+R\+T\+C\+A\+RD Clock Polarity} \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_af4d18b6718b05eba09981764ec1fc466}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_af4d18b6718b05eba09981764ec1fc466}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Guard\+Time@{Guard\+Time}}
+\index{Guard\+Time@{Guard\+Time}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Guard\+Time}{GuardTime}}
+{\footnotesize\ttfamily uint8\+\_\+t Guard\+Time}
+
+Specifies the Smart\+Card Guard Time applied after stop bits. \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_aabdbacb3ad2d5c4b4594fda17777f292}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_aabdbacb3ad2d5c4b4594fda17777f292}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Mode@{Mode}}
+\index{Mode@{Mode}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily uint16\+\_\+t Mode}
+
+Specifies whether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___mode}{S\+M\+A\+R\+T\+C\+A\+RD Transfer Mode} \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a4b40e866ffda1e4a75cd2c6b8fe3063e}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a4b40e866ffda1e4a75cd2c6b8fe3063e}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!N\+A\+C\+K\+Enable@{N\+A\+C\+K\+Enable}}
+\index{N\+A\+C\+K\+Enable@{N\+A\+C\+K\+Enable}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{N\+A\+C\+K\+Enable}{NACKEnable}}
+{\footnotesize\ttfamily uint16\+\_\+t N\+A\+C\+K\+Enable}
+
+Specifies whether the Smart\+Card N\+A\+CK transmission is enabled in case of parity error. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___n_a_c_k___enable}{S\+M\+A\+R\+T\+C\+A\+RD N\+A\+CK Enable} \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_aa9e1e2730d3764f6bcc994a41f30c28c}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_aa9e1e2730d3764f6bcc994a41f30c28c}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!One\+Bit\+Sampling@{One\+Bit\+Sampling}}
+\index{One\+Bit\+Sampling@{One\+Bit\+Sampling}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{One\+Bit\+Sampling}{OneBitSampling}}
+{\footnotesize\ttfamily uint16\+\_\+t One\+Bit\+Sampling}
+
+Specifies whether a single sample or three samples\textquotesingle{} majority vote is selected. Selecting the single sample method increases the receiver tolerance to clock deviations. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___one_bit___sampling}{S\+M\+A\+R\+T\+C\+A\+RD One Bit Sampling Method}. \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_ab9ca95a28592c8639b87be21d8ec2026}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_ab9ca95a28592c8639b87be21d8ec2026}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Parity@{Parity}}
+\index{Parity@{Parity}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Parity}{Parity}}
+{\footnotesize\ttfamily uint16\+\_\+t Parity}
+
+Specifies the parity mode. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___parity}{S\+M\+A\+R\+T\+C\+A\+RD Parity} \begin{DoxyNote}{Note}
+The parity is enabled by default (P\+CE is forced to 1). Since the Word\+Length is forced to 8 bits + parity, M is forced to 1 and the parity bit is the 9th bit. 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a5c9d1e760b400d2502c03b0391606f90}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a5c9d1e760b400d2502c03b0391606f90}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Prescaler@{Prescaler}}
+\index{Prescaler@{Prescaler}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Prescaler}{Prescaler}}
+{\footnotesize\ttfamily uint8\+\_\+t Prescaler}
+
+Specifies the Smart\+Card Prescaler. \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a8394ba239444e3e5fe1ada1c37cb1019}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a8394ba239444e3e5fe1ada1c37cb1019}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Stop\+Bits@{Stop\+Bits}}
+\index{Stop\+Bits@{Stop\+Bits}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Stop\+Bits}{StopBits}}
+{\footnotesize\ttfamily uint32\+\_\+t Stop\+Bits}
+
+Specifies the number of stop bits. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___stop___bits}{S\+M\+A\+R\+T\+C\+A\+RD Number of Stop Bits}. \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_a2f228719b83d2c8b7795c08f7f6e1d82}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_a2f228719b83d2c8b7795c08f7f6e1d82}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Time\+Out\+Enable@{Time\+Out\+Enable}}
+\index{Time\+Out\+Enable@{Time\+Out\+Enable}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Time\+Out\+Enable}{TimeOutEnable}}
+{\footnotesize\ttfamily uint32\+\_\+t Time\+Out\+Enable}
+
+Specifies whether the receiver timeout is enabled. This parameter can be a value of \hyperlink{group___s_m_a_r_t_c_a_r_d___timeout___enable}{S\+M\+A\+R\+T\+C\+A\+RD Timeout Enable} \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_addf8da5ef1eb6f989da4d85e43901c8b}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_addf8da5ef1eb6f989da4d85e43901c8b}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Time\+Out\+Value@{Time\+Out\+Value}}
+\index{Time\+Out\+Value@{Time\+Out\+Value}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Time\+Out\+Value}{TimeOutValue}}
+{\footnotesize\ttfamily uint32\+\_\+t Time\+Out\+Value}
+
+Specifies the receiver time out value in number of baud blocks\+: it is used to implement the Character Wait Time (C\+WT) and Block Wait Time (B\+WT). It is coded over 24 bits. \mbox{\Hypertarget{struct_s_m_a_r_t_c_a_r_d___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}\label{struct_s_m_a_r_t_c_a_r_d___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}!Word\+Length@{Word\+Length}}
+\index{Word\+Length@{Word\+Length}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Word\+Length}{WordLength}}
+{\footnotesize\ttfamily uint32\+\_\+t Word\+Length}
+
+Specifies the number of data bits transmitted or received in a frame. This parameter \hyperlink{group___s_m_a_r_t_c_a_r_d___word___length}{S\+M\+A\+R\+T\+C\+A\+RD Word Length} can only be set to 9 (8 data + 1 parity bits). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__smartcard_8h}{stm32f0xx\+\_\+hal\+\_\+smartcard.\+h}\end{DoxyCompactItemize}

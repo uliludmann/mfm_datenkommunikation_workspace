@@ -1,0 +1,110 @@
+\hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition}{}\section{S\+M\+A\+R\+T\+C\+A\+RD Interrupts Definition}
+\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition}\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gac56e07a71ab82a23930ad58e9a8dc806}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+PE}~((uint16\+\_\+t)0x0028\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga758561a96d28254dc3504cb5325dad1f}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+T\+XE}~((uint16\+\_\+t)0x0727\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga808ee7d7c209374af004e8bf1d2ca492}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+TC}~((uint16\+\_\+t)0x0626\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga75b6c6e283a114afa1130f6f1bc98da6}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+X\+NE}~((uint16\+\_\+t)0x0525\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga0b1a5f7e611a976c71168a5b9e3a1f0e}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+I\+D\+LE}~((uint16\+\_\+t)0x0424\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga751761f820948ee230b30a244ca85725}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+RR}~((uint16\+\_\+t)0x0060\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gafdbe4b4371bea3dc66f2cc5b9e2353e4}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+O\+RE}~((uint16\+\_\+t)0x0300\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga04cf820da6effba9f284833856ecd105}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+NE}~((uint16\+\_\+t)0x0200\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gab6e04d30ea8c0ff7c75e4d6cbe687cfa}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+FE}~((uint16\+\_\+t)0x0100\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga0f1d46faf880c6d17c9156c049206a7c}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+OB}~((uint16\+\_\+t)0x0\+C3\+B\+U)
+\item 
+\#define \hyperlink{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga9834b14912101cac858fd7b5de574f02}{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+TO}~((uint16\+\_\+t)0x0\+B3\+A\+U)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Elements values convention\+: 0000\+Z\+Z\+Z\+Z0\+X\+X\+Y\+Y\+Y\+Y\+Yb
+\begin{DoxyItemize}
+\item Y\+Y\+Y\+YY \+: Interrupt source position in the XX register (5bits)
+\item XX \+: Interrupt source register (2bits)
+\begin{DoxyItemize}
+\item 01\+: C\+R1 register
+\item 10\+: C\+R2 register
+\item 11\+: C\+R3 register
+\end{DoxyItemize}
+\item Z\+Z\+ZZ \+: Flag position in the I\+SR register(4bits) 
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga0f1d46faf880c6d17c9156c049206a7c}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga0f1d46faf880c6d17c9156c049206a7c}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+OB@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+OB}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+OB@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+OB}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+OB}{SMARTCARD\_IT\_EOB}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+OB~((uint16\+\_\+t)0x0\+C3\+B\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD end of block interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga751761f820948ee230b30a244ca85725}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga751761f820948ee230b30a244ca85725}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+RR@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+RR}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+RR@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+RR}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+RR}{SMARTCARD\_IT\_ERR}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+E\+RR~((uint16\+\_\+t)0x0060\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD error interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gab6e04d30ea8c0ff7c75e4d6cbe687cfa}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gab6e04d30ea8c0ff7c75e4d6cbe687cfa}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+FE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+FE}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+FE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+FE}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+FE}{SMARTCARD\_IT\_FE}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+FE~((uint16\+\_\+t)0x0100\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD frame error interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga0b1a5f7e611a976c71168a5b9e3a1f0e}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga0b1a5f7e611a976c71168a5b9e3a1f0e}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+I\+D\+LE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+I\+D\+LE}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+I\+D\+LE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+I\+D\+LE}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+I\+D\+LE}{SMARTCARD\_IT\_IDLE}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+I\+D\+LE~((uint16\+\_\+t)0x0424\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD idle line detection interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga04cf820da6effba9f284833856ecd105}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga04cf820da6effba9f284833856ecd105}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+NE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+NE}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+NE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+NE}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+NE}{SMARTCARD\_IT\_NE}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+NE~((uint16\+\_\+t)0x0200\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD noise error interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gafdbe4b4371bea3dc66f2cc5b9e2353e4}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gafdbe4b4371bea3dc66f2cc5b9e2353e4}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+O\+RE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+O\+RE}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+O\+RE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+O\+RE}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+O\+RE}{SMARTCARD\_IT\_ORE}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+O\+RE~((uint16\+\_\+t)0x0300\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD overrun error interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gac56e07a71ab82a23930ad58e9a8dc806}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_gac56e07a71ab82a23930ad58e9a8dc806}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+PE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+PE}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+PE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+PE}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+PE}{SMARTCARD\_IT\_PE}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+PE~((uint16\+\_\+t)0x0028\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD parity error interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga9834b14912101cac858fd7b5de574f02}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga9834b14912101cac858fd7b5de574f02}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+TO@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+TO}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+TO@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+TO}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+TO}{SMARTCARD\_IT\_RTO}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+TO~((uint16\+\_\+t)0x0\+B3\+A\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD receiver timeout interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga75b6c6e283a114afa1130f6f1bc98da6}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga75b6c6e283a114afa1130f6f1bc98da6}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+X\+NE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+X\+NE}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+X\+NE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+X\+NE}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+X\+NE}{SMARTCARD\_IT\_RXNE}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+R\+X\+NE~((uint16\+\_\+t)0x0525\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD read data register not empty interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga808ee7d7c209374af004e8bf1d2ca492}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga808ee7d7c209374af004e8bf1d2ca492}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+TC@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+TC}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+TC@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+TC}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+TC}{SMARTCARD\_IT\_TC}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+TC~((uint16\+\_\+t)0x0626\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD transmission complete interruption \mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga758561a96d28254dc3504cb5325dad1f}\label{group___s_m_a_r_t_c_a_r_d___interrupt__definition_ga758561a96d28254dc3504cb5325dad1f}} 
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}!S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+T\+XE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+T\+XE}}
+\index{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+T\+XE@{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+T\+XE}!S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition@{S\+M\+A\+R\+T\+C\+A\+R\+D Interrupts Definition}}
+\subsubsection{\texorpdfstring{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+T\+XE}{SMARTCARD\_IT\_TXE}}
+{\footnotesize\ttfamily \#define S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+I\+T\+\_\+\+T\+XE~((uint16\+\_\+t)0x0727\+U)}
+
+S\+M\+A\+R\+T\+C\+A\+RD transmit data register empty interruption 

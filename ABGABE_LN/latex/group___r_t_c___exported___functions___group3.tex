@@ -1,0 +1,54 @@
+\hypertarget{group___r_t_c___exported___functions___group3}{}\section{R\+TC Alarm functions}
+\label{group___r_t_c___exported___functions___group3}\index{R\+T\+C Alarm functions@{R\+T\+C Alarm functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_t_c___exported___functions___group3_gafd78015b93b16dcb9e41a4655a7ea972}\label{group___r_t_c___exported___functions___group3_gafd78015b93b16dcb9e41a4655a7ea972}} 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \hyperlink{struct_r_t_c___alarm_type_def}{R\+T\+C\+\_\+\+Alarm\+Type\+Def} $\ast$s\+Alarm, uint32\+\_\+t Format)
+\item 
+\mbox{\Hypertarget{group___r_t_c___exported___functions___group3_gab66a7fec05e9d9374de95d5f61e16c16}\label{group___r_t_c___exported___functions___group3_gab66a7fec05e9d9374de95d5f61e16c16}} 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+\_\+\+IT} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \hyperlink{struct_r_t_c___alarm_type_def}{R\+T\+C\+\_\+\+Alarm\+Type\+Def} $\ast$s\+Alarm, uint32\+\_\+t Format)
+\item 
+\mbox{\Hypertarget{group___r_t_c___exported___functions___group3_ga186d852f8aee8a4d0dfeec778be35482}\label{group___r_t_c___exported___functions___group3_ga186d852f8aee8a4d0dfeec778be35482}} 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Deactivate\+Alarm} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Alarm)
+\item 
+\mbox{\Hypertarget{group___r_t_c___exported___functions___group3_ga4786b652ffee2d59da2c65dd78646405}\label{group___r_t_c___exported___functions___group3_ga4786b652ffee2d59da2c65dd78646405}} 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \hyperlink{struct_r_t_c___alarm_type_def}{R\+T\+C\+\_\+\+Alarm\+Type\+Def} $\ast$s\+Alarm, uint32\+\_\+t Alarm, uint32\+\_\+t Format)
+\item 
+\mbox{\Hypertarget{group___r_t_c___exported___functions___group3_gac185f2ce34fe566418d0978a48e0c199}\label{group___r_t_c___exported___functions___group3_gac185f2ce34fe566418d0978a48e0c199}} 
+void {\bfseries H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+I\+R\+Q\+Handler} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+\mbox{\Hypertarget{group___r_t_c___exported___functions___group3_gaedc27fe412f45d999d74a0b98dce4d09}\label{group___r_t_c___exported___functions___group3_gaedc27fe412f45d999d74a0b98dce4d09}} 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Poll\+For\+Alarm\+A\+Event} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Timeout)
+\item 
+void \hyperlink{group___r_t_c___exported___functions___group3_ga11aeff83fd498cddbed3bcddcf017e0a}{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback} (\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\begin{DoxyCompactList}\small\item\em A\+L\+A\+RM A Event Callback in non blocking mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___r_t_c___exported___functions___group3_ga11aeff83fd498cddbed3bcddcf017e0a}\label{group___r_t_c___exported___functions___group3_ga11aeff83fd498cddbed3bcddcf017e0a}} 
+\index{R\+T\+C Alarm functions@{R\+T\+C Alarm functions}!H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback@{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback}}
+\index{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback@{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback}!R\+T\+C Alarm functions@{R\+T\+C Alarm functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback()}{HAL\_RTC\_AlarmAEventCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{struct_r_t_c___handle_type_def}{R\+T\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+
+
+A\+L\+A\+RM A Event Callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when R\+T\+C\+\_\+\+A\+L\+A\+RM interrupt took place, inside \hyperlink{group___h_a_l___time_base___r_t_c___alarm___template_gab86b9dd0d7b4eacfe38086e1fa4c2312}{R\+T\+C\+\_\+\+I\+R\+Q\+Handler()}. It makes a direct call to H\+A\+L\+\_\+\+Inc\+Tick() to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em hrtc} & \+: R\+TC handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,80 @@
+\hypertarget{stm32f0xx__ll__utils_8c}{}\section{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+ll\+\_\+utils.c File Reference}
+\label{stm32f0xx__ll__utils_8c}\index{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+ll\+\_\+utils.\+c@{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+ll\+\_\+utils.\+c}}
+
+
+U\+T\+I\+LS LL module driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+ll\+\_\+rcc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+ll\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+ll\+\_\+system.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stm32f0xx__ll__utils_8c_a631dea7b230e600555f979c62af1de21}\label{stm32f0xx__ll__utils_8c_a631dea7b230e600555f979c62af1de21}} 
+\#define {\bfseries assert\+\_\+param}(expr)~((void)0\+U)
+\item 
+\#define \hyperlink{group___u_t_i_l_s___l_l___private___constants_gad04670e4dd1d91d02b6ac32498d74d81}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+IN}~((uint32\+\_\+t)16000000\+U)
+\item 
+\#define \hyperlink{group___u_t_i_l_s___l_l___private___constants_ga3edafc754826e07341fecc87bf2c9a39}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+AX}~((uint32\+\_\+t)48000000\+U)
+\item 
+\#define \hyperlink{group___u_t_i_l_s___l_l___private___constants_ga7bc514193367ab0d598fe4c3bedd6066}{U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+IN}~((uint32\+\_\+t)4000000\+U)
+\item 
+\#define \hyperlink{group___u_t_i_l_s___l_l___private___constants_gae3407ef407af85f72bbba3db982a1826}{U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+AX}~((uint32\+\_\+t)32000000\+U)
+\item 
+\#define \hyperlink{group___u_t_i_l_s___l_l___private___constants_gaad8153359f1c7dc9ecb053eefdbd58d8}{U\+T\+I\+L\+S\+\_\+\+L\+A\+T\+E\+N\+C\+Y1\+\_\+\+F\+R\+EQ}~((uint32\+\_\+t)24000000\+U)
+\item 
+\#define {\bfseries I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+S\+Y\+S\+C\+L\+K\+\_\+\+D\+IV}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define {\bfseries I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+A\+P\+B1\+\_\+\+D\+IV}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define {\bfseries I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+M\+U\+L\+\_\+\+V\+A\+L\+UE}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define {\bfseries I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+V\+A\+L\+UE}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define {\bfseries I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)~((\hyperlink{group___u_t_i_l_s___l_l___private___constants_gad04670e4dd1d91d02b6ac32498d74d81}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+IN} $<$= (\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)) \&\& ((\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+) $<$= \hyperlink{group___u_t_i_l_s___l_l___private___constants_ga3edafc754826e07341fecc87bf2c9a39}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+AX}))
+\item 
+\#define {\bfseries I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+B\+Y\+P\+A\+SS}(\+\_\+\+\_\+\+S\+T\+A\+T\+E\+\_\+\+\_\+)
+\item 
+\#define {\bfseries I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}(\+\_\+\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+\_\+) $>$= \hyperlink{group___u_t_i_l_s___l_l___private___constants_ga7bc514193367ab0d598fe4c3bedd6066}{U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+IN}) \&\& ((\+\_\+\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+\_\+) $<$= \hyperlink{group___u_t_i_l_s___l_l___private___constants_gae3407ef407af85f72bbba3db982a1826}{U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+AX}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga485805c708e3aa0820454523782d4de4}{L\+L\+\_\+\+Init1ms\+Tick} (uint32\+\_\+t H\+C\+L\+K\+Frequency)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source to have 1ms time base. \end{DoxyCompactList}\item 
+void \hyperlink{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga7b7ca6d9cbec320c3e9f326b203807aa}{L\+L\+\_\+m\+Delay} (uint32\+\_\+t Delay)
+\begin{DoxyCompactList}\small\item\em This function provides accurate delay (in milliseconds) based on Sys\+Tick counter flag. \end{DoxyCompactList}\item 
+void \hyperlink{group___u_t_i_l_s___e_f___s_y_s_t_e_m_ga5af902d59c4c2d9dc5e189df0bc71ecd}{L\+L\+\_\+\+Set\+System\+Core\+Clock} (uint32\+\_\+t H\+C\+L\+K\+Frequency)
+\begin{DoxyCompactList}\small\item\em This function sets directly System\+Core\+Clock C\+M\+S\+IS variable. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___u_t_i_l_s___e_f___s_y_s_t_e_m_ga7ada5e4210f6ef80ef9f55bf9dd048c6}{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI} (\hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct, \hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em This function configures system clock with H\+SI as clock source of the P\+LL. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___u_t_i_l_s___e_f___s_y_s_t_e_m_gaf6c8553d03464d4646b63321b97d25e2}{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE} (uint32\+\_\+t H\+S\+E\+Frequency, uint32\+\_\+t H\+S\+E\+Bypass, \hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct, \hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em This function configures system clock with H\+SE as clock source of the P\+LL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+T\+I\+LS LL module driver. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/\+November-\/2016 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+H\+T(c) 2016 S\+T\+Microelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of S\+T\+Microelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 

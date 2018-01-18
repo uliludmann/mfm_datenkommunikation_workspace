@@ -1,0 +1,106 @@
+\hypertarget{group___i_r_d_a___interrupt__definition}{}\section{I\+R\+DA Interrupts Definition}
+\label{group___i_r_d_a___interrupt__definition}\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_ga1d2b4b601ece8f1ab0b2542412bb2533}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+PE}~((uint16\+\_\+t)0x0028\+U)
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_ga5e81e9fd3d52bafcf21281c10d2ca257}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+T\+XE}~((uint16\+\_\+t)0x0727\+U)
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_gadd3e4b796b67db171ca04c5297d4e667}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+TC}~((uint16\+\_\+t)0x0626\+U)
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_ga8f2de9c6c3cccfb2de0277ce10f23b13}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+R\+X\+NE}~((uint16\+\_\+t)0x0525\+U)
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_ga32dfb69029c5576d82feb59129d11000}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+I\+D\+LE}~((uint16\+\_\+t)0x0424\+U)
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_ga5649210cc5343a80483178849a11ac66}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+E\+RR}~((uint16\+\_\+t)0x0060\+U)
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_ga25949256f4317d4520cc5a9f3a18b794}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+O\+RE}~((uint16\+\_\+t)0x0300\+U)
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_gabc87f825339853122d5cabb5c6ca462b}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+NE}~((uint16\+\_\+t)0x0200\+U)
+\item 
+\#define \hyperlink{group___i_r_d_a___interrupt__definition_gac193cb9027e7425c022a160f172bf8b7}{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+FE}~((uint16\+\_\+t)0x0100\+U)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Elements values convention\+: 0000\+Z\+Z\+Z\+Z0\+X\+X\+Y\+Y\+Y\+Y\+Yb
+\begin{DoxyItemize}
+\item Y\+Y\+Y\+YY \+: Interrupt source position in the XX register (5bits)
+\item XX \+: Interrupt source register (2bits)
+\begin{DoxyItemize}
+\item 01\+: C\+R1 register
+\item 10\+: C\+R2 register
+\item 11\+: C\+R3 register
+\end{DoxyItemize}
+\item Z\+Z\+ZZ \+: Flag position in the I\+SR register(4bits) 
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_ga5649210cc5343a80483178849a11ac66}\label{group___i_r_d_a___interrupt__definition_ga5649210cc5343a80483178849a11ac66}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+E\+RR@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+E\+RR}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+E\+RR@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+E\+RR}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+E\+RR}{IRDA\_IT\_ERR}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+E\+RR~((uint16\+\_\+t)0x0060\+U)}
+
+Elements values convention\+: 000000000\+X\+X\+Y\+Y\+Y\+Y\+Yb
+\begin{DoxyItemize}
+\item Y\+Y\+Y\+YY \+: Interrupt source position in the XX register (5bits)
+\item XX \+: Interrupt source register (2bits)
+\begin{DoxyItemize}
+\item 01\+: C\+R1 register
+\item 10\+: C\+R2 register
+\item 11\+: C\+R3 register\+I\+R\+DA Error interruption 
+\end{DoxyItemize}
+\end{DoxyItemize}\mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_gac193cb9027e7425c022a160f172bf8b7}\label{group___i_r_d_a___interrupt__definition_gac193cb9027e7425c022a160f172bf8b7}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+FE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+FE}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+FE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+FE}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+FE}{IRDA\_IT\_FE}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+FE~((uint16\+\_\+t)0x0100\+U)}
+
+I\+R\+DA Frame error interruption \mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_ga32dfb69029c5576d82feb59129d11000}\label{group___i_r_d_a___interrupt__definition_ga32dfb69029c5576d82feb59129d11000}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+I\+D\+LE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+I\+D\+LE}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+I\+D\+LE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+I\+D\+LE}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+I\+D\+LE}{IRDA\_IT\_IDLE}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+I\+D\+LE~((uint16\+\_\+t)0x0424\+U)}
+
+I\+R\+DA Idle interruption \mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_gabc87f825339853122d5cabb5c6ca462b}\label{group___i_r_d_a___interrupt__definition_gabc87f825339853122d5cabb5c6ca462b}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+NE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+NE}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+NE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+NE}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+NE}{IRDA\_IT\_NE}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+NE~((uint16\+\_\+t)0x0200\+U)}
+
+I\+R\+DA Noise error interruption \mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_ga25949256f4317d4520cc5a9f3a18b794}\label{group___i_r_d_a___interrupt__definition_ga25949256f4317d4520cc5a9f3a18b794}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+O\+RE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+O\+RE}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+O\+RE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+O\+RE}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+O\+RE}{IRDA\_IT\_ORE}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+O\+RE~((uint16\+\_\+t)0x0300\+U)}
+
+Elements values convention\+: 0000\+Z\+Z\+Z\+Z00000000b
+\begin{DoxyItemize}
+\item Z\+Z\+ZZ \+: Flag position in the I\+SR register(4bits)I\+R\+DA Overrun error interruption 
+\end{DoxyItemize}\mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_ga1d2b4b601ece8f1ab0b2542412bb2533}\label{group___i_r_d_a___interrupt__definition_ga1d2b4b601ece8f1ab0b2542412bb2533}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+PE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+PE}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+PE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+PE}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+PE}{IRDA\_IT\_PE}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+PE~((uint16\+\_\+t)0x0028\+U)}
+
+I\+R\+DA Parity error interruption \mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_ga8f2de9c6c3cccfb2de0277ce10f23b13}\label{group___i_r_d_a___interrupt__definition_ga8f2de9c6c3cccfb2de0277ce10f23b13}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+R\+X\+NE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+R\+X\+NE}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+R\+X\+NE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+R\+X\+NE}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+R\+X\+NE}{IRDA\_IT\_RXNE}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+R\+X\+NE~((uint16\+\_\+t)0x0525\+U)}
+
+I\+R\+DA Read data register not empty interruption \mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_gadd3e4b796b67db171ca04c5297d4e667}\label{group___i_r_d_a___interrupt__definition_gadd3e4b796b67db171ca04c5297d4e667}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+TC@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+TC}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+TC@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+TC}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+TC}{IRDA\_IT\_TC}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+TC~((uint16\+\_\+t)0x0626\+U)}
+
+I\+R\+DA Transmission complete interruption \mbox{\Hypertarget{group___i_r_d_a___interrupt__definition_ga5e81e9fd3d52bafcf21281c10d2ca257}\label{group___i_r_d_a___interrupt__definition_ga5e81e9fd3d52bafcf21281c10d2ca257}} 
+\index{I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}!I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+T\+XE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+T\+XE}}
+\index{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+T\+XE@{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+T\+XE}!I\+R\+D\+A Interrupts Definition@{I\+R\+D\+A Interrupts Definition}}
+\subsubsection{\texorpdfstring{I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+T\+XE}{IRDA\_IT\_TXE}}
+{\footnotesize\ttfamily \#define I\+R\+D\+A\+\_\+\+I\+T\+\_\+\+T\+XE~((uint16\+\_\+t)0x0727\+U)}
+
+I\+R\+DA Transmit data register empty interruption 

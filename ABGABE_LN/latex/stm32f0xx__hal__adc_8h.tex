@@ -1,0 +1,333 @@
+\hypertarget{stm32f0xx__hal__adc_8h}{}\section{H\+A\+L\+\_\+\+Driver/\+Inc/stm32f0xx\+\_\+hal\+\_\+adc.h File Reference}
+\label{stm32f0xx__hal__adc_8h}\index{H\+A\+L\+\_\+\+Driver/\+Inc/stm32f0xx\+\_\+hal\+\_\+adc.\+h@{H\+A\+L\+\_\+\+Driver/\+Inc/stm32f0xx\+\_\+hal\+\_\+adc.\+h}}
+
+
+Header file containing functions prototypes of A\+DC H\+AL library.  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_a_d_c___init_type_def}{A\+D\+C\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em Structure definition of A\+DC initialization and regular group. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_a_d_c___channel_conf_type_def}{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em Structure definition of A\+DC channel for regular group. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def}{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em Structure definition of A\+DC analog watchdog. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em A\+DC handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga3f995b6dedd7366d0663f852511b9104}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET}~(0x00000000\+U)
+\begin{DoxyCompactList}\small\item\em H\+AL A\+DC state machine\+: A\+DC states definition (bitfields) \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___exported___types_gadccf2475d321f82bc5b18b4c0031794b}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+A\+DY}~(0x00000001\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga7055248355e179ee208d23bd2ce8ba69}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+S\+Y\+\_\+\+I\+N\+T\+E\+R\+N\+AL}~(0x00000002\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_gaaa31ad8c2f5337eac601534cb581dd15}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT}~(0x00000004\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga65b592627f1f9277f4b89bfc33a9e641}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+N\+AL}~(0x00000010\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga22d43a637ce63e13e33f5a0f1d4564fd}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+IG}~(0x00000020\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga5a1b4881d17e72aa0823797958221172}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+MA}~(0x00000040\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga516d4b4ebc261c241c69d96aae19acc3}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+G\+\_\+\+B\+U\+SY}~(0x00000100\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_gae2da191bffb720a553a1e39c10929711}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+G\+\_\+\+E\+OC}~(0x00000200\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga1f99cd51b6636d9f60bc68dacb01eb10}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+G\+\_\+\+O\+VR}~(0x00000400\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga28309e91f810694b13b5035f4ff698ce}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+G\+\_\+\+E\+O\+S\+MP}~(0x00000800\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga0044d240de80a70923b5c970d19ba24b}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+J\+\_\+\+B\+U\+SY}~(0x00001000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_gafcfffd11ab8b84d3b0a1ce50ccf821d5}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+J\+\_\+\+E\+OC}~(0x00002000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga0e29888675cbdd18e461fcd7711a2ad4}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+J\+\_\+\+J\+Q\+O\+VF}~(0x00004000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga39ce295171a5e608097017fda4cfd7d5}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+W\+D1}~(0x00010000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_gae6e9712c706ca7f2998dfb5cf776b48f}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+W\+D2}~(0x00020000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_gaa43e91fedb9ce41e36bc78ced4f3912e}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+W\+D3}~(0x00040000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___exported___types_ga24f867061abe6ee31227ec21289c69db}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+M\+U\+L\+T\+I\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE}~(0x00100000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___error___code_ga93b4576d46ee0f8c53b7d69f39778e38}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}~(0x00\+U)
+\item 
+\#define \hyperlink{group___a_d_c___error___code_ga7182f9ffc028f217db8724c7bc348f2f}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+N\+AL}~(0x01\+U)
+\item 
+\#define \hyperlink{group___a_d_c___error___code_ga30ce24556ebd3c0341558c700a3b9add}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+VR}~(0x02\+U)
+\item 
+\#define \hyperlink{group___a_d_c___error___code_gaea82628f53a8e30db3f3426922acf60f}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+MA}~(0x04\+U)
+\item 
+\#define \hyperlink{group___a_d_c___clock_prescaler_ga092c0277fd6db9b905d229c9f8dda8ab}{A\+D\+C\+\_\+\+C\+L\+O\+C\+K\+\_\+\+A\+S\+Y\+N\+C\+\_\+\+D\+I\+V1}~(0x00000000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___clock_prescaler_ga71571b183aa6d0ddbaeef8a1da11d00a}{A\+D\+C\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+P\+C\+L\+K\+\_\+\+D\+I\+V2}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_ga8603cb9fe211cb7cda8b29049dcde908}{A\+D\+C\+\_\+\+C\+F\+G\+R2\+\_\+\+C\+K\+M\+O\+D\+E\+\_\+0})
+\item 
+\#define \hyperlink{group___a_d_c___clock_prescaler_ga41b6a6d1cdf7806ec1e5790fc7fdc651}{A\+D\+C\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+P\+C\+L\+K\+\_\+\+D\+I\+V4}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_gadd8d90fdb7639030c0816d24f27cad4b}{A\+D\+C\+\_\+\+C\+F\+G\+R2\+\_\+\+C\+K\+M\+O\+D\+E\+\_\+1})
+\item 
+\#define \hyperlink{group___a_d_c___resolution_ga49c8408a1cdbf97bbf29234c3770fa74}{A\+D\+C\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+12B}~(0x00000000\+U)
+\item 
+\#define \hyperlink{group___a_d_c___resolution_ga91289e269eb3080d25301909c0f417e5}{A\+D\+C\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+10B}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_gaa09ba21ff2817d7633982748c7afe8ff}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+R\+E\+S\+\_\+0})
+\item 
+\#define \hyperlink{group___a_d_c___resolution_ga39925af93719877bdcc5664e4b95e69a}{A\+D\+C\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+8B}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_ga3540c4cec0b318ccc71dfa1317b4f659}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+R\+E\+S\+\_\+1})
+\item 
+\#define \hyperlink{group___a_d_c___resolution_ga24c5226e05db78b4065f2f187d497b04}{A\+D\+C\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+6B}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_ga9d5676c559f66561a86e6236ba803f98}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+R\+ES})
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+D\+A\+T\+A\+A\+L\+I\+G\+N\+\_\+\+R\+I\+G\+HT}~(0x00000000\+U)
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+D\+A\+T\+A\+A\+L\+I\+G\+N\+\_\+\+L\+E\+FT}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_ga48d91913f0fe8acb7a07de52505a1fa7}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+A\+L\+I\+GN})
+\item 
+\#define \hyperlink{group___a_d_c___scan__mode_ga68fdaadb92f6293fc63cdeefd0c93a4f}{A\+D\+C\+\_\+\+S\+C\+A\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+F\+O\+R\+W\+A\+RD}~(0x00000001\+U)
+\item 
+\#define \hyperlink{group___a_d_c___scan__mode_gae160445e1a005fba64d739c321ae61b9}{A\+D\+C\+\_\+\+S\+C\+A\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+B\+A\+C\+K\+W\+A\+RD}~(0x00000002\+U)
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+S\+C\+A\+N\+\_\+\+E\+N\+A\+B\+LE}~\hyperlink{group___a_d_c___scan__mode_ga68fdaadb92f6293fc63cdeefd0c93a4f}{A\+D\+C\+\_\+\+S\+C\+A\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+F\+O\+R\+W\+A\+RD}       /$\ast$ For compatibility with other S\+T\+M32 devices $\ast$/
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+C\+O\+N\+V\+E\+D\+G\+E\+\_\+\+N\+O\+NE}~(0x00000000\+U)
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+C\+O\+N\+V\+E\+D\+G\+E\+\_\+\+R\+I\+S\+I\+NG}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_ga7bd587c78699a50b76f5e33f867285c2}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+E\+N\+\_\+0})
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+C\+O\+N\+V\+E\+D\+G\+E\+\_\+\+F\+A\+L\+L\+I\+NG}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_gaf280aa8043f44ba5af39f6d9381169a1}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+E\+N\+\_\+1})
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+C\+O\+N\+V\+E\+D\+G\+E\+\_\+\+R\+I\+S\+I\+N\+G\+F\+A\+L\+L\+I\+NG}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_gafc48e957d935d791a767c763b9225832}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+EN})
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+E\+O\+C\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+C\+O\+NV}~((uint32\+\_\+t) \hyperlink{group___peripheral___registers___bits___definition_ga949681e78b978c1ccd680f11137a1550}{A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+E\+OC})
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+E\+O\+C\+\_\+\+S\+E\+Q\+\_\+\+C\+O\+NV}~((uint32\+\_\+t) \hyperlink{group___peripheral___registers___bits___definition_ga56b6edb70e1c04c5e03a935d2c945f50}{A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+E\+OS})
+\item 
+\#define \hyperlink{group___a_d_c___e_o_c_selection_ga0cbb4e6ee76ee1bef233212bf947d320}{A\+D\+C\+\_\+\+E\+O\+C\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+Q\+\_\+\+C\+O\+NV}~((uint32\+\_\+t)(\hyperlink{group___peripheral___registers___bits___definition_ga949681e78b978c1ccd680f11137a1550}{A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+E\+OC} $\vert$ \hyperlink{group___peripheral___registers___bits___definition_ga56b6edb70e1c04c5e03a935d2c945f50}{A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+E\+OS}))
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+O\+V\+R\+\_\+\+D\+A\+T\+A\+\_\+\+O\+V\+E\+R\+W\+R\+I\+T\+T\+EN}~(0x00000000\+U)
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+O\+V\+R\+\_\+\+D\+A\+T\+A\+\_\+\+P\+R\+E\+S\+E\+R\+V\+ED}~(0x00000001\+U)
+\item 
+\#define \hyperlink{group___a_d_c__rank_ga25907c7d81b72261eff9adc6e9726690}{A\+D\+C\+\_\+\+R\+A\+N\+K\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+U\+M\+B\+ER}~(0x00001000\+U)
+\item 
+\#define \hyperlink{group___a_d_c__rank_gace464dc0c5d9a401d2842f7f1629d5cd}{A\+D\+C\+\_\+\+R\+A\+N\+K\+\_\+\+N\+O\+NE}~(0x00001001\+U)
+\item 
+\#define \hyperlink{group___a_d_c__sampling__times_ga01ae8ddd4c3f0a7cace13273c1e67fdd}{A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+1\+C\+Y\+C\+L\+E\+\_\+5}~(0x10000000\+U)
+\item 
+\#define \hyperlink{group___a_d_c__sampling__times_gac0aff040aa3a0e63147fcdd8ab805af1}{A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+7\+C\+Y\+C\+L\+E\+S\+\_\+5}~((uint32\+\_\+t) \hyperlink{group___peripheral___registers___bits___definition_ga694f8b1e1e5410a1a60484f4857b8b2d}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+0})
+\item 
+\#define \hyperlink{group___a_d_c__sampling__times_ga96ddc2c8f5aec56ef5b6dc7cf908842a}{A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+13\+C\+Y\+C\+L\+E\+S\+\_\+5}~((uint32\+\_\+t) \hyperlink{group___peripheral___registers___bits___definition_gab57bf329f4bf7c460f3666ea37dc7221}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+1})
+\item 
+\#define \hyperlink{group___a_d_c__sampling__times_ga2fb67421195d0c9f1edb705dcfcd754f}{A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+28\+C\+Y\+C\+L\+E\+S\+\_\+5}~((uint32\+\_\+t)(\hyperlink{group___peripheral___registers___bits___definition_gab57bf329f4bf7c460f3666ea37dc7221}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+1} $\vert$ \hyperlink{group___peripheral___registers___bits___definition_ga694f8b1e1e5410a1a60484f4857b8b2d}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+0}))
+\item 
+\#define \hyperlink{group___a_d_c__sampling__times_ga190357836133681e150ddc7242151661}{A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+41\+C\+Y\+C\+L\+E\+S\+\_\+5}~((uint32\+\_\+t) \hyperlink{group___peripheral___registers___bits___definition_ga046d9b1e209acb9e7152db85c8b7bcce}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+2})
+\item 
+\#define \hyperlink{group___a_d_c__sampling__times_ga4ea55e3a10a04630820387755f4f448a}{A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+55\+C\+Y\+C\+L\+E\+S\+\_\+5}~((uint32\+\_\+t)(\hyperlink{group___peripheral___registers___bits___definition_ga046d9b1e209acb9e7152db85c8b7bcce}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+2} $\vert$ \hyperlink{group___peripheral___registers___bits___definition_ga694f8b1e1e5410a1a60484f4857b8b2d}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+0}))
+\item 
+\#define \hyperlink{group___a_d_c__sampling__times_ga15c48307b1f2aed2a1c3c6338c13b070}{A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+71\+C\+Y\+C\+L\+E\+S\+\_\+5}~((uint32\+\_\+t)(\hyperlink{group___peripheral___registers___bits___definition_ga046d9b1e209acb9e7152db85c8b7bcce}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+2} $\vert$ \hyperlink{group___peripheral___registers___bits___definition_gab57bf329f4bf7c460f3666ea37dc7221}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+M\+P\+\_\+1}))
+\item 
+\#define \hyperlink{group___a_d_c__sampling__times_ga7172f3d957445df5b98648b25ccc64d4}{A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+239\+C\+Y\+C\+L\+E\+S\+\_\+5}~((uint32\+\_\+t) \hyperlink{group___peripheral___registers___bits___definition_gaceac2124a2a41388f9f5e5c2c310a27e}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+MP})
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+A\+N\+A\+L\+O\+G\+W\+A\+T\+C\+H\+D\+O\+G\+\_\+\+N\+O\+NE}~( 0x00000000\+U)
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+A\+N\+A\+L\+O\+G\+W\+A\+T\+C\+H\+D\+O\+G\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+EG}~((uint32\+\_\+t)(A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+A\+W\+D\+S\+GL $\vert$ A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+A\+W\+D\+EN))
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+A\+N\+A\+L\+O\+G\+W\+A\+T\+C\+H\+D\+O\+G\+\_\+\+A\+L\+L\+\_\+\+R\+EG}~((uint32\+\_\+t) A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+A\+W\+D\+EN)
+\item 
+\#define \hyperlink{group___a_d_c___event__type_ga2d1d545ea1bfecba7a7081be6ef2cb93}{A\+D\+C\+\_\+\+A\+W\+D\+\_\+\+E\+V\+E\+NT}~((uint32\+\_\+t)\hyperlink{group___a_d_c__flags__definition_gadb75a4b430fb84950232b7a8f3a6a877}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+A\+WD})
+\item 
+\#define \hyperlink{group___a_d_c___event__type_gae1ef5aaecb2d24cac50a59f1bc311221}{A\+D\+C\+\_\+\+O\+V\+R\+\_\+\+E\+V\+E\+NT}~((uint32\+\_\+t)\hyperlink{group___a_d_c__flags__definition_ga6e8f399d2af342bd18b9f5803cb986e7}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+O\+VR})
+\item 
+\#define \hyperlink{group___a_d_c__interrupts__definition_ga2f5c7f9900c24250a0c6ccaa7cbca946}{A\+D\+C\+\_\+\+I\+T\+\_\+\+A\+WD}~A\+D\+C\+\_\+\+I\+E\+R\+\_\+\+A\+W\+D\+IE
+\item 
+\#define \hyperlink{group___a_d_c__interrupts__definition_gac3852b7789860e0ea79b82115ab877a0}{A\+D\+C\+\_\+\+I\+T\+\_\+\+O\+VR}~\hyperlink{group___peripheral___registers___bits___definition_ga150e154d48f6069e324aa642ec30f107}{A\+D\+C\+\_\+\+I\+E\+R\+\_\+\+O\+V\+R\+IE}
+\item 
+\#define \hyperlink{group___a_d_c__interrupts__definition_gaefebf69110054387451593d4d52ce197}{A\+D\+C\+\_\+\+I\+T\+\_\+\+E\+OS}~A\+D\+C\+\_\+\+I\+E\+R\+\_\+\+E\+O\+S\+E\+Q\+IE
+\item 
+\#define \hyperlink{group___a_d_c__interrupts__definition_ga0ad335d835f54415194d448019569e00}{A\+D\+C\+\_\+\+I\+T\+\_\+\+E\+OC}~\hyperlink{group___peripheral___registers___bits___definition_ga367429f3a07068668ffefd84c7c60985}{A\+D\+C\+\_\+\+I\+E\+R\+\_\+\+E\+O\+C\+IE}
+\item 
+\#define \hyperlink{group___a_d_c__interrupts__definition_ga955e4c06483055cade95fc849ff3af29}{A\+D\+C\+\_\+\+I\+T\+\_\+\+E\+O\+S\+MP}~\hyperlink{group___peripheral___registers___bits___definition_gafe38c621f1e8239fefbb8585911d2138}{A\+D\+C\+\_\+\+I\+E\+R\+\_\+\+E\+O\+S\+M\+P\+IE}
+\item 
+\#define \hyperlink{group___a_d_c__interrupts__definition_gad46aa18aeb55285ecda24956c9811936}{A\+D\+C\+\_\+\+I\+T\+\_\+\+R\+DY}~\hyperlink{group___peripheral___registers___bits___definition_ga55d9fb25dbbbaa72791a52fedfecca7b}{A\+D\+C\+\_\+\+I\+E\+R\+\_\+\+A\+D\+R\+D\+Y\+IE}
+\item 
+\#define \hyperlink{group___a_d_c__flags__definition_gadb75a4b430fb84950232b7a8f3a6a877}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+A\+WD}~A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+A\+WD
+\item 
+\#define \hyperlink{group___a_d_c__flags__definition_ga6e8f399d2af342bd18b9f5803cb986e7}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+O\+VR}~\hyperlink{group___peripheral___registers___bits___definition_ga66f58970a53712eed20aaac04c6a6f61}{A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+O\+VR}
+\item 
+\#define \hyperlink{group___a_d_c__flags__definition_gac3acbfd08e72d33bc520dac5998f7e52}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+OS}~A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+E\+O\+S\+EQ
+\item 
+\#define \hyperlink{group___a_d_c__flags__definition_gaf2c6fdf7e9ab63b778149e5fb56413d4}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+OC}~\hyperlink{group___peripheral___registers___bits___definition_ga949681e78b978c1ccd680f11137a1550}{A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+E\+OC}
+\item 
+\#define \hyperlink{group___a_d_c__flags__definition_gacf79acb4682b5c104fe38f9dff035656}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+O\+S\+MP}~\hyperlink{group___peripheral___registers___bits___definition_ga0e8d87957a25e701a13575d635628d11}{A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+E\+O\+S\+MP}
+\item 
+\#define \hyperlink{group___a_d_c__flags__definition_gaf1a4a140115121cc0ec1f821d2c8c199}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+R\+DY}~\hyperlink{group___peripheral___registers___bits___definition_ga06cdc9a3bf111d8c50ecba178daa90d8}{A\+D\+C\+\_\+\+I\+S\+R\+\_\+\+A\+D\+R\+DY}
+\item 
+\#define {\bfseries A\+D\+C1\+\_\+2\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+\_\+\+T1\+\_\+\+T\+R\+GO}~(0x00000000\+U)
+\item 
+\#define {\bfseries A\+D\+C1\+\_\+2\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+\_\+\+T1\+\_\+\+C\+C4}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_ga6b23e26a7ff780ae4a913f9eb3c4fafb}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+S\+E\+L\+\_\+0})
+\item 
+\#define {\bfseries A\+D\+C1\+\_\+2\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+\_\+\+T2\+\_\+\+T\+R\+GO}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_gabd08752ec8996d12b0dbf1b555f4a67f}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+S\+E\+L\+\_\+1})
+\item 
+\#define {\bfseries A\+D\+C1\+\_\+2\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+\_\+\+T3\+\_\+\+T\+R\+GO}~((uint32\+\_\+t)(\hyperlink{group___peripheral___registers___bits___definition_gabd08752ec8996d12b0dbf1b555f4a67f}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+S\+E\+L\+\_\+1} $\vert$ \hyperlink{group___peripheral___registers___bits___definition_ga6b23e26a7ff780ae4a913f9eb3c4fafb}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+S\+E\+L\+\_\+0}))
+\item 
+\#define {\bfseries A\+D\+C1\+\_\+2\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+T\+R\+I\+G\+\_\+\+T15\+\_\+\+T\+R\+GO}~((uint32\+\_\+t)\hyperlink{group___peripheral___registers___bits___definition_gaf417f2e3a6ca8d741d074fc2734e3b9d}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+S\+E\+L\+\_\+2})
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+S\+T\+C\+O\+N\+V\+\_\+\+A\+LL}~(\hyperlink{group___a_d_c__flags__definition_gadb75a4b430fb84950232b7a8f3a6a877}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+A\+WD} $\vert$ \hyperlink{group___a_d_c__flags__definition_ga6e8f399d2af342bd18b9f5803cb986e7}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+O\+VR} $\vert$ \hyperlink{group___a_d_c__flags__definition_gac3acbfd08e72d33bc520dac5998f7e52}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+OS} $\vert$ \hyperlink{group___a_d_c__flags__definition_gaf2c6fdf7e9ab63b778149e5fb56413d4}{A\+D\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+OC})
+\item 
+\#define \hyperlink{group___a_d_c___exported___macros_gaadf16862da7593def189559423c287f4}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+E\+N\+A\+B\+LE}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= \hyperlink{group___peripheral___registers___bits___definition_ga26fe09dfd6969dd95591942e80cc3d2b}{A\+D\+C\+\_\+\+C\+R\+\_\+\+A\+D\+EN})
+\begin{DoxyCompactList}\small\item\em Enable the A\+DC peripheral. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___exported___macros_ga8afd5963c41c0a30c5cf1fec5c5710b3}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+D\+I\+S\+A\+B\+LE}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Disable the A\+DC peripheral. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___exported___macros_ga650073de508d335d0a1c7bf9b4d07afe}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+IT}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+ER) $\vert$= (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the A\+DC end of conversion interrupt. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___exported___macros_gadcec48b44a2133effd20f41ab227edb9}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+IT}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+ER) \&= $\sim$(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the A\+DC end of conversion interrupt. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___exported___macros_gaf29cd943cb451e4ed1f07bd7d4854fb0}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+G\+E\+T\+\_\+\+I\+T\+\_\+\+S\+O\+U\+R\+CE}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+ER \& (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Checks if the specified A\+DC interrupt source is enabled or disabled. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___exported___macros_gaff951862689bb92173f803577cf2d447}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+G\+E\+T\+\_\+\+F\+L\+AG}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+SR) \& (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Get the selected A\+DC\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___exported___macros_gafe44e1e66141bca3665bb82981a81a17}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+L\+AG}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+SR) = (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the A\+DC\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___exported___macros_gacb290bae25b972942021331122a3600f}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = \hyperlink{group___a_d_c___exported___types_ga3f995b6dedd7366d0663f852511b9104}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET})
+\begin{DoxyCompactList}\small\item\em Reset A\+DC handle state. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga659ecd034552504fc163da87bad15ddc}{A\+D\+C\+\_\+\+E\+N\+A\+B\+L\+I\+N\+G\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Verification of hardware constraints before A\+DC can be enabled. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga52dac43dfd7bb8d95df16b30d7567c3f}{A\+D\+C\+\_\+\+D\+I\+S\+A\+B\+L\+I\+N\+G\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Verification of hardware constraints before A\+DC can be disabled. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gafe3a7a04ff078c62ae98b19403f696c7}{A\+D\+C\+\_\+\+I\+S\+\_\+\+E\+N\+A\+B\+LE}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Verification of A\+DC state\+: enabled or disabled. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga2ccb82ecf85d6c6d1ff2cdf9b6a82d2b}{A\+D\+C\+\_\+\+I\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+\+R\+E\+G\+U\+L\+AR}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+F\+G\+R1 \& \hyperlink{group___peripheral___registers___bits___definition_gafc48e957d935d791a767c763b9225832}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+E\+X\+T\+EN}) == R\+E\+S\+ET)
+\begin{DoxyCompactList}\small\item\em Test if conversion trigger of regular group is software start or external trigger. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga5df8ea820271c854b85617162b08c6d3}{A\+D\+C\+\_\+\+I\+S\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+O\+N\+G\+O\+I\+N\+G\+\_\+\+R\+E\+G\+U\+L\+AR}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check if no conversion on going on regular group. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gae2da95074db4dd0418c1dd1f13ad7970}{A\+D\+C\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+F\+G\+R1) \& \hyperlink{group___peripheral___registers___bits___definition_ga9d5676c559f66561a86e6236ba803f98}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+R\+ES})
+\begin{DoxyCompactList}\small\item\em Returns resolution bits in C\+F\+G\+R1 register\+: R\+ES\mbox{[}1\+:0\mbox{]}. Returned value is among parameters to \hyperlink{group___a_d_c___resolution}{A\+DC Resolution}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga2fcb55eda590a2037a99af8d594460b7}{A\+D\+C\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+I\+N\+G\+T\+I\+ME}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$S\+M\+PR) \& \hyperlink{group___peripheral___registers___bits___definition_gaceac2124a2a41388f9f5e5c2c310a27e}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+MP})
+\begin{DoxyCompactList}\small\item\em Returns A\+DC sample time bits in S\+M\+PR register\+: S\+MP\mbox{[}2\+:0\mbox{]}. Returned value is among parameters to \hyperlink{group___a_d_c___resolution}{A\+DC Resolution}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gaaf93e91b164d4a220aae475eff82665f}{A\+D\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+L\+R\+\_\+\+S\+ET}~M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG
+\begin{DoxyCompactList}\small\item\em Simultaneously clears and sets specific bits of the handle State. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gac7ab87a3ab932eed1b3ac5faad4e3aa9}{A\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+E\+R\+R\+O\+R\+C\+O\+DE}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Error\+Code = \hyperlink{group___a_d_c___error___code_ga93b4576d46ee0f8c53b7d69f39778e38}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE})
+\begin{DoxyCompactList}\small\item\em Clear A\+DC error code (set it to error code\+: \char`\"{}no error\char`\"{}) \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga5d9a732e25a3c6fda616bd7095d0bcb6}{A\+D\+C\+\_\+\+C\+H\+S\+E\+L\+R\+\_\+\+C\+H\+A\+N\+N\+EL}(\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+)~( 1\+U $<$$<$ (\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+))
+\begin{DoxyCompactList}\small\item\em Configure the channel number into channel selection register. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga84692d85aac11c581274b17e74cabc08}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+ET}(\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+)~((\+\_\+\+S\+A\+M\+P\+L\+E\+T\+I\+M\+E\+\_\+) \& (\hyperlink{group___peripheral___registers___bits___definition_gaceac2124a2a41388f9f5e5c2c310a27e}{A\+D\+C\+\_\+\+S\+M\+P\+R\+\_\+\+S\+MP}))
+\begin{DoxyCompactList}\small\item\em Set the A\+DC\textquotesingle{}s sample time. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gaf14fd1def24bda245430287f2c7dbab7}{A\+D\+C\+\_\+\+C\+F\+G\+R\+\_\+\+A\+W\+D\+CH}(\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+)~((\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+) $<$$<$ 26\+U)
+\begin{DoxyCompactList}\small\item\em Set the Analog Watchdog 1 channel. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gaa0ec9cb0b5d97ba2d8bfd4fdf1f2a398}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+R\+E\+G\+\_\+\+D\+I\+S\+C\+C\+O\+N\+T\+I\+N\+U\+O\+US}(\+\_\+\+R\+E\+G\+\_\+\+D\+I\+S\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+M\+O\+D\+E\+\_\+)~((\+\_\+\+R\+E\+G\+\_\+\+D\+I\+S\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+M\+O\+D\+E\+\_\+) $<$$<$ 16\+U)
+\begin{DoxyCompactList}\small\item\em Enable A\+DC discontinuous conversion mode for regular group. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga36993a7b32f5ec4f4163856f7ba8e8f0}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+A\+U\+T\+O\+O\+FF}(\+\_\+\+A\+U\+T\+O\+O\+F\+F\+\_\+)~((\+\_\+\+A\+U\+T\+O\+O\+F\+F\+\_\+) $<$$<$ 15\+U)
+\begin{DoxyCompactList}\small\item\em Enable the A\+DC auto off mode. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga36fe17d7bad2f7445f201d318779051d}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+A\+U\+T\+O\+W\+A\+IT}(\+\_\+\+A\+U\+T\+O\+W\+A\+I\+T\+\_\+)~((\+\_\+\+A\+U\+T\+O\+W\+A\+I\+T\+\_\+) $<$$<$ 14\+U)
+\begin{DoxyCompactList}\small\item\em Enable the A\+DC auto delay mode. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gaa6d2333361167e3a510b2dd50f824a80}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US}(\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+M\+O\+D\+E\+\_\+)~((\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+M\+O\+D\+E\+\_\+) $<$$<$ 13\+U)
+\begin{DoxyCompactList}\small\item\em Enable A\+DC continuous conversion mode. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga0e446f9c5ff062c2f138636c1ea639a1}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+O\+V\+E\+R\+R\+UN}(\+\_\+\+O\+V\+E\+R\+R\+U\+N\+\_\+\+M\+O\+D\+E\+\_\+)
+\begin{DoxyCompactList}\small\item\em Enable A\+DC overrun mode. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gaf160864141810a124f506714b47446ca}{A\+D\+C\+\_\+\+S\+C\+A\+N\+D\+IR}(\+\_\+\+S\+C\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+)
+\begin{DoxyCompactList}\small\item\em Enable A\+DC scan mode to convert multiple ranks with sequencer. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga06cee7979b56d2ad07f024f394522097}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+D\+M\+A\+C\+O\+N\+T\+R\+EQ}(\+\_\+\+D\+M\+A\+C\+O\+N\+T\+R\+E\+Q\+\_\+\+M\+O\+D\+E\+\_\+)~((\+\_\+\+D\+M\+A\+C\+O\+N\+T\+R\+E\+Q\+\_\+\+M\+O\+D\+E\+\_\+) $<$$<$ 1\+U)
+\begin{DoxyCompactList}\small\item\em Enable the A\+DC D\+MA continuous request. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_gaa93c21f107b7c38b524cd72b12ec18ac}{A\+D\+C\+\_\+\+T\+R\+X\+\_\+\+H\+I\+G\+H\+T\+H\+R\+E\+S\+H\+O\+LD}(\+\_\+\+Threshold\+\_\+)~((\+\_\+\+Threshold\+\_\+) $<$$<$ 16\+U)
+\begin{DoxyCompactList}\small\item\em Configure the analog watchdog high threshold into register TR. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___a_d_c___private___macros_ga6964dd348041232d34696fd535ad4450}{A\+D\+C\+\_\+\+A\+W\+D1\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+S\+H\+I\+F\+T\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+Threshold\+\_\+)~((\+\_\+\+Threshold\+\_\+) $<$$<$ ((((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+F\+G\+R1 \& \hyperlink{group___peripheral___registers___bits___definition_ga9d5676c559f66561a86e6236ba803f98}{A\+D\+C\+\_\+\+C\+F\+G\+R1\+\_\+\+R\+ES}) $>$$>$ 3\+U)$\ast$2))
+\begin{DoxyCompactList}\small\item\em Shift the A\+WD threshold in function of the selected A\+DC resolution. Thresholds have to be left-\/aligned on bit 11, the L\+SB (right bits) are set to 0. If resolution 12 bits, no shift. If resolution 10 bits, shift of 2 ranks on the left. If resolution 8 bits, shift of 4 ranks on the left. If resolution 6 bits, shift of 6 ranks on the left. therefore, shift = (12 -\/ resolution) = 12 -\/ (12-\/ (((R\+ES\mbox{[}1\+:0\mbox{]}) $>$$>$ 3)$\ast$2)) \end{DoxyCompactList}\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+C\+L\+O\+C\+K\+P\+R\+E\+S\+C\+A\+L\+ER}(A\+D\+C\+\_\+\+C\+L\+O\+CK)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}(R\+E\+S\+O\+L\+U\+T\+I\+ON)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+A\+L\+I\+GN}(A\+L\+I\+GN)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+S\+C\+A\+N\+\_\+\+M\+O\+DE}(S\+C\+A\+N\+\_\+\+M\+O\+DE)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+X\+T\+T\+R\+I\+G\+\_\+\+E\+D\+GE}(E\+D\+GE)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+O\+C\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}(E\+O\+C\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+O\+V\+E\+R\+R\+UN}(O\+VR)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+R\+A\+NK}(W\+A\+T\+C\+H\+D\+OG)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+T\+I\+ME}(T\+I\+ME)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+W\+A\+T\+C\+H\+D\+O\+G\+\_\+\+M\+O\+DE}(W\+A\+T\+C\+H\+D\+OG)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+PE}(E\+V\+E\+NT)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+R\+A\+N\+GE}(R\+E\+S\+O\+L\+U\+T\+I\+ON,  A\+D\+C\+\_\+\+V\+A\+L\+UE)
+\item 
+\#define {\bfseries I\+S\+\_\+\+A\+D\+C\+\_\+\+R\+E\+G\+U\+L\+A\+R\+\_\+\+R\+A\+NK}(R\+A\+NK)~(((R\+A\+NK) $>$= (1\+U)) \&\& ((\+R\+A\+N\+K) $<$= (16\+U)))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Init} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+De\+Init} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+De\+Init} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Start} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Stop} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Poll\+For\+Conversion} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc, uint32\+\_\+t Timeout)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Poll\+For\+Event} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc, uint32\+\_\+t Event\+Type, uint32\+\_\+t Timeout)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Start\+\_\+\+IT} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Stop\+\_\+\+IT} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Start\+\_\+\+D\+MA} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t Length)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Stop\+\_\+\+D\+MA} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+uint32\+\_\+t {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Get\+Value} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Conv\+Cplt\+Callback} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Conv\+Half\+Cplt\+Callback} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Level\+Out\+Of\+Window\+Callback} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Error\+Callback} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Config\+Channel} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc, \hyperlink{struct_a_d_c___channel_conf_type_def}{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def} $\ast$s\+Config)
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Config} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc, \hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def}{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def} $\ast$Analog\+W\+D\+G\+Config)
+\item 
+uint32\+\_\+t {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Get\+State} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+uint32\+\_\+t {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Get\+Error} (\hyperlink{struct_a_d_c___handle_type_def}{A\+D\+C\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file containing functions prototypes of A\+DC H\+AL library. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/\+November-\/2016 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+H\+T(c) 2016 S\+T\+Microelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of S\+T\+Microelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 

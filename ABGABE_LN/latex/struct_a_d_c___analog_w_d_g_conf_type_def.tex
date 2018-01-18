@@ -1,0 +1,70 @@
+\hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def}{}\section{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def Struct Reference}
+\label{struct_a_d_c___analog_w_d_g_conf_type_def}\index{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}}
+
+
+Structure definition of A\+DC analog watchdog.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+adc.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a13924e920be2454c955a2139e2c3eb1a}{Watchdog\+Mode}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_ae82bf9242a014164f9f6907f29782c44}{Channel}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_adb9d0be5088ff9f6e0b5e4bbb9088904}{I\+T\+Mode}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a5c3a76d9a8ac84c537e7df10b0315e5a}{High\+Threshold}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a018c772cad96f1f0493ec0019ecc08f9}{Low\+Threshold}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure definition of A\+DC analog watchdog. 
+
+\begin{DoxyNote}{Note}
+The setting of these parameters with function H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Config() is conditioned to A\+DC state. A\+DC state can be either\+: A\+DC disabled or A\+DC enabled without conversion on going on regular group. 
+\end{DoxyNote}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_ae82bf9242a014164f9f6907f29782c44}\label{struct_a_d_c___analog_w_d_g_conf_type_def_ae82bf9242a014164f9f6907f29782c44}} 
+\index{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}!Channel@{Channel}}
+\index{Channel@{Channel}!A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}}
+\subsubsection{\texorpdfstring{Channel}{Channel}}
+{\footnotesize\ttfamily uint32\+\_\+t Channel}
+
+Selects which A\+DC channel to monitor by analog watchdog. This parameter has an effect only if parameter \textquotesingle{}Watchdog\+Mode\textquotesingle{} is configured on single channel. Only 1 channel can be monitored. This parameter can be a value of \hyperlink{group___a_d_c__channels}{A\+DC channels}. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a5c3a76d9a8ac84c537e7df10b0315e5a}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a5c3a76d9a8ac84c537e7df10b0315e5a}} 
+\index{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}!High\+Threshold@{High\+Threshold}}
+\index{High\+Threshold@{High\+Threshold}!A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}}
+\subsubsection{\texorpdfstring{High\+Threshold}{HighThreshold}}
+{\footnotesize\ttfamily uint32\+\_\+t High\+Threshold}
+
+Configures the A\+DC analog watchdog High threshold value. Depending of A\+DC resolution selected (12, 10, 8 or 6 bits), this parameter must be a number between Min\+\_\+\+Data = 0x000 and Max\+\_\+\+Data = 0x\+F\+FF, 0x3\+FF, 0x\+FF or 0x3F respectively. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_adb9d0be5088ff9f6e0b5e4bbb9088904}\label{struct_a_d_c___analog_w_d_g_conf_type_def_adb9d0be5088ff9f6e0b5e4bbb9088904}} 
+\index{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}!I\+T\+Mode@{I\+T\+Mode}}
+\index{I\+T\+Mode@{I\+T\+Mode}!A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}}
+\subsubsection{\texorpdfstring{I\+T\+Mode}{ITMode}}
+{\footnotesize\ttfamily uint32\+\_\+t I\+T\+Mode}
+
+Specifies whether the analog watchdog is configured in interrupt or polling mode. This parameter can be set to E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a018c772cad96f1f0493ec0019ecc08f9}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a018c772cad96f1f0493ec0019ecc08f9}} 
+\index{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}!Low\+Threshold@{Low\+Threshold}}
+\index{Low\+Threshold@{Low\+Threshold}!A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}}
+\subsubsection{\texorpdfstring{Low\+Threshold}{LowThreshold}}
+{\footnotesize\ttfamily uint32\+\_\+t Low\+Threshold}
+
+Configures the A\+DC analog watchdog High threshold value. Depending of A\+DC resolution selected (12, 10, 8 or 6 bits), this parameter must be a number between Min\+\_\+\+Data = 0x000 and Max\+\_\+\+Data = 0x\+F\+FF, 0x3\+FF, 0x\+FF or 0x3F respectively. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a13924e920be2454c955a2139e2c3eb1a}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a13924e920be2454c955a2139e2c3eb1a}} 
+\index{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}!Watchdog\+Mode@{Watchdog\+Mode}}
+\index{Watchdog\+Mode@{Watchdog\+Mode}!A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def}}
+\subsubsection{\texorpdfstring{Watchdog\+Mode}{WatchdogMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Watchdog\+Mode}
+
+Configures the A\+DC analog watchdog mode\+: single/all/none channels. This parameter can be a value of \hyperlink{group___a_d_c__analog__watchdog__mode}{A\+DC analog watchdog mode}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__adc_8h}{stm32f0xx\+\_\+hal\+\_\+adc.\+h}\end{DoxyCompactItemize}

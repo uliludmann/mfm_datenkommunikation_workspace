@@ -1,0 +1,298 @@
+\hypertarget{group___i_r_d_a___private___macros}{}\section{I\+R\+DA Private Macros}
+\label{group___i_r_d_a___private___macros}\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_gac2fec9bcc7ccdd8ccdd7ab75246860d5}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+B\+A\+U\+D\+R\+A\+TE}(\+\_\+\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+\_\+) $<$ 115201\+U)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA Baud rate is less or equal to maximum value. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_ga62a58f1171d6c619a18845e2a418853c}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER}(\+\_\+\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+\+\_\+)~((\+\_\+\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+\+\_\+) $>$ 0\+U)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA prescaler value is strictly larger than 0. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_ga21d1f4784a9e003b3195e27b22173e69}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+A\+R\+I\+TY}(\+\_\+\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA frame parity is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_ga31f1a9c7b9046663256277c2f639dbaf}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+T\+X\+\_\+\+R\+X\+\_\+\+M\+O\+DE}(\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+) \& ($\sim$((uint32\+\_\+t)(\hyperlink{group___i_r_d_a___transfer___mode_gada775794a25b76b7ecafc9bea3fc1f8a}{I\+R\+D\+A\+\_\+\+M\+O\+D\+E\+\_\+\+T\+X\+\_\+\+RX})))) == 0x00\+U) \&\& ((\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+) != 0x00\+U))
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA communication mode is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_ga62955831ac6c4b3cf603046f74ddd88d}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+O\+W\+E\+R\+M\+O\+DE}(\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA power mode is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_gadbef223495eba26be840e14cc37d34d8}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+S\+T\+A\+TE}(\+\_\+\+\_\+\+S\+T\+A\+T\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA state is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_ga9e804e8a642eb9866ced93b6a47cc9cd}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+M\+O\+DE}(\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA associated U\+A\+R\+T/\+U\+S\+A\+RT mode is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_ga6bb7d320c0f8800d4cb5750cf24bf760}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+O\+N\+E\+\_\+\+B\+I\+T\+\_\+\+S\+A\+M\+P\+LE}(\+\_\+\+\_\+\+O\+N\+E\+B\+I\+T\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA sampling rate is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_gae9db415403482c9cc419e61cb5277d5f}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+TX}(\+\_\+\+\_\+\+D\+M\+A\+T\+X\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA D\+MA TX mode is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_gab7a7ec8d5f6d340bad128dbe0c25f543}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+RX}(\+\_\+\+\_\+\+D\+M\+A\+R\+X\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA D\+MA RX mode is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___i_r_d_a___private___macros_gad9d643360bbb8c35f04c9aeefa5bb1d5}{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}(\+\_\+\+\_\+\+P\+A\+R\+A\+M\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that I\+R\+DA request is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_gac2fec9bcc7ccdd8ccdd7ab75246860d5}\label{group___i_r_d_a___private___macros_gac2fec9bcc7ccdd8ccdd7ab75246860d5}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+B\+A\+U\+D\+R\+A\+TE}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+B\+A\+U\+D\+R\+A\+TE}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+B\+A\+U\+D\+R\+A\+TE}{IS\_IRDA\_BAUDRATE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+B\+A\+U\+D\+R\+A\+TE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+\_\+) $<$ 115201\+U)}
+
+
+
+Ensure that I\+R\+DA Baud rate is less or equal to maximum value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+B\+A\+U\+D\+R\+A\+T\+E$<$/strong$>$} & specifies the I\+R\+DA Baudrate set by the user. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & or False \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_gab7a7ec8d5f6d340bad128dbe0c25f543}\label{group___i_r_d_a___private___macros_gab7a7ec8d5f6d340bad128dbe0c25f543}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+RX@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+RX}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+RX@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+RX}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+RX}{IS\_IRDA\_DMA\_RX}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+RX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+D\+M\+A\+R\+X\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_DMARX\_\_) == \hyperlink{group___i_r_d_a___d_m_a___rx_ga81e25c2dd20eec53aecead5923723c0c}{IRDA\_DMA\_RX\_DISABLE}) || \(\backslash\)
+                                   ((\_\_DMARX\_\_) == \hyperlink{group___i_r_d_a___d_m_a___rx_gab5de34cac5f5672f882670d7608241ed}{IRDA\_DMA\_RX\_ENABLE}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA D\+MA RX mode is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+D\+M\+A\+R\+X$<$/strong$>$} & I\+R\+DA D\+MA RX mode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries D\+M\+A\+RX} is valid) or R\+E\+S\+ET ({\bfseries D\+M\+A\+RX} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_gae9db415403482c9cc419e61cb5277d5f}\label{group___i_r_d_a___private___macros_gae9db415403482c9cc419e61cb5277d5f}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+TX@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+TX}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+TX@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+TX}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+TX}{IS\_IRDA\_DMA\_TX}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+D\+M\+A\+\_\+\+TX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+D\+M\+A\+T\+X\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_DMATX\_\_) == \hyperlink{group___i_r_d_a___d_m_a___tx_ga9e023ad9d465b2ff0c75fe515e8a65f7}{IRDA\_DMA\_TX\_DISABLE}) || \(\backslash\)
+                                       ((\_\_DMATX\_\_) == \hyperlink{group___i_r_d_a___d_m_a___tx_ga4e8223148a583093a0af5c2e60e75270}{IRDA\_DMA\_TX\_ENABLE}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA D\+MA TX mode is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+D\+M\+A\+T\+X$<$/strong$>$} & I\+R\+DA D\+MA TX mode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries D\+M\+A\+TX} is valid) or R\+E\+S\+ET ({\bfseries D\+M\+A\+TX} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_ga9e804e8a642eb9866ced93b6a47cc9cd}\label{group___i_r_d_a___private___macros_ga9e804e8a642eb9866ced93b6a47cc9cd}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+M\+O\+DE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+M\+O\+DE}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+M\+O\+DE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+M\+O\+DE}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+M\+O\+DE}{IS\_IRDA\_MODE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+M\+O\+DE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_MODE\_\_) == \hyperlink{group___i_r_d_a___mode_gaaa2d9e9ccafff98bcbb3744c149d2146}{IRDA\_MODE\_DISABLE}) || \(\backslash\)
+                                 ((\_\_MODE\_\_) == \hyperlink{group___i_r_d_a___mode_gad13d47ff38029e1b137334b505d72cb8}{IRDA\_MODE\_ENABLE}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA associated U\+A\+R\+T/\+U\+S\+A\+RT mode is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+M\+O\+D\+E$<$/strong$>$} & I\+R\+DA associated U\+A\+R\+T/\+U\+S\+A\+RT mode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries M\+O\+DE} is valid) or R\+E\+S\+ET ({\bfseries M\+O\+DE} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_ga6bb7d320c0f8800d4cb5750cf24bf760}\label{group___i_r_d_a___private___macros_ga6bb7d320c0f8800d4cb5750cf24bf760}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+O\+N\+E\+\_\+\+B\+I\+T\+\_\+\+S\+A\+M\+P\+LE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+O\+N\+E\+\_\+\+B\+I\+T\+\_\+\+S\+A\+M\+P\+LE}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+O\+N\+E\+\_\+\+B\+I\+T\+\_\+\+S\+A\+M\+P\+LE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+O\+N\+E\+\_\+\+B\+I\+T\+\_\+\+S\+A\+M\+P\+LE}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+O\+N\+E\+\_\+\+B\+I\+T\+\_\+\+S\+A\+M\+P\+LE}{IS\_IRDA\_ONE\_BIT\_SAMPLE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+O\+N\+E\+\_\+\+B\+I\+T\+\_\+\+S\+A\+M\+P\+LE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+O\+N\+E\+B\+I\+T\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_ONEBIT\_\_) == \hyperlink{group___i_r_d_a___one___bit_ga373ec0d11671c4a4d2d2c0dd646d976c}{IRDA\_ONE\_BIT\_SAMPLE\_DISABLE}) || \(\backslash\)
+                                                 ((\_\_ONEBIT\_\_) == 
+      \hyperlink{group___i_r_d_a___one___bit_ga0ff275354a873d6f9a37e982a7fdd1da}{IRDA\_ONE\_BIT\_SAMPLE\_ENABLE}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA sampling rate is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+O\+N\+E\+B\+I\+T$<$/strong$>$} & I\+R\+DA sampling rate. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries O\+N\+E\+B\+IT} is valid) or R\+E\+S\+ET ({\bfseries O\+N\+E\+B\+IT} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_ga21d1f4784a9e003b3195e27b22173e69}\label{group___i_r_d_a___private___macros_ga21d1f4784a9e003b3195e27b22173e69}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+A\+R\+I\+TY@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+A\+R\+I\+TY}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+A\+R\+I\+TY@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+A\+R\+I\+TY}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+A\+R\+I\+TY}{IS\_IRDA\_PARITY}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+A\+R\+I\+TY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_PARITY\_\_) == \hyperlink{group___i_r_d_a___parity_ga930d90dc494068f6e8fd34c2008af6c3}{IRDA\_PARITY\_NONE}) || \(\backslash\)
+                                    ((\_\_PARITY\_\_) == \hyperlink{group___i_r_d_a___parity_ga1fa76c44ce474adc0d277d849217cc95}{IRDA\_PARITY\_EVEN}) || \(\backslash\)
+                                    ((\_\_PARITY\_\_) == \hyperlink{group___i_r_d_a___parity_ga64282fa5873f188bb26429bbc88bf040}{IRDA\_PARITY\_ODD}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA frame parity is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+P\+A\+R\+I\+T\+Y$<$/strong$>$} & I\+R\+DA frame parity. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries P\+A\+R\+I\+TY} is valid) or R\+E\+S\+ET ({\bfseries P\+A\+R\+I\+TY} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_ga62955831ac6c4b3cf603046f74ddd88d}\label{group___i_r_d_a___private___macros_ga62955831ac6c4b3cf603046f74ddd88d}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+O\+W\+E\+R\+M\+O\+DE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+O\+W\+E\+R\+M\+O\+DE}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+O\+W\+E\+R\+M\+O\+DE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+O\+W\+E\+R\+M\+O\+DE}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+O\+W\+E\+R\+M\+O\+DE}{IS\_IRDA\_POWERMODE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+O\+W\+E\+R\+M\+O\+DE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_MODE\_\_) == \hyperlink{group___i_r_d_a___low___power_ga261eafd053023b5935b50767058c804b}{IRDA\_POWERMODE\_LOWPOWER}) || \(\backslash\)
+                                     ((\_\_MODE\_\_) == \hyperlink{group___i_r_d_a___low___power_ga28e06e6f6e185f066d492e2d3cdb7e89}{IRDA\_POWERMODE\_NORMAL}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA power mode is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+M\+O\+D\+E$<$/strong$>$} & I\+R\+DA power mode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries M\+O\+DE} is valid) or R\+E\+S\+ET ({\bfseries M\+O\+DE} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_ga62a58f1171d6c619a18845e2a418853c}\label{group___i_r_d_a___private___macros_ga62a58f1171d6c619a18845e2a418853c}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER}{IS\_IRDA\_PRESCALER}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+\+\_\+) $>$ 0\+U)}
+
+
+
+Ensure that I\+R\+DA prescaler value is strictly larger than 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+P\+R\+E\+S\+C\+A\+L\+E\+R$<$/strong$>$} & specifies the I\+R\+DA prescaler value set by the user. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & or False \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_gad9d643360bbb8c35f04c9aeefa5bb1d5}\label{group___i_r_d_a___private___macros_gad9d643360bbb8c35f04c9aeefa5bb1d5}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}{IS\_IRDA\_REQUEST\_PARAMETER}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+A\+R\+A\+M\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_PARAM\_\_) == \hyperlink{group___i_r_d_a___request___parameters_ga6431d33b8cf9df0d86e29a210df6d454}{IRDA\_AUTOBAUD\_REQUEST}) || \(\backslash\)
+                                              ((\_\_PARAM\_\_) == 
+      \hyperlink{group___i_r_d_a___request___parameters_gade40b479c4ee0227c2851e7eb3f0f930}{IRDA\_RXDATA\_FLUSH\_REQUEST}) || \(\backslash\)
+                                              ((\_\_PARAM\_\_) == 
+      \hyperlink{group___i_r_d_a___request___parameters_ga15f0617bb3c52ca8936f1d9127274ac9}{IRDA\_TXDATA\_FLUSH\_REQUEST}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA request is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+P\+A\+R\+A\+M$<$/strong$>$} & I\+R\+DA request. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries P\+A\+R\+AM} is valid) or R\+E\+S\+ET ({\bfseries P\+A\+R\+AM} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_gadbef223495eba26be840e14cc37d34d8}\label{group___i_r_d_a___private___macros_gadbef223495eba26be840e14cc37d34d8}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+S\+T\+A\+TE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+S\+T\+A\+TE}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+S\+T\+A\+TE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+S\+T\+A\+TE}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+S\+T\+A\+TE}{IS\_IRDA\_STATE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+S\+T\+A\+T\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_STATE\_\_) == \hyperlink{group___i_r_d_a___state_gafe8a4ac9dd67528fba0e452fc9fa38d6}{IRDA\_STATE\_DISABLE}) || \(\backslash\)
+                                  ((\_\_STATE\_\_) == \hyperlink{group___i_r_d_a___state_ga45411b354a12cbbde6a510fc4713c1b2}{IRDA\_STATE\_ENABLE}))
+\end{DoxyCode}
+
+
+Ensure that I\+R\+DA state is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+S\+T\+A\+T\+E$<$/strong$>$} & I\+R\+DA state mode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries S\+T\+A\+TE} is valid) or R\+E\+S\+ET ({\bfseries S\+T\+A\+TE} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_r_d_a___private___macros_ga31f1a9c7b9046663256277c2f639dbaf}\label{group___i_r_d_a___private___macros_ga31f1a9c7b9046663256277c2f639dbaf}} 
+\index{I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}!I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+T\+X\+\_\+\+R\+X\+\_\+\+M\+O\+DE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+T\+X\+\_\+\+R\+X\+\_\+\+M\+O\+DE}}
+\index{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+T\+X\+\_\+\+R\+X\+\_\+\+M\+O\+DE@{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+T\+X\+\_\+\+R\+X\+\_\+\+M\+O\+DE}!I\+R\+D\+A Private Macros@{I\+R\+D\+A Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+T\+X\+\_\+\+R\+X\+\_\+\+M\+O\+DE}{IS\_IRDA\_TX\_RX\_MODE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+R\+D\+A\+\_\+\+T\+X\+\_\+\+R\+X\+\_\+\+M\+O\+DE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~((((\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+) \& ($\sim$((uint32\+\_\+t)(\hyperlink{group___i_r_d_a___transfer___mode_gada775794a25b76b7ecafc9bea3fc1f8a}{I\+R\+D\+A\+\_\+\+M\+O\+D\+E\+\_\+\+T\+X\+\_\+\+RX})))) == 0x00\+U) \&\& ((\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+) != 0x00\+U))}
+
+
+
+Ensure that I\+R\+DA communication mode is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+M\+O\+D\+E$<$/strong$>$} & I\+R\+DA communication mode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries M\+O\+DE} is valid) or R\+E\+S\+ET ({\bfseries M\+O\+DE} is invalid) \\
+\hline
+\end{DoxyRetVals}

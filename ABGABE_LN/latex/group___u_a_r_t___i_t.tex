@@ -1,0 +1,56 @@
+\hypertarget{group___u_a_r_t___i_t}{}\section{U\+A\+RT IT}
+\label{group___u_a_r_t___i_t}\index{U\+A\+R\+T IT@{U\+A\+R\+T IT}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___u_a_r_t___i_t_ga8eb26d8edd9bf78ae8d3ad87dd51b618}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+E\+RR}~(0x0060\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___i_t_ga333810cb588a739ad49042b9f564a6b2}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+O\+RE}~(0x0300\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___i_t_ga35c77abdf7744b407d5ba751e546e965}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+NE}~(0x0200\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___i_t_ga98cbd9e918bcc56f329a803febaab468}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+FE}~(0x0100\+U)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Elements values convention\+: 000000000\+X\+X\+Y\+Y\+Y\+Y\+Yb
+\begin{DoxyItemize}
+\item Y\+Y\+Y\+YY \+: Interrupt source position in the XX register (5bits)
+\item XX \+: Interrupt source register (2bits)
+\begin{DoxyItemize}
+\item 01\+: C\+R1 register
+\item 10\+: C\+R2 register
+\item 11\+: C\+R3 register 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_a_r_t___i_t_ga8eb26d8edd9bf78ae8d3ad87dd51b618}\label{group___u_a_r_t___i_t_ga8eb26d8edd9bf78ae8d3ad87dd51b618}} 
+\index{U\+A\+R\+T IT@{U\+A\+R\+T IT}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+E\+RR@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+E\+RR}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+E\+RR@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+E\+RR}!U\+A\+R\+T IT@{U\+A\+R\+T IT}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+E\+RR}{UART\_IT\_ERR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+E\+RR~(0x0060\+U)}
+
+U\+A\+RT error interruption \mbox{\Hypertarget{group___u_a_r_t___i_t_ga98cbd9e918bcc56f329a803febaab468}\label{group___u_a_r_t___i_t_ga98cbd9e918bcc56f329a803febaab468}} 
+\index{U\+A\+R\+T IT@{U\+A\+R\+T IT}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+FE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+FE}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+FE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+FE}!U\+A\+R\+T IT@{U\+A\+R\+T IT}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+FE}{UART\_IT\_FE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+FE~(0x0100\+U)}
+
+U\+A\+RT frame error interruption \mbox{\Hypertarget{group___u_a_r_t___i_t_ga35c77abdf7744b407d5ba751e546e965}\label{group___u_a_r_t___i_t_ga35c77abdf7744b407d5ba751e546e965}} 
+\index{U\+A\+R\+T IT@{U\+A\+R\+T IT}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+NE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+NE}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+NE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+NE}!U\+A\+R\+T IT@{U\+A\+R\+T IT}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+NE}{UART\_IT\_NE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+NE~(0x0200\+U)}
+
+U\+A\+RT noise error interruption \mbox{\Hypertarget{group___u_a_r_t___i_t_ga333810cb588a739ad49042b9f564a6b2}\label{group___u_a_r_t___i_t_ga333810cb588a739ad49042b9f564a6b2}} 
+\index{U\+A\+R\+T IT@{U\+A\+R\+T IT}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+O\+RE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+O\+RE}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+O\+RE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+O\+RE}!U\+A\+R\+T IT@{U\+A\+R\+T IT}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+O\+RE}{UART\_IT\_ORE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+O\+RE~(0x0300\+U)}
+
+Elements values convention\+: 0000\+Z\+Z\+Z\+Z00000000b
+\begin{DoxyItemize}
+\item Z\+Z\+ZZ \+: Flag position in the I\+SR register(4bits)U\+A\+RT overrun error interruption 
+\end{DoxyItemize}

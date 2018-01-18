@@ -1,0 +1,40 @@
+\hypertarget{group___u_a_r_t_ex___exported___macros}{}\section{U\+A\+R\+T\+Ex Exported Macros}
+\label{group___u_a_r_t_ex___exported___macros}\index{U\+A\+R\+T\+Ex Exported Macros@{U\+A\+R\+T\+Ex Exported Macros}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___u_a_r_t_ex___exported___macros_gafc4f20cb0f29ba146c9bc14167c52744}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+F\+L\+U\+S\+H\+\_\+\+D\+R\+R\+E\+G\+I\+S\+T\+ER}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Flush the U\+A\+RT Data registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_a_r_t_ex___exported___macros_gafc4f20cb0f29ba146c9bc14167c52744}\label{group___u_a_r_t_ex___exported___macros_gafc4f20cb0f29ba146c9bc14167c52744}} 
+\index{U\+A\+R\+T\+Ex Exported Macros@{U\+A\+R\+T\+Ex Exported Macros}!\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+F\+L\+U\+S\+H\+\_\+\+D\+R\+R\+E\+G\+I\+S\+T\+ER@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+F\+L\+U\+S\+H\+\_\+\+D\+R\+R\+E\+G\+I\+S\+T\+ER}}
+\index{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+F\+L\+U\+S\+H\+\_\+\+D\+R\+R\+E\+G\+I\+S\+T\+ER@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+F\+L\+U\+S\+H\+\_\+\+D\+R\+R\+E\+G\+I\+S\+T\+ER}!U\+A\+R\+T\+Ex Exported Macros@{U\+A\+R\+T\+Ex Exported Macros}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+F\+L\+U\+S\+H\+\_\+\+D\+R\+R\+E\+G\+I\+S\+T\+ER}{\_\_HAL\_UART\_FLUSH\_DRREGISTER}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+F\+L\+U\+S\+H\+\_\+\+D\+R\+R\+E\+G\+I\+S\+T\+ER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{                \(\backslash\)
+      SET\_BIT((\_\_HANDLE\_\_)->Instance->RQR, \hyperlink{group___u_a_r_t___request___parameters_gaf2ee2d4b1bdcbc7772ddc0da89566936}{UART\_RXDATA\_FLUSH\_REQUEST}); \(\backslash\)
+      SET\_BIT((\_\_HANDLE\_\_)->Instance->RQR, \hyperlink{group___u_a_r_t___request___parameters_gafecbd800f456ed666a42ac0842cd2c4b}{UART\_TXDATA\_FLUSH\_REQUEST}); \(\backslash\)
+    \}  \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+
+
+Flush the U\+A\+RT Data registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & specifies the U\+A\+RT Handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,96 @@
+\hypertarget{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y}{}\section{D\+E\+L\+AY}
+\label{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y}\index{D\+E\+L\+AY@{D\+E\+L\+AY}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga170d1d651b46544daf571fb6b4e3b850}{L\+L\+\_\+\+Init\+Tick} (uint32\+\_\+t H\+C\+L\+K\+Frequency, uint32\+\_\+t Ticks)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source of the time base. \end{DoxyCompactList}\item 
+void \hyperlink{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga485805c708e3aa0820454523782d4de4}{L\+L\+\_\+\+Init1ms\+Tick} (uint32\+\_\+t H\+C\+L\+K\+Frequency)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source to have 1ms time base. \end{DoxyCompactList}\item 
+void \hyperlink{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga7b7ca6d9cbec320c3e9f326b203807aa}{L\+L\+\_\+m\+Delay} (uint32\+\_\+t Delay)
+\begin{DoxyCompactList}\small\item\em This function provides accurate delay (in milliseconds) based on Sys\+Tick counter flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga485805c708e3aa0820454523782d4de4}\label{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga485805c708e3aa0820454523782d4de4}} 
+\index{D\+E\+L\+AY@{D\+E\+L\+AY}!L\+L\+\_\+\+Init1ms\+Tick@{L\+L\+\_\+\+Init1ms\+Tick}}
+\index{L\+L\+\_\+\+Init1ms\+Tick@{L\+L\+\_\+\+Init1ms\+Tick}!D\+E\+L\+AY@{D\+E\+L\+AY}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+Init1ms\+Tick()}{LL\_Init1msTick()}}
+{\footnotesize\ttfamily void L\+L\+\_\+\+Init1ms\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+C\+L\+K\+Frequency }\end{DoxyParamCaption})}
+
+
+
+This function configures the Cortex-\/M Sys\+Tick source to have 1ms time base. 
+
+\begin{DoxyNote}{Note}
+When a R\+T\+OS is used, it is recommended to avoid changing the Systick configuration by calling this function, for a delay use rather os\+Delay R\+T\+OS service. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em H\+C\+L\+K\+Frequency} & H\+C\+LK frequency in Hz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+H\+C\+LK frequency can be calculated thanks to R\+CC helper macro or function L\+L\+\_\+\+R\+C\+C\+\_\+\+Get\+System\+Clocks\+Freq 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga170d1d651b46544daf571fb6b4e3b850}\label{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga170d1d651b46544daf571fb6b4e3b850}} 
+\index{D\+E\+L\+AY@{D\+E\+L\+AY}!L\+L\+\_\+\+Init\+Tick@{L\+L\+\_\+\+Init\+Tick}}
+\index{L\+L\+\_\+\+Init\+Tick@{L\+L\+\_\+\+Init\+Tick}!D\+E\+L\+AY@{D\+E\+L\+AY}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+Init\+Tick()}{LL\_InitTick()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void L\+L\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+C\+L\+K\+Frequency,  }\item[{uint32\+\_\+t}]{Ticks }\end{DoxyParamCaption})}
+
+
+
+This function configures the Cortex-\/M Sys\+Tick source of the time base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H\+C\+L\+K\+Frequency} & H\+C\+LK frequency in Hz (can be calculated thanks to R\+CC helper macro) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When a R\+T\+OS is used, it is recommended to avoid changing the Sys\+Tick configuration by calling this function, for a delay use rather os\+Delay R\+T\+OS service. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Ticks} & Number of ticks \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga7b7ca6d9cbec320c3e9f326b203807aa}\label{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga7b7ca6d9cbec320c3e9f326b203807aa}} 
+\index{D\+E\+L\+AY@{D\+E\+L\+AY}!L\+L\+\_\+m\+Delay@{L\+L\+\_\+m\+Delay}}
+\index{L\+L\+\_\+m\+Delay@{L\+L\+\_\+m\+Delay}!D\+E\+L\+AY@{D\+E\+L\+AY}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+m\+Delay()}{LL\_mDelay()}}
+{\footnotesize\ttfamily void L\+L\+\_\+m\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+
+
+
+This function provides accurate delay (in milliseconds) based on Sys\+Tick counter flag. 
+
+\begin{DoxyNote}{Note}
+When a R\+T\+OS is used, it is recommended to avoid using blocking delay and use rather os\+Delay service. 
+
+To respect 1ms timebase, user should call \hyperlink{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga485805c708e3aa0820454523782d4de4}{L\+L\+\_\+\+Init1ms\+Tick} function which will configure Systick to 1ms 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & specifies the delay time length, in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

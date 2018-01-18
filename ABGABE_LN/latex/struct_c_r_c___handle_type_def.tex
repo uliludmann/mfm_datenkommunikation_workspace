@@ -1,0 +1,65 @@
+\hypertarget{struct_c_r_c___handle_type_def}{}\section{C\+R\+C\+\_\+\+Handle\+Type\+Def Struct Reference}
+\label{struct_c_r_c___handle_type_def}\index{C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}}
+
+
+C\+RC Handle Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+crc.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_c_r_c___type_def}{C\+R\+C\+\_\+\+Type\+Def} $\ast$ \hyperlink{struct_c_r_c___handle_type_def_ad47f94224843c74bd605a4299349798a}{Instance}
+\item 
+\hyperlink{struct_c_r_c___init_type_def}{C\+R\+C\+\_\+\+Init\+Type\+Def} \hyperlink{struct_c_r_c___handle_type_def_a5c36434cd514a1d1d2201f4cec5f46d1}{Init}
+\item 
+\hyperlink{stm32f0xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def} \hyperlink{struct_c_r_c___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}{Lock}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} \hyperlink{group___c_r_c___exported___types_ga1021d6f27a072d45f6f3b233eefd8bbe}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+State\+Type\+Def} \hyperlink{struct_c_r_c___handle_type_def_a5d303997b28e27531cbcff9d51113dc6}{State}
+\item 
+uint32\+\_\+t \hyperlink{struct_c_r_c___handle_type_def_a4edbae35710a51deebfbbbb329186fd3}{Input\+Data\+Format}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+RC Handle Structure definition. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_c_r_c___handle_type_def_a5c36434cd514a1d1d2201f4cec5f46d1}\label{struct_c_r_c___handle_type_def_a5c36434cd514a1d1d2201f4cec5f46d1}} 
+\index{C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}!Init@{Init}}
+\index{Init@{Init}!C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}}
+\subsubsection{\texorpdfstring{Init}{Init}}
+{\footnotesize\ttfamily \hyperlink{struct_c_r_c___init_type_def}{C\+R\+C\+\_\+\+Init\+Type\+Def} Init}
+
+C\+RC configuration parameters \mbox{\Hypertarget{struct_c_r_c___handle_type_def_a4edbae35710a51deebfbbbb329186fd3}\label{struct_c_r_c___handle_type_def_a4edbae35710a51deebfbbbb329186fd3}} 
+\index{C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}!Input\+Data\+Format@{Input\+Data\+Format}}
+\index{Input\+Data\+Format@{Input\+Data\+Format}!C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}}
+\subsubsection{\texorpdfstring{Input\+Data\+Format}{InputDataFormat}}
+{\footnotesize\ttfamily uint32\+\_\+t Input\+Data\+Format}
+
+This parameter is a value of \hyperlink{group___c_r_c___input___buffer___format}{Input Buffer Format} and specifies input data format. Can be either C\+R\+C\+\_\+\+I\+N\+P\+U\+T\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+B\+Y\+T\+ES input data is a stream of bytes (8-\/bit data) C\+R\+C\+\_\+\+I\+N\+P\+U\+T\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+H\+A\+L\+F\+W\+O\+R\+DS input data is a stream of half-\/words (16-\/bit data) C\+R\+C\+\_\+\+I\+N\+P\+U\+T\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+W\+O\+R\+DS input data is a stream of words (32-\/bits data) Note that constant C\+R\+C\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED is defined but an initialization error must occur if Input\+Buffer\+Format is not one of the three values listed above \mbox{\Hypertarget{struct_c_r_c___handle_type_def_ad47f94224843c74bd605a4299349798a}\label{struct_c_r_c___handle_type_def_ad47f94224843c74bd605a4299349798a}} 
+\index{C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}!Instance@{Instance}}
+\index{Instance@{Instance}!C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}}
+\subsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \hyperlink{struct_c_r_c___type_def}{C\+R\+C\+\_\+\+Type\+Def}$\ast$ Instance}
+
+Register base address \mbox{\Hypertarget{struct_c_r_c___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}\label{struct_c_r_c___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}} 
+\index{C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}!Lock@{Lock}}
+\index{Lock@{Lock}!C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}}
+\subsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \hyperlink{stm32f0xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def} Lock}
+
+C\+RC Locking object \mbox{\Hypertarget{struct_c_r_c___handle_type_def_a5d303997b28e27531cbcff9d51113dc6}\label{struct_c_r_c___handle_type_def_a5d303997b28e27531cbcff9d51113dc6}} 
+\index{C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}!State@{State}}
+\index{State@{State}!C\+R\+C\+\_\+\+Handle\+Type\+Def@{C\+R\+C\+\_\+\+Handle\+Type\+Def}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} \hyperlink{group___c_r_c___exported___types_ga1021d6f27a072d45f6f3b233eefd8bbe}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+State\+Type\+Def} State}
+
+C\+RC communication state 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__crc_8h}{stm32f0xx\+\_\+hal\+\_\+crc.\+h}\end{DoxyCompactItemize}

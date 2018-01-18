@@ -1,0 +1,89 @@
+\hypertarget{stm32f0xx__ll__cortex_8h}{}\section{H\+A\+L\+\_\+\+Driver/\+Inc/stm32f0xx\+\_\+ll\+\_\+cortex.h File Reference}
+\label{stm32f0xx__ll__cortex_8h}\index{H\+A\+L\+\_\+\+Driver/\+Inc/stm32f0xx\+\_\+ll\+\_\+cortex.\+h@{H\+A\+L\+\_\+\+Driver/\+Inc/stm32f0xx\+\_\+ll\+\_\+cortex.\+h}}
+
+
+Header file of C\+O\+R\+T\+EX LL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___c_o_r_t_e_x___l_l___e_c___c_l_k_s_o_u_r_c_e___h_c_l_k_gab13c4588c1b1a8b867541a4ad928d205}{L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+H\+C\+L\+K\+\_\+\+D\+I\+V8}~((uint32\+\_\+t)0x00000000\+U)
+\item 
+\#define \hyperlink{group___c_o_r_t_e_x___l_l___e_c___c_l_k_s_o_u_r_c_e___h_c_l_k_gaa92530d2f2cd8ce785297e4aed960ff0}{L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+H\+C\+LK}~((uint32\+\_\+t)\hyperlink{group___c_m_s_i_s___sys_tick_gaa41d06039797423a46596bd313d57373}{Sys\+Tick\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+Msk})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gaf5dfb37d859552753594f9cc66431ba6}{L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Is\+Active\+Counter\+Flag} (void)
+\begin{DoxyCompactList}\small\item\em This function checks if the Systick counter flag is active or not. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gaaf98ae8e0298b44c5d58a3ba9ef358f7}{L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Set\+Clk\+Source} (uint32\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Configures the Sys\+Tick clock source  S\+T\+K\+\_\+\+C\+T\+RL C\+L\+K\+S\+O\+U\+R\+CE L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Set\+Clk\+Source. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga2cfeb1396db13a9fbc208cc659064b19}{L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Get\+Clk\+Source} (void)
+\begin{DoxyCompactList}\small\item\em Get the Sys\+Tick clock source  S\+T\+K\+\_\+\+C\+T\+RL C\+L\+K\+S\+O\+U\+R\+CE L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Get\+Clk\+Source. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga770fac4394ddde9a53e1a236c81538f0}{L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Enable\+IT} (void)
+\begin{DoxyCompactList}\small\item\em Enable Sys\+Tick exception request  S\+T\+K\+\_\+\+C\+T\+RL T\+I\+C\+K\+I\+NT L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Enable\+IT. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga11d0d066050805c9e8d24718d8a15e4d}{L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Disable\+IT} (void)
+\begin{DoxyCompactList}\small\item\em Disable Sys\+Tick exception request  S\+T\+K\+\_\+\+C\+T\+RL T\+I\+C\+K\+I\+NT L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Disable\+IT. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gab34484042fd5a82aa80ba94223b6fbde}{L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Is\+Enabled\+IT} (void)
+\begin{DoxyCompactList}\small\item\em Checks if the S\+Y\+S\+T\+I\+CK interrupt is enabled or disabled.  S\+T\+K\+\_\+\+C\+T\+RL T\+I\+C\+K\+I\+NT L\+L\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+Is\+Enabled\+IT. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gab55eabc37e5abe00df558c0ba1c37508}{L\+L\+\_\+\+L\+P\+M\+\_\+\+Enable\+Sleep} (void)
+\begin{DoxyCompactList}\small\item\em Processor uses sleep as its low power mode  S\+C\+B\+\_\+\+S\+CR S\+L\+E\+E\+P\+D\+E\+EP L\+L\+\_\+\+L\+P\+M\+\_\+\+Enable\+Sleep. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga37d70238e98ca1214e3fe4113b119474}{L\+L\+\_\+\+L\+P\+M\+\_\+\+Enable\+Deep\+Sleep} (void)
+\begin{DoxyCompactList}\small\item\em Processor uses deep sleep as its low power mode  S\+C\+B\+\_\+\+S\+CR S\+L\+E\+E\+P\+D\+E\+EP L\+L\+\_\+\+L\+P\+M\+\_\+\+Enable\+Deep\+Sleep. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gabb2b2648dff19d88209af8761fc34c30}{L\+L\+\_\+\+L\+P\+M\+\_\+\+Enable\+Sleep\+On\+Exit} (void)
+\begin{DoxyCompactList}\small\item\em Configures sleep-\/on-\/exit when returning from Handler mode to Thread mode. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga88768c6c5f53de30a647123241451eb9}{L\+L\+\_\+\+L\+P\+M\+\_\+\+Disable\+Sleep\+On\+Exit} (void)
+\begin{DoxyCompactList}\small\item\em Do not sleep when returning to Thread mode.  S\+C\+B\+\_\+\+S\+CR S\+L\+E\+E\+P\+O\+N\+E\+X\+IT L\+L\+\_\+\+L\+P\+M\+\_\+\+Disable\+Sleep\+On\+Exit. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf1c01ae00b4a13c5b6531f82a9677b90}{L\+L\+\_\+\+L\+P\+M\+\_\+\+Enable\+Event\+On\+Pend} (void)
+\begin{DoxyCompactList}\small\item\em Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.  S\+C\+B\+\_\+\+S\+CR S\+E\+V\+E\+O\+N\+P\+E\+ND L\+L\+\_\+\+L\+P\+M\+\_\+\+Enable\+Event\+On\+Pend. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf4ebb8351f09676067aa0ce1fe08321b}{L\+L\+\_\+\+L\+P\+M\+\_\+\+Disable\+Event\+On\+Pend} (void)
+\begin{DoxyCompactList}\small\item\em Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded  S\+C\+B\+\_\+\+S\+CR S\+E\+V\+E\+O\+N\+P\+E\+ND L\+L\+\_\+\+L\+P\+M\+\_\+\+Disable\+Event\+On\+Pend. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga648a5236b7fa08786086fcc4ce42b4b9}{L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Implementer} (void)
+\begin{DoxyCompactList}\small\item\em Get Implementer code  S\+C\+B\+\_\+\+C\+P\+U\+ID I\+M\+P\+L\+E\+M\+E\+N\+T\+ER L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Implementer. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga1f843da5f8524bace7fcf8dcce7996cb}{L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Variant} (void)
+\begin{DoxyCompactList}\small\item\em Get Variant number (The r value in the rnpn product revision identifier)  S\+C\+B\+\_\+\+C\+P\+U\+ID V\+A\+R\+I\+A\+NT L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Variant. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_gadc6dc3055d2a192ac1218e09a1e8fd19}{L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Architecture} (void)
+\begin{DoxyCompactList}\small\item\em Get Architecture number  S\+C\+B\+\_\+\+C\+P\+U\+ID A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+RE L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Architecture. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_gac98fd56ad9162c3f372004bd07038bdb}{L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Par\+No} (void)
+\begin{DoxyCompactList}\small\item\em Get Part number  S\+C\+B\+\_\+\+C\+P\+U\+ID P\+A\+R\+T\+NO L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Par\+No. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga7372821defd92c49ea4563da407acd01}{L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Revision} (void)
+\begin{DoxyCompactList}\small\item\em Get Revision number (The p value in the rnpn product revision identifier, indicates patch release)  S\+C\+B\+\_\+\+C\+P\+U\+ID R\+E\+V\+I\+S\+I\+ON L\+L\+\_\+\+C\+P\+U\+I\+D\+\_\+\+Get\+Revision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file of C\+O\+R\+T\+EX LL module. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/\+November-\/2016 \begin{DoxyVerb}==============================================================================
+                   ##### How to use this driver #####
+==============================================================================
+  [..]
+  The LL CORTEX driver contains a set of generic APIs that can be
+  used by user:
+    (+) SYSTICK configuration used by @ref LL_mDelay and @ref LL_Init1msTick
+        functions
+    (+) Low power mode configuration (SCB register of Cortex-MCU)
+    (+) API to access to MCU info (CPUID register)\end{DoxyVerb}
+
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+H\+T(c) 2016 S\+T\+Microelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of S\+T\+Microelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 

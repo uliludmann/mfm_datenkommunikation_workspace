@@ -1,0 +1,192 @@
+\hypertarget{stm32f0xx__hal__dac_8c}{}\section{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+dac.c File Reference}
+\label{stm32f0xx__hal__dac_8c}\index{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+dac.\+c@{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+dac.\+c}}
+
+
+D\+AC H\+AL module driver. This file provides firmware functions to manage the following functionalities of the Digital to Analog Converter (D\+AC) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal.\+h\char`\"{}}\newline
+
+
+\subsection{Detailed Description}
+D\+AC H\+AL module driver. This file provides firmware functions to manage the following functionalities of the Digital to Analog Converter (D\+AC) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/\+November-\/2016
+\begin{DoxyItemize}
+\item Initialization and de-\/initialization functions
+\item IO operation functions
+\item Peripheral Control functions
+\item Peripheral State and Errors functions
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb} ==============================================================================
+                     ##### DAC Peripheral features #####
+ ==============================================================================
+   [..]        
+     *** DAC Channels ***
+     ====================  
+   [..]  
+   STM32F0 devices integrates no, one or two 12-bit Digital Analog Converters.
+   STM32F05x devices have one converter (channel1)
+   STM32F07x & STM32F09x devices have two converters (i.e. channel1 & channel2)
+
+   When 2 converters are present (i.e. channel1 & channel2)  they 
+   can be used independently or simultaneously (dual mode):
+     (#) DAC channel1 with DAC_OUT1 (PA4) as output
+     (#) DAC channel2 with DAC_OUT2 (PA5) as output
+     
+     *** DAC Triggers ***
+     ====================
+   [..]
+   Digital to Analog conversion can be non-triggered using DAC_TRIGGER_NONE
+   and DAC_OUT1/DAC_OUT2 is available once writing to DHRx register. 
+   [..] 
+   Digital to Analog conversion can be triggered by:
+     (#) External event: EXTI Line 9 (any GPIOx_PIN_9) using DAC_TRIGGER_EXT_IT9.
+         The used pin (GPIOx_PIN_9) must be configured in input mode.
+ 
+     (#) Timers TRGO: TIM2, TIM3, TIM6, and TIM15 
+         (DAC_TRIGGER_T2_TRGO, DAC_TRIGGER_T3_TRGO...)
+ 
+     (#) Software using DAC_TRIGGER_SOFTWARE
+ 
+     *** DAC Buffer mode feature ***
+     =============================== 
+     [..] 
+     Each DAC channel integrates an output buffer that can be used to 
+     reduce the output impedance, and to drive external loads directly
+     without having to add an external operational amplifier.
+     To enable, the output buffer use  
+     sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
+     [..]           
+     (@) Refer to the device datasheet for more details about output 
+         impedance value with and without output buffer.
+
+     *** GPIO configurations guidelines ***
+     =====================
+     [..] 
+     When a DAC channel is used (ex channel1 on PA4) and the other is not 
+     (ex channel1 on PA5 is configured in Analog and disabled).
+     Channel1 may disturb channel2 as coupling effect.
+     Note that there is no coupling on channel2 as soon as channel2 is turned on.
+     Coupling on adjacent channel could be avoided as follows:
+     when unused PA5 is configured as INPUT PULL-UP or DOWN. 
+     PA5 is configured in ANALOG just before it is turned on.     
+           
+      *** DAC wave generation feature ***
+      =================================== 
+      [..]     
+      Both DAC channels can be used to generate
+        (#) Noise wave 
+        (#) Triangle wave
+           
+      *** DAC data format ***
+      =======================
+      [..]   
+      The DAC data format can be:
+        (#) 8-bit right alignment using DAC_ALIGN_8B_R
+        (#) 12-bit left alignment using DAC_ALIGN_12B_L
+        (#) 12-bit right alignment using DAC_ALIGN_12B_R
+ 
+      *** DAC data value to voltage correspondance ***  
+      ================================================ 
+      [..] 
+      The analog output voltage on each DAC channel pin is determined
+      by the following equation: 
+      [..]
+      DAC_OUTx = VREF+ * DOR / 4095
+      (+) with  DOR is the Data Output Register
+      [..]
+         VEF+ is the input voltage reference (refer to the device datasheet)
+      [..]
+       e.g. To set DAC_OUT1 to 0.7V, use
+      (+) Assuming that VREF+ = 3.3V, DAC_OUT1 = (3.3 * 868) / 4095 = 0.7V
+ 
+      *** DMA requests  ***
+      =====================
+      [..]    
+      A DMA1 request can be generated when an external trigger (but not
+      a software trigger) occurs if DMA1 requests are enabled using
+      HAL_DAC_Start_DMA()
+      [..]
+      DMA1 requests are mapped as following:
+        (#) DAC channel1 : mapped on DMA1 channel3 which must be 
+            already configured
+        (#) DAC channel2 : mapped on DMA1 channel4 which must be 
+            already configured
+      
+   (@) For Dual mode and specific signal (Triangle and noise) generation please 
+       refer to Extended Features Driver description        
+       STM32F0 devices with one channel (one converting capability) does not
+       support Dual mode and specific signal (Triangle and noise) generation.
+     
+                     ##### How to use this driver #####
+ ==============================================================================
+   [..]          
+     (+) DAC APB clock must be enabled to get write access to DAC
+         registers using HAL_DAC_Init()
+     (+) Configure DAC_OUTx (DAC_OUT1: PA4, DAC_OUT2: PA5) in analog mode.
+     (+) Configure the DAC channel using HAL_DAC_ConfigChannel() function.
+     (+) Enable the DAC channel using HAL_DAC_Start() or HAL_DAC_Start_DMA() functions.
+
+    *** Polling mode IO operation ***
+    =================================
+    [..]    
+      (+) Start the DAC peripheral using HAL_DAC_Start() 
+      (+) To read the DAC last data output value, use the HAL_DAC_GetValue() function.
+      (+) Stop the DAC peripheral using HAL_DAC_Stop()
+      
+    *** DMA mode IO operation ***    
+    ==============================
+    [..]    
+      (+) Start the DAC peripheral using HAL_DAC_Start_DMA(), at this stage the user specify the length 
+          of data to be transferred at each end of conversion
+      (+) At the middle of data transfer HAL_DAC_ConvHalfCpltCallbackCh1() or HAL_DACEx_ConvHalfCpltCallbackCh2()  
+          function is executed and user can add his own code by customization of function pointer 
+          HAL_DAC_ConvHalfCpltCallbackCh1() or HAL_DACEx_ConvHalfCpltCallbackCh2()
+      (+) At The end of data transfer HAL_DAC_ConvCpltCallbackCh1() or HAL_DACEx_ConvHalfCpltCallbackCh2()  
+          function is executed and user can add his own code by customization of function pointer 
+          HAL_DAC_ConvCpltCallbackCh1() or HAL_DACEx_ConvHalfCpltCallbackCh2()
+      (+) In case of transfer Error, HAL_DAC_ErrorCallbackCh1() function is executed and user can 
+           add his own code by customization of function pointer HAL_DAC_ErrorCallbackCh1
+      (+) In case of DMA underrun, DAC interruption triggers and execute internal function HAL_DAC_IRQHandler.
+          HAL_DAC_DMAUnderrunCallbackCh1() or HAL_DACEx_DMAUnderrunCallbackCh2()  
+          function is executed and user can add his own code by customization of function pointer 
+          HAL_DAC_DMAUnderrunCallbackCh1() or HAL_DACEx_DMAUnderrunCallbackCh2() and
+          add his own code by customization of function pointer HAL_DAC_ErrorCallbackCh1()
+      (+) Stop the DAC peripheral using HAL_DAC_Stop_DMA()
+                   
+    *** DAC HAL driver macros list ***
+    ============================================= 
+    [..]
+      Below the list of most used macros in DAC HAL driver.
+      
+     (+) __HAL_DAC_ENABLE : Enable the DAC peripheral
+     (+) __HAL_DAC_DISABLE : Disable the DAC peripheral
+     (+) __HAL_DAC_CLEAR_FLAG: Clear the DAC's pending flags
+     (+) __HAL_DAC_GET_FLAG: Get the selected DAC's flag status
+     
+    [..]
+     (@) You can refer to the DAC HAL driver header file for more useful macros  \end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+H\+T(c) 2016 S\+T\+Microelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of S\+T\+Microelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 

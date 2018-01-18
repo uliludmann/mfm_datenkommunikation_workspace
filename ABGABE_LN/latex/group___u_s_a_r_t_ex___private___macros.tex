@@ -1,0 +1,130 @@
+\hypertarget{group___u_s_a_r_t_ex___private___macros}{}\section{U\+S\+A\+R\+T\+Ex Private Macros}
+\label{group___u_s_a_r_t_ex___private___macros}\index{U\+S\+A\+R\+T\+Ex Private Macros@{U\+S\+A\+R\+T\+Ex Private Macros}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___u_s_a_r_t_ex___private___macros_gad57ccc8ecd4497f3d5d7f8da10e00158}{U\+S\+A\+R\+T\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Report the U\+S\+A\+RT clock source. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t_ex___private___macros_ga8cacb83de23342eddca6ad3d07f56e5c}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}(\+\_\+\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT frame length is valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___u_s_a_r_t_ex___private___macros_ga493fc7a1c42648b29223e8c1608a6fa8}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}(\+\_\+\+\_\+\+P\+A\+R\+A\+M\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that U\+S\+A\+RT request parameter is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_s_a_r_t_ex___private___macros_ga493fc7a1c42648b29223e8c1608a6fa8}\label{group___u_s_a_r_t_ex___private___macros_ga493fc7a1c42648b29223e8c1608a6fa8}} 
+\index{U\+S\+A\+R\+T\+Ex Private Macros@{U\+S\+A\+R\+T\+Ex Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!U\+S\+A\+R\+T\+Ex Private Macros@{U\+S\+A\+R\+T\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}{IS\_USART\_REQUEST\_PARAMETER}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+A\+R\+A\+M\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_PARAM\_\_) == \hyperlink{group___u_s_a_r_t___request___parameters_ga3d08169bc6516ef929b161f47ecba555}{USART\_RXDATA\_FLUSH\_REQUEST}) || \(\backslash\)
+                                               ((\_\_PARAM\_\_) == 
+      \hyperlink{group___u_s_a_r_t___request___parameters_ga5d3de7b3c6b8f2691dc6ddae10c2355d}{USART\_TXDATA\_FLUSH\_REQUEST}))
+\end{DoxyCode}
+
+
+Ensure that U\+S\+A\+RT request parameter is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+P\+A\+R\+A\+M$<$/strong$>$} & U\+S\+A\+RT request parameter. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries P\+A\+R\+AM} is valid) or R\+E\+S\+ET ({\bfseries P\+A\+R\+AM} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t_ex___private___macros_ga8cacb83de23342eddca6ad3d07f56e5c}\label{group___u_s_a_r_t_ex___private___macros_ga8cacb83de23342eddca6ad3d07f56e5c}} 
+\index{U\+S\+A\+R\+T\+Ex Private Macros@{U\+S\+A\+R\+T\+Ex Private Macros}!I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}}
+\index{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}!U\+S\+A\+R\+T\+Ex Private Macros@{U\+S\+A\+R\+T\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}{IS\_USART\_WORD\_LENGTH}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_LENGTH\_\_) == \hyperlink{group___u_s_a_r_t_ex___word___length_gae2978458689a31bed9a8a3e66ed84f50}{USART\_WORDLENGTH\_8B}) || \(\backslash\)
+                                          ((\_\_LENGTH\_\_) == \hyperlink{group___u_s_a_r_t_ex___word___length_ga3a8363f7dccf85ccb52d698e0900f347}{USART\_WORDLENGTH\_9B}))
+\end{DoxyCode}
+
+
+Ensure that U\+S\+A\+RT frame length is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+L\+E\+N\+G\+T\+H$<$/strong$>$} & U\+S\+A\+RT frame length. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+ET} & ({\bfseries L\+E\+N\+G\+TH} is valid) or R\+E\+S\+ET ({\bfseries L\+E\+N\+G\+TH} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_a_r_t_ex___private___macros_gad57ccc8ecd4497f3d5d7f8da10e00158}\label{group___u_s_a_r_t_ex___private___macros_gad57ccc8ecd4497f3d5d7f8da10e00158}} 
+\index{U\+S\+A\+R\+T\+Ex Private Macros@{U\+S\+A\+R\+T\+Ex Private Macros}!U\+S\+A\+R\+T\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON@{U\+S\+A\+R\+T\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON}}
+\index{U\+S\+A\+R\+T\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON@{U\+S\+A\+R\+T\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON}!U\+S\+A\+R\+T\+Ex Private Macros@{U\+S\+A\+R\+T\+Ex Private Macros}}
+\subsubsection{\texorpdfstring{U\+S\+A\+R\+T\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON}{USART\_MASK\_COMPUTATION}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                                \(\backslash\)
+  if ((\_\_HANDLE\_\_)->Init.WordLength == \hyperlink{group___u_s_a_r_t_ex___word___length_ga3a8363f7dccf85ccb52d698e0900f347}{USART\_WORDLENGTH\_9B})           \(\backslash\)
+  \{                                                                   \(\backslash\)
+     if ((\_\_HANDLE\_\_)->Init.Parity == \hyperlink{group___u_s_a_r_t___parity_ga85bfcbeb5ba1c34bbcda3f3e3b994846}{USART\_PARITY\_NONE})              \(\backslash\)
+     \{                                                                \(\backslash\)
+        (\_\_HANDLE\_\_)->Mask = 0x01FFU;                                 \(\backslash\)
+     \}                                                                \(\backslash\)
+     else                                                             \(\backslash\)
+     \{                                                                \(\backslash\)
+        (\_\_HANDLE\_\_)->Mask = 0x00FFU;                                 \(\backslash\)
+     \}                                                                \(\backslash\)
+  \}                                                                   \(\backslash\)
+  else \textcolor{keywordflow}{if} ((\_\_HANDLE\_\_)->Init.WordLength == \hyperlink{group___u_s_a_r_t_ex___word___length_gae2978458689a31bed9a8a3e66ed84f50}{USART\_WORDLENGTH\_8B})      \(\backslash\)
+  \{                                                                   \(\backslash\)
+     if ((\_\_HANDLE\_\_)->Init.Parity == \hyperlink{group___u_s_a_r_t___parity_ga85bfcbeb5ba1c34bbcda3f3e3b994846}{USART\_PARITY\_NONE})              \(\backslash\)
+     \{                                                                \(\backslash\)
+        (\_\_HANDLE\_\_)->Mask = 0x00FFU;                                 \(\backslash\)
+     \}                                                                \(\backslash\)
+     else                                                             \(\backslash\)
+     \{                                                                \(\backslash\)
+        (\_\_HANDLE\_\_)->Mask = 0x007FU;                                 \(\backslash\)
+     \}                                                                \(\backslash\)
+  \}                                                                   \(\backslash\)
+\} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+
+
+Report the U\+S\+A\+RT clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & specifies the U\+S\+A\+RT Handle. \\
+\hline
+{\em $<$strong$>$\+C\+L\+O\+C\+K\+S\+O\+U\+R\+C\+E$<$/strong$>$} & output variable. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em the} & U\+S\+A\+RT clocking source, written in {\bfseries C\+L\+O\+C\+K\+S\+O\+U\+R\+CE}.Compute the U\+S\+A\+RT mask to apply to retrieve the received data according to the word length and to the parity bits activation. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+If P\+CE = 1, the parity bit is not included in the data extracted by the reception A\+P\+I(). This masking operation is not carried out in the case of D\+MA transfers. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & specifies the U\+S\+A\+RT Handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None,the} & mask to apply to U\+S\+A\+RT R\+DR register is stored in ({\bfseries H\+A\+N\+D\+LE})-\/$>$Mask field. \\
+\hline
+\end{DoxyRetVals}

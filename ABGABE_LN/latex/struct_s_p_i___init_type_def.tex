@@ -1,0 +1,132 @@
+\hypertarget{struct_s_p_i___init_type_def}{}\section{S\+P\+I\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_s_p_i___init_type_def}\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+
+
+S\+PI Configuration Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+spi.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_ab94410c1333b512e271b1c135fe50916}{Direction}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a98999b0cd6e4c94f05b61b2554ee0371}{Data\+Size}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a83f278c9d173d3cd021644692bf3c435}{C\+L\+K\+Polarity}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_aba7183911cbc41063270dab182de768f}{C\+L\+K\+Phase}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_ae4a064e48fd5945eda7210d515fed69c}{N\+SS}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a2fa72ad4f27606fffa2ec9456bcb0a56}{Baud\+Rate\+Prescaler}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a9740c535f073c87bb06668385ce96002}{First\+Bit}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a3db685adbdc6f7bfc7ad0191ba5ab277}{T\+I\+Mode}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a9d334a47c34b01cbfa55ff66cfc1e0ce}{C\+R\+C\+Calculation}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a48aef59cfd7bf0262b1ad993fef2fc7b}{C\+R\+C\+Polynomial}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_aba709d1ebebac9b3385fb61d6eeb79a2}{C\+R\+C\+Length}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_p_i___init_type_def_a537f238782f2847191f7d221ffaa6c9b}{N\+S\+S\+P\+Mode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI Configuration Structure definition. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_s_p_i___init_type_def_a2fa72ad4f27606fffa2ec9456bcb0a56}\label{struct_s_p_i___init_type_def_a2fa72ad4f27606fffa2ec9456bcb0a56}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!Baud\+Rate\+Prescaler@{Baud\+Rate\+Prescaler}}
+\index{Baud\+Rate\+Prescaler@{Baud\+Rate\+Prescaler}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Baud\+Rate\+Prescaler}{BaudRatePrescaler}}
+{\footnotesize\ttfamily uint32\+\_\+t Baud\+Rate\+Prescaler}
+
+Specifies the Baud Rate prescaler value which will be used to configure the transmit and receive S\+CK clock. This parameter can be a value of \hyperlink{group___s_p_i___baud_rate___prescaler}{S\+PI Baud\+Rate Prescaler} \begin{DoxyNote}{Note}
+The communication clock is derived from the master clock. The slave clock does not need to be set. 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_s_p_i___init_type_def_aba7183911cbc41063270dab182de768f}\label{struct_s_p_i___init_type_def_aba7183911cbc41063270dab182de768f}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!C\+L\+K\+Phase@{C\+L\+K\+Phase}}
+\index{C\+L\+K\+Phase@{C\+L\+K\+Phase}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+L\+K\+Phase}{CLKPhase}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+K\+Phase}
+
+Specifies the clock active edge for the bit capture. This parameter can be a value of \hyperlink{group___s_p_i___clock___phase}{S\+PI Clock Phase} \mbox{\Hypertarget{struct_s_p_i___init_type_def_a83f278c9d173d3cd021644692bf3c435}\label{struct_s_p_i___init_type_def_a83f278c9d173d3cd021644692bf3c435}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!C\+L\+K\+Polarity@{C\+L\+K\+Polarity}}
+\index{C\+L\+K\+Polarity@{C\+L\+K\+Polarity}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+L\+K\+Polarity}{CLKPolarity}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+K\+Polarity}
+
+Specifies the serial clock steady state. This parameter can be a value of \hyperlink{group___s_p_i___clock___polarity}{S\+PI Clock Polarity} \mbox{\Hypertarget{struct_s_p_i___init_type_def_a9d334a47c34b01cbfa55ff66cfc1e0ce}\label{struct_s_p_i___init_type_def_a9d334a47c34b01cbfa55ff66cfc1e0ce}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!C\+R\+C\+Calculation@{C\+R\+C\+Calculation}}
+\index{C\+R\+C\+Calculation@{C\+R\+C\+Calculation}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+R\+C\+Calculation}{CRCCalculation}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+R\+C\+Calculation}
+
+Specifies if the C\+RC calculation is enabled or not. This parameter can be a value of \hyperlink{group___s_p_i___c_r_c___calculation}{S\+PI C\+RC Calculation} \mbox{\Hypertarget{struct_s_p_i___init_type_def_aba709d1ebebac9b3385fb61d6eeb79a2}\label{struct_s_p_i___init_type_def_aba709d1ebebac9b3385fb61d6eeb79a2}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!C\+R\+C\+Length@{C\+R\+C\+Length}}
+\index{C\+R\+C\+Length@{C\+R\+C\+Length}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+R\+C\+Length}{CRCLength}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+R\+C\+Length}
+
+Specifies the C\+RC Length used for the C\+RC calculation. C\+RC Length is only used with Data8 and Data16, not other data size This parameter can be a value of \hyperlink{group___s_p_i___c_r_c__length}{S\+PI C\+RC Length} \mbox{\Hypertarget{struct_s_p_i___init_type_def_a48aef59cfd7bf0262b1ad993fef2fc7b}\label{struct_s_p_i___init_type_def_a48aef59cfd7bf0262b1ad993fef2fc7b}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!C\+R\+C\+Polynomial@{C\+R\+C\+Polynomial}}
+\index{C\+R\+C\+Polynomial@{C\+R\+C\+Polynomial}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+R\+C\+Polynomial}{CRCPolynomial}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+R\+C\+Polynomial}
+
+Specifies the polynomial used for the C\+RC calculation. This parameter must be an odd number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 65535 \mbox{\Hypertarget{struct_s_p_i___init_type_def_a98999b0cd6e4c94f05b61b2554ee0371}\label{struct_s_p_i___init_type_def_a98999b0cd6e4c94f05b61b2554ee0371}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!Data\+Size@{Data\+Size}}
+\index{Data\+Size@{Data\+Size}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Data\+Size}{DataSize}}
+{\footnotesize\ttfamily uint32\+\_\+t Data\+Size}
+
+Specifies the S\+PI data size. This parameter can be a value of \hyperlink{group___s_p_i___data___size}{S\+PI Data Size} \mbox{\Hypertarget{struct_s_p_i___init_type_def_ab94410c1333b512e271b1c135fe50916}\label{struct_s_p_i___init_type_def_ab94410c1333b512e271b1c135fe50916}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!Direction@{Direction}}
+\index{Direction@{Direction}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily uint32\+\_\+t Direction}
+
+Specifies the S\+PI bidirectional mode state. This parameter can be a value of \hyperlink{group___s_p_i___direction}{S\+PI Direction Mode} \mbox{\Hypertarget{struct_s_p_i___init_type_def_a9740c535f073c87bb06668385ce96002}\label{struct_s_p_i___init_type_def_a9740c535f073c87bb06668385ce96002}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!First\+Bit@{First\+Bit}}
+\index{First\+Bit@{First\+Bit}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{First\+Bit}{FirstBit}}
+{\footnotesize\ttfamily uint32\+\_\+t First\+Bit}
+
+Specifies whether data transfers start from M\+SB or L\+SB bit. This parameter can be a value of \hyperlink{group___s_p_i___m_s_b___l_s_b__transmission}{S\+PI M\+SB L\+SB Transmission} \mbox{\Hypertarget{struct_s_p_i___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}\label{struct_s_p_i___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!Mode@{Mode}}
+\index{Mode@{Mode}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily uint32\+\_\+t Mode}
+
+Specifies the S\+PI operating mode. This parameter can be a value of \hyperlink{group___s_p_i___mode}{S\+PI Mode} \mbox{\Hypertarget{struct_s_p_i___init_type_def_ae4a064e48fd5945eda7210d515fed69c}\label{struct_s_p_i___init_type_def_ae4a064e48fd5945eda7210d515fed69c}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!N\+SS@{N\+SS}}
+\index{N\+SS@{N\+SS}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{N\+SS}{NSS}}
+{\footnotesize\ttfamily uint32\+\_\+t N\+SS}
+
+Specifies whether the N\+SS signal is managed by hardware (N\+SS pin) or by software using the S\+SI bit. This parameter can be a value of \hyperlink{group___s_p_i___slave___select__management}{S\+PI Slave Select Management} \mbox{\Hypertarget{struct_s_p_i___init_type_def_a537f238782f2847191f7d221ffaa6c9b}\label{struct_s_p_i___init_type_def_a537f238782f2847191f7d221ffaa6c9b}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!N\+S\+S\+P\+Mode@{N\+S\+S\+P\+Mode}}
+\index{N\+S\+S\+P\+Mode@{N\+S\+S\+P\+Mode}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{N\+S\+S\+P\+Mode}{NSSPMode}}
+{\footnotesize\ttfamily uint32\+\_\+t N\+S\+S\+P\+Mode}
+
+Specifies whether the N\+S\+SP signal is enabled or not . This parameter can be a value of \hyperlink{group___s_p_i___n_s_s_p___mode}{S\+PI N\+SS Pulse Mode} This mode is activated by the N\+S\+SP bit in the S\+P\+Ix\+\_\+\+C\+R2 register and it takes effect only if the S\+PI interface is configured as Motorola S\+PI master (F\+RF=0) with capture on the first edge (S\+P\+Ix\+\_\+\+C\+R1 C\+P\+HA = 0, C\+P\+OL setting is ignored).. \mbox{\Hypertarget{struct_s_p_i___init_type_def_a3db685adbdc6f7bfc7ad0191ba5ab277}\label{struct_s_p_i___init_type_def_a3db685adbdc6f7bfc7ad0191ba5ab277}} 
+\index{S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}!T\+I\+Mode@{T\+I\+Mode}}
+\index{T\+I\+Mode@{T\+I\+Mode}!S\+P\+I\+\_\+\+Init\+Type\+Def@{S\+P\+I\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{T\+I\+Mode}{TIMode}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+I\+Mode}
+
+Specifies if the TI mode is enabled or not. This parameter can be a value of \hyperlink{group___s_p_i___t_i__mode}{S\+PI TI Mode} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__spi_8h}{stm32f0xx\+\_\+hal\+\_\+spi.\+h}\end{DoxyCompactItemize}

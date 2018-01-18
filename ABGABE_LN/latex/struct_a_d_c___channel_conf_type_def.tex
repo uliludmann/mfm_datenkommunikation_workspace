@@ -1,0 +1,57 @@
+\hypertarget{struct_a_d_c___channel_conf_type_def}{}\section{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def Struct Reference}
+\label{struct_a_d_c___channel_conf_type_def}\index{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def}}
+
+
+Structure definition of A\+DC channel for regular group.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+adc.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___channel_conf_type_def_ae82bf9242a014164f9f6907f29782c44}{Channel}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___channel_conf_type_def_ab926cc2abe3d17aeaf637d499aef6b1b}{Rank}
+\item 
+uint32\+\_\+t \hyperlink{struct_a_d_c___channel_conf_type_def_a72e649848c8a14f0adcba783cfb3b2cd}{Sampling\+Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure definition of A\+DC channel for regular group. 
+
+\begin{DoxyNote}{Note}
+The setting of these parameters with function H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Config\+Channel() is conditioned to A\+DC state. A\+DC state can be either\+:
+\begin{DoxyItemize}
+\item For all parameters\+: A\+DC disabled or enabled without conversion on going on regular group. If A\+DC is not in the appropriate state to modify some parameters, these parameters setting is bypassed without error reporting (as it can be the expected behaviour in case of intended action to update another parameter (which fulfills the A\+DC state condition) on the fly). 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_a_d_c___channel_conf_type_def_ae82bf9242a014164f9f6907f29782c44}\label{struct_a_d_c___channel_conf_type_def_ae82bf9242a014164f9f6907f29782c44}} 
+\index{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def}!Channel@{Channel}}
+\index{Channel@{Channel}!A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def}}
+\subsubsection{\texorpdfstring{Channel}{Channel}}
+{\footnotesize\ttfamily uint32\+\_\+t Channel}
+
+Specifies the channel to configure into A\+DC regular group. This parameter can be a value of \hyperlink{group___a_d_c__channels}{A\+DC channels} Note\+: Depending on devices, some channels may not be available on package pins. Refer to device datasheet for channels availability. \mbox{\Hypertarget{struct_a_d_c___channel_conf_type_def_ab926cc2abe3d17aeaf637d499aef6b1b}\label{struct_a_d_c___channel_conf_type_def_ab926cc2abe3d17aeaf637d499aef6b1b}} 
+\index{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def}!Rank@{Rank}}
+\index{Rank@{Rank}!A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def}}
+\subsubsection{\texorpdfstring{Rank}{Rank}}
+{\footnotesize\ttfamily uint32\+\_\+t Rank}
+
+Add or remove the channel from A\+DC regular group sequencer. On S\+T\+M32\+F0 devices, number of ranks in the sequence is defined by number of channels enabled, rank of each channel is defined by channel number (channel 0 fixed on rank 0, channel 1 fixed on rank1, ...).. Despite the channel rank is fixed, this parameter allow an additional possibility\+: to remove the selected rank (selected channel) from sequencer. This parameter can be a value of \hyperlink{group___a_d_c__rank}{A\+DC rank} \mbox{\Hypertarget{struct_a_d_c___channel_conf_type_def_a72e649848c8a14f0adcba783cfb3b2cd}\label{struct_a_d_c___channel_conf_type_def_a72e649848c8a14f0adcba783cfb3b2cd}} 
+\index{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def}!Sampling\+Time@{Sampling\+Time}}
+\index{Sampling\+Time@{Sampling\+Time}!A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def@{A\+D\+C\+\_\+\+Channel\+Conf\+Type\+Def}}
+\subsubsection{\texorpdfstring{Sampling\+Time}{SamplingTime}}
+{\footnotesize\ttfamily uint32\+\_\+t Sampling\+Time}
+
+Sampling time value to be set for the selected channel. Unit\+: A\+DC clock cycles Conversion time is the addition of sampling time and processing time (12.\+5 A\+DC clock cycles at A\+DC resolution 12 bits, 10.\+5 cycles at 10 bits, 8.\+5 cycles at 8 bits, 6.\+5 cycles at 6 bits). This parameter can be a value of \hyperlink{group___a_d_c__sampling__times}{A\+DC sampling times} Caution\+: this setting impacts the entire regular group. Therefore, call of H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Config\+Channel() to configure a channel can impact the configuration of other channels previously set. Caution\+: Obsolete parameter. Use parameter \char`\"{}\+Sampling\+Time\+Common\char`\"{} in A\+DC initialization structure. If parameter \char`\"{}\+Sampling\+Time\+Common\char`\"{} is set to a valid sampling time, parameter \char`\"{}\+Sampling\+Time\char`\"{} is discarded. Note\+: In case of usage of internal measurement channels (Vref\+Int/\+Vbat/\+Temp\+Sensor), sampling time constraints must be respected (sampling time can be adjusted in function of A\+DC clock frequency and sampling time setting) Refer to device datasheet for timings values, parameters T\+S\+\_\+vrefint, T\+S\+\_\+vbat, T\+S\+\_\+temp (values rough order\+: 5us to 17us). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__adc_8h}{stm32f0xx\+\_\+hal\+\_\+adc.\+h}\end{DoxyCompactItemize}

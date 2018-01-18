@@ -1,0 +1,120 @@
+\hypertarget{stm32f0xx__hal__wwdg_8c}{}\section{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+wwdg.c File Reference}
+\label{stm32f0xx__hal__wwdg_8c}\index{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+wwdg.\+c@{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+wwdg.\+c}}
+
+
+W\+W\+DG H\+AL module driver. This file provides firmware functions to manage the following functionalities of the Window Watchdog (W\+W\+DG) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal.\+h\char`\"{}}\newline
+
+
+\subsection{Detailed Description}
+W\+W\+DG H\+AL module driver. This file provides firmware functions to manage the following functionalities of the Window Watchdog (W\+W\+DG) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/\+November-\/2016
+\begin{DoxyItemize}
+\item Initialization and Configuration function
+\item IO operation functions \begin{DoxyVerb}==============================================================================
+                    ##### WWDG specific features #####
+==============================================================================
+[..]
+  Once enabled the WWDG generates a system reset on expiry of a programmed
+  time period, unless the program refreshes the counter (T[6;0] downcounter)
+  before reaching 0x3F value (i.e. a reset is generated when the counter
+  value rolls over from 0x40 to 0x3F).
+
+  (+) An MCU reset is also generated if the counter value is refreshed
+      before the counter has reached the refresh window value. This
+      implies that the counter must be refreshed in a limited window.
+
+  (+) Once enabled the WWDG cannot be disabled except by a system reset.
+
+  (+) WWDGRST flag in RCC_CSR register informs when a WWDG reset has 
+      occurred (check available with __HAL_RCC_GET_FLAG(RCC_FLAG_WWDGRST)).
+
+  (+) The WWDG downcounter input clock is derived from the APB clock divided
+      by a programmable prescaler.
+  
+  (+) WWDG downcounter clock (Hz) = PCLK / (4096 * Prescaler)
+
+  (+) WWDG timeout (ms) = (1000 * (T[5;0] + 1)) / (WWDG downcounter clock)
+      where T[5;0] are the lowest 6 bits of downcounter.
+
+  (+) WWDG Counter refresh is allowed between the following limits :
+      (++) min time (ms) = (1000 * (T[5;0] - Window)) / (WWDG downcounter clock)
+      (++) max time (ms) = (1000 * (T[5;0] - 0x40)) / (WWDG downcounter clock)
+
+  (+) Min-max timeout value @48 MHz(PCLK): ~85,3us / ~5,46 ms
+  
+  (+) The Early Wakeup Interrupt (EWI) can be used if specific safety 
+      operations or data logging must be performed before the actual reset is
+      generated. When the downcounter reaches the value 0x40, an EWI interrupt
+      is generated and the corresponding interrupt service routine (ISR) can 
+      be used to trigger specific actions (such as communications or data 
+      logging), before resetting the device.
+      In some applications, the EWI interrupt can be used to manage a software
+      system check and/or system recovery/graceful degradation, without 
+      generating a WWDG reset. In this case, the corresponding interrupt 
+      service routine (ISR) should reload the WWDG counter to avoid the WWDG 
+      reset, then trigger the required actions.
+      Note:When the EWI interrupt cannot be served, e.g. due to a system lock 
+      in a higher priority task, the WWDG reset will eventually be generated.
+
+  (+) Debug mode : When the microcontroller enters debug mode (core halted),
+      the WWDG counter either continues to work normally or stops, depending 
+      on DBG_WWDG_STOP configuration bit in DBG module, accessible through
+      __HAL_DBGMCU_FREEZE_WWDG() and __HAL_DBGMCU_UNFREEZE_WWDG() macros
+
+                   ##### How to use this driver #####
+==============================================================================
+[..]
+  (+) Enable WWDG APB1 clock using __HAL_RCC_WWDG_CLK_ENABLE().
+
+  (+) Set the WWDG prescaler, refresh window, counter value and Early Wakeup 
+      Interrupt mode using using HAL_WWDG_Init() function.
+      This enables WWDG peripheral and the downcounter starts downcounting 
+      from given counter value.
+      Init function can be called again to modify all watchdog parameters, 
+      however if EWI mode has been set once, it can't be clear until next 
+      reset.
+
+  (+) The application program must refresh the WWDG counter at regular
+      intervals during normal operation to prevent an MCU reset using
+      HAL_WWDG_Refresh() function. This operation must occur only when
+      the counter is lower than the window value already programmed.
+
+  (+) if Early Wakeup Interrupt mode is enable an interrupt is generated when 
+      the counter reaches 0x40. User can add his own code in weak function 
+      HAL_WWDG_EarlyWakeupCallback().
+
+   *** WWDG HAL driver macros list ***
+   ==================================
+   [..]
+     Below the list of most used macros in WWDG HAL driver.
+
+    (+) __HAL_WWDG_GET_IT_SOURCE: Check the selected WWDG's interrupt source.
+    (+) __HAL_WWDG_GET_FLAG: Get the selected WWDG's flag status.
+    (+) __HAL_WWDG_CLEAR_FLAG: Clear the WWDG's pending flags.\end{DoxyVerb}
+
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+H\+T(c) 2016 S\+T\+Microelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of S\+T\+Microelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 

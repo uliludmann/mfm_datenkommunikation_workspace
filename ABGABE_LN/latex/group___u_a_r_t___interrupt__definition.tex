@@ -1,0 +1,94 @@
+\hypertarget{group___u_a_r_t___interrupt__definition}{}\section{U\+A\+R\+T\+Ex Interrupts Definition}
+\label{group___u_a_r_t___interrupt__definition}\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_ga55f922ddcf513509710ade5d7c40a1db}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+PE}~(0x0028\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_ga552636e2af516d578856f5ee2ba71ed7}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+T\+XE}~(0x0727\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_gab9a4dc4e8cea354fd60f4117513b2004}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+TC}~(0x0626\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_gac1bedf7a65eb8c3f3c4b52bdb24b139d}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+R\+X\+NE}~(0x0525\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_ga9781808d4f9999061fc2da36572191d9}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+I\+D\+LE}~(0x0424\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_gabca5e77508dc2dd9aa26fcb683d9b988}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+L\+BD}~(0x0846\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_ga986d271478550f9afa918262ca642333}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+C\+TS}~(0x096\+A\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_ga4c22e866bce68975a180828012489106}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+CM}~(0x112\+E\+U)
+\item 
+\#define \hyperlink{group___u_a_r_t___interrupt__definition_gab8899f6307781779f65a7c18aabb3204}{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+W\+UF}~(0x1476\+U)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Elements values convention\+: 000\+Z\+Z\+Z\+Z\+Z0\+X\+X\+Y\+Y\+Y\+Y\+Yb
+\begin{DoxyItemize}
+\item Y\+Y\+Y\+YY \+: Interrupt source position in the XX register (5bits)
+\item XX \+: Interrupt source register (2bits)
+\begin{DoxyItemize}
+\item 01\+: C\+R1 register
+\item 10\+: C\+R2 register
+\item 11\+: C\+R3 register
+\end{DoxyItemize}
+\item Z\+Z\+Z\+ZZ \+: Flag position in the I\+SR register(5bits) 
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_ga4c22e866bce68975a180828012489106}\label{group___u_a_r_t___interrupt__definition_ga4c22e866bce68975a180828012489106}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+CM@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+CM}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+CM@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+CM}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+CM}{UART\_IT\_CM}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+CM~(0x112\+E\+U)}
+
+U\+A\+RT character match interruption \mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_ga986d271478550f9afa918262ca642333}\label{group___u_a_r_t___interrupt__definition_ga986d271478550f9afa918262ca642333}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+C\+TS@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+C\+TS}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+C\+TS@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+C\+TS}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+C\+TS}{UART\_IT\_CTS}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+C\+TS~(0x096\+A\+U)}
+
+U\+A\+RT C\+TS interruption \mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_ga9781808d4f9999061fc2da36572191d9}\label{group___u_a_r_t___interrupt__definition_ga9781808d4f9999061fc2da36572191d9}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+I\+D\+LE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+I\+D\+LE}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+I\+D\+LE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+I\+D\+LE}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+I\+D\+LE}{UART\_IT\_IDLE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+I\+D\+LE~(0x0424\+U)}
+
+U\+A\+RT idle interruption \mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_gabca5e77508dc2dd9aa26fcb683d9b988}\label{group___u_a_r_t___interrupt__definition_gabca5e77508dc2dd9aa26fcb683d9b988}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+L\+BD@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+L\+BD}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+L\+BD@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+L\+BD}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+L\+BD}{UART\_IT\_LBD}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+L\+BD~(0x0846\+U)}
+
+U\+A\+RT L\+IN break detection interruption \mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_ga55f922ddcf513509710ade5d7c40a1db}\label{group___u_a_r_t___interrupt__definition_ga55f922ddcf513509710ade5d7c40a1db}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+PE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+PE}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+PE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+PE}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+PE}{UART\_IT\_PE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+PE~(0x0028\+U)}
+
+U\+A\+RT parity error interruption \mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_gac1bedf7a65eb8c3f3c4b52bdb24b139d}\label{group___u_a_r_t___interrupt__definition_gac1bedf7a65eb8c3f3c4b52bdb24b139d}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+R\+X\+NE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+R\+X\+NE}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+R\+X\+NE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+R\+X\+NE}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+R\+X\+NE}{UART\_IT\_RXNE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+R\+X\+NE~(0x0525\+U)}
+
+U\+A\+RT read data register not empty interruption \mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_gab9a4dc4e8cea354fd60f4117513b2004}\label{group___u_a_r_t___interrupt__definition_gab9a4dc4e8cea354fd60f4117513b2004}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+TC@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+TC}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+TC@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+TC}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+TC}{UART\_IT\_TC}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+TC~(0x0626\+U)}
+
+U\+A\+RT transmission complete interruption \mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_ga552636e2af516d578856f5ee2ba71ed7}\label{group___u_a_r_t___interrupt__definition_ga552636e2af516d578856f5ee2ba71ed7}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+T\+XE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+T\+XE}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+T\+XE@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+T\+XE}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+T\+XE}{UART\_IT\_TXE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+T\+XE~(0x0727\+U)}
+
+U\+A\+RT transmit data register empty interruption \mbox{\Hypertarget{group___u_a_r_t___interrupt__definition_gab8899f6307781779f65a7c18aabb3204}\label{group___u_a_r_t___interrupt__definition_gab8899f6307781779f65a7c18aabb3204}} 
+\index{U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}!U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+W\+UF@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+W\+UF}}
+\index{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+W\+UF@{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+W\+UF}!U\+A\+R\+T\+Ex Interrupts Definition@{U\+A\+R\+T\+Ex Interrupts Definition}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+W\+UF}{UART\_IT\_WUF}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+T\+\_\+\+W\+UF~(0x1476\+U)}
+
+U\+A\+RT wake-\/up from stop mode interruption 

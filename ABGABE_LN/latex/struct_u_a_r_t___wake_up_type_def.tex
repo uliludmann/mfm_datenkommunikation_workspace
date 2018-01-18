@@ -1,0 +1,49 @@
+\hypertarget{struct_u_a_r_t___wake_up_type_def}{}\section{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def Struct Reference}
+\label{struct_u_a_r_t___wake_up_type_def}\index{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def@{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def}}
+
+
+U\+A\+RT wake up from stop mode parameters.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+uart\+\_\+ex.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_u_a_r_t___wake_up_type_def_a1146a984a15b77174e96057cb88e4f59}{Wake\+Up\+Event}
+\item 
+uint16\+\_\+t \hyperlink{struct_u_a_r_t___wake_up_type_def_a5be92432486df9b5320d668c236e1b6f}{Address\+Length}
+\item 
+uint8\+\_\+t \hyperlink{struct_u_a_r_t___wake_up_type_def_ae2bbeaf207df18992544fd4193b34112}{Address}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+A\+RT wake up from stop mode parameters. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_u_a_r_t___wake_up_type_def_ae2bbeaf207df18992544fd4193b34112}\label{struct_u_a_r_t___wake_up_type_def_ae2bbeaf207df18992544fd4193b34112}} 
+\index{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def@{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def}!Address@{Address}}
+\index{Address@{Address}!U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def@{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def}}
+\subsubsection{\texorpdfstring{Address}{Address}}
+{\footnotesize\ttfamily uint8\+\_\+t Address}
+
+U\+A\+R\+T/\+U\+S\+A\+RT node address (7-\/bit long max). \mbox{\Hypertarget{struct_u_a_r_t___wake_up_type_def_a5be92432486df9b5320d668c236e1b6f}\label{struct_u_a_r_t___wake_up_type_def_a5be92432486df9b5320d668c236e1b6f}} 
+\index{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def@{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def}!Address\+Length@{Address\+Length}}
+\index{Address\+Length@{Address\+Length}!U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def@{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def}}
+\subsubsection{\texorpdfstring{Address\+Length}{AddressLength}}
+{\footnotesize\ttfamily uint16\+\_\+t Address\+Length}
+
+Specifies whether the address is 4 or 7-\/bit long. This parameter can be a value of \hyperlink{group___u_a_r_t___wake_up___address___length}{U\+A\+RT Wake\+Up Address Length}. \mbox{\Hypertarget{struct_u_a_r_t___wake_up_type_def_a1146a984a15b77174e96057cb88e4f59}\label{struct_u_a_r_t___wake_up_type_def_a1146a984a15b77174e96057cb88e4f59}} 
+\index{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def@{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def}!Wake\+Up\+Event@{Wake\+Up\+Event}}
+\index{Wake\+Up\+Event@{Wake\+Up\+Event}!U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def@{U\+A\+R\+T\+\_\+\+Wake\+Up\+Type\+Def}}
+\subsubsection{\texorpdfstring{Wake\+Up\+Event}{WakeUpEvent}}
+{\footnotesize\ttfamily uint32\+\_\+t Wake\+Up\+Event}
+
+Specifies which event will activat the Wakeup from Stop mode flag (W\+UF). This parameter can be a value of \hyperlink{group___u_a_r_t___wake_up__from___stop___selection}{U\+A\+RT Wake\+Up From Stop Selection}. If set to U\+A\+R\+T\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+O\+N\+\_\+\+A\+D\+D\+R\+E\+SS, the two other fields below must be filled up. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__uart__ex_8h}{stm32f0xx\+\_\+hal\+\_\+uart\+\_\+ex.\+h}\end{DoxyCompactItemize}

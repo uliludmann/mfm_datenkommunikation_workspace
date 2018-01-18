@@ -1,0 +1,133 @@
+\hypertarget{main_8c}{}\section{src/main.c File Reference}
+\label{main_8c}\index{src/main.\+c@{src/main.\+c}}
+
+
+Hier ist unsere \hyperlink{main_8c}{main.\+c} Datei.  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+nucleo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal\+\_\+can.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal\+\_\+gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal\+\_\+gpio\+\_\+ex.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a4ddf2aa56d63d41d408da716f97ed0bb}\label{main_8c_a4ddf2aa56d63d41d408da716f97ed0bb}} 
+\#define {\bfseries S\+L\+A\+V\+E\+\_\+\+A\+D\+D\+\_\+8\+B\+IT}~(0x9\+E)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config} (void)
+\begin{DoxyCompactList}\small\item\em Funktionsaufruf System\+Clock und Error Handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+void {\bfseries Error\+\_\+\+Handler} (void)
+\item 
+int \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\begin{DoxyCompactList}\small\item\em main routine \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hier ist unsere \hyperlink{main_8c}{main.\+c} Datei. 
+
+\begin{DoxyAuthor}{Author}
+Petersen, Mayer, Ludmann 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V0.\+5.\+8 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16-\/\+Januar-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+main routine 
+
+$<$ Takt geht los
+
+$<$ Variablen Deklaration
+
+$<$ Variable für Datenempfang des Sensors (2 Byte)
+
+$<$ Variable zum Senden der Commandobytes an D\+S1621 Temperatursensor
+
+$<$ Variable zur Nachkommastellung Umrechnung
+
+$<$ Variable zur Aktualisierung der Messwerte alle 500ms
+
+$<$ Variable (der Feldgröße 8) zum Senden der C\+A\+N-\/\+Nachricht (Inhalt\+: Temperatur des D\+S1621)
+
+I2C
+
+$<$ I2C G\+P\+IO Einstellung
+
+$<$ pinouts\+: P\+B8 -- S\+CL / P\+B9--- S\+DA
+
+$<$ I2\+C-\/\+Clock
+
+$<$ Initialisierung des I2\+C-\/\+Bus Kanals
+
+$<$Taktfrequenz S\+CL\+: 100k\+Hz
+
+$<$ Senden der Commandobytes an D\+S1621 Temperatursensor
+
+$<$ Kommandobyte senden
+
+$<$Kommandobyte senden
+
+$<$ Einstellen des Blinkens der L\+E\+D-\/\+Lampe
+
+$<$ C\+A\+N-\/\+Einstellung
+
+$<$ C\+AN G\+P\+IO Einstellung
+
+$<$ C\+A\+N-\/\+Clock aktivieren
+
+$<$ Initialisierung des C\+A\+N-\/\+Bus Kanals
+
+y C\+A\+N-\/\+Bus für Senden Einstellen
+
+$<$ I2C Read, Blink L\+ED, C\+AN senden
+
+$<$ I2C Read
+
+$<$ Kommandobyte senden
+
+$<$ Temperaturdaten empfangen
+
+$<$ Nachkomma Temp
+
+$<$ C\+AN senden Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.\+c@{main.\+c}!System\+Clock\+\_\+\+Config@{System\+Clock\+\_\+\+Config}}
+\index{System\+Clock\+\_\+\+Config@{System\+Clock\+\_\+\+Config}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{System\+Clock\+\_\+\+Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Funktionsaufruf System\+Clock und Error Handler. 
+
+Initializes the C\+PU, A\+HB and A\+PB busses clocks
+
+Initializes the C\+PU, A\+HB and A\+PB busses clocks
+
+Configure L\+SE Drive Capability
+
+Configure the Systick interrupt time
+
+Configure the Systick Here is the caller graph for this function\+:
+% FIG 2

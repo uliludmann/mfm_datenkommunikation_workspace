@@ -1,0 +1,135 @@
+\hypertarget{group___u_t_i_l_s___e_f___s_y_s_t_e_m}{}\section{S\+Y\+S\+T\+EM}
+\label{group___u_t_i_l_s___e_f___s_y_s_t_e_m}\index{S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}}
+
+
+System Configuration functions.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___u_t_i_l_s___e_f___s_y_s_t_e_m_ga5af902d59c4c2d9dc5e189df0bc71ecd}{L\+L\+\_\+\+Set\+System\+Core\+Clock} (uint32\+\_\+t H\+C\+L\+K\+Frequency)
+\begin{DoxyCompactList}\small\item\em This function sets directly System\+Core\+Clock C\+M\+S\+IS variable. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___u_t_i_l_s___e_f___s_y_s_t_e_m_ga7ada5e4210f6ef80ef9f55bf9dd048c6}{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI} (\hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct, \hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em This function configures system clock with H\+SI as clock source of the P\+LL. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___u_t_i_l_s___e_f___s_y_s_t_e_m_gaf6c8553d03464d4646b63321b97d25e2}{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE} (uint32\+\_\+t H\+S\+E\+Frequency, uint32\+\_\+t H\+S\+E\+Bypass, \hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct, \hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em This function configures system clock with H\+SE as clock source of the P\+LL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+System Configuration functions. 
+
+\begin{DoxyVerb}===============================================================================
+          ##### System Configuration functions #####
+===============================================================================
+   [..]
+        System, AHB and APB buses clocks configuration
+
+        (+) The maximum frequency of the SYSCLK, HCLK, PCLK1 and PCLK2 is 48000000 Hz.\end{DoxyVerb}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___u_t_i_l_s___e_f___s_y_s_t_e_m_gaf6c8553d03464d4646b63321b97d25e2}\label{group___u_t_i_l_s___e_f___s_y_s_t_e_m_gaf6c8553d03464d4646b63321b97d25e2}} 
+\index{S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}!L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE@{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE}}
+\index{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE@{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE}!S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+S\+E()}{LL\_PLL\_ConfigSystemClock\_HSE()}}
+{\footnotesize\ttfamily Error\+Status L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+S\+E\+Frequency,  }\item[{uint32\+\_\+t}]{H\+S\+E\+Bypass,  }\item[{\hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct,  }\item[{\hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct }\end{DoxyParamCaption})}
+
+
+
+This function configures system clock with H\+SE as clock source of the P\+LL. 
+
+\begin{DoxyNote}{Note}
+The application need to ensure that P\+LL is disabled. 
+
+Function is based on the following formula\+:
+\begin{DoxyItemize}
+\item P\+LL output frequency = ((H\+SE frequency / P\+R\+E\+D\+IV) $\ast$ P\+L\+L\+M\+UL)
+\item P\+L\+L\+M\+UL\+: The application software must set correctly the P\+LL multiplication factor to be in the range 16-\/48\+M\+Hz 
+\end{DoxyItemize}
+
+F\+L\+A\+SH latency can be modified through this function. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em H\+S\+E\+Frequency} & Value between Min\+\_\+\+Data = 4000000 and Max\+\_\+\+Data = 32000000 \\
+\hline
+{\em H\+S\+E\+Bypass} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \hyperlink{group___u_t_i_l_s___e_c___h_s_e___b_y_p_a_s_s_ga2053b398a3829ad616af6f1a732dbdd4}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+B\+Y\+P\+A\+S\+S\+\_\+\+ON} \item \hyperlink{group___u_t_i_l_s___e_c___h_s_e___b_y_p_a_s_s_ga4aab0968739934c6560805bcf222e1fe}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+B\+Y\+P\+A\+S\+S\+\_\+\+O\+FF} \end{DoxyItemize}
+\\
+\hline
+{\em U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct} & pointer to a \hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def} structure that contains the configuration information for the P\+LL. \\
+\hline
+{\em U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct} & pointer to a \hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def} structure that contains the configuration information for the B\+US prescalers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & Error\+Status enumeration value\+:
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: Max frequency configuration done
+\item E\+R\+R\+OR\+: Max frequency configuration not done 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_t_i_l_s___e_f___s_y_s_t_e_m_ga7ada5e4210f6ef80ef9f55bf9dd048c6}\label{group___u_t_i_l_s___e_f___s_y_s_t_e_m_ga7ada5e4210f6ef80ef9f55bf9dd048c6}} 
+\index{S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}!L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI@{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI}}
+\index{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI@{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI}!S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+S\+I()}{LL\_PLL\_ConfigSystemClock\_HSI()}}
+{\footnotesize\ttfamily Error\+Status L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct,  }\item[{\hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct }\end{DoxyParamCaption})}
+
+
+
+This function configures system clock with H\+SI as clock source of the P\+LL. 
+
+\begin{DoxyNote}{Note}
+The application need to ensure that P\+LL is disabled. 
+
+Function is based on the following formula\+:
+\begin{DoxyItemize}
+\item P\+LL output frequency = ((H\+SI frequency / P\+R\+E\+D\+IV) $\ast$ P\+L\+L\+M\+UL)
+\item P\+R\+E\+D\+IV\+: Set to 2 for few devices
+\item P\+L\+L\+M\+UL\+: The application software must set correctly the P\+LL multiplication factor to be in the range 16-\/48\+M\+Hz 
+\end{DoxyItemize}
+
+F\+L\+A\+SH latency can be modified through this function. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct} & pointer to a \hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def} structure that contains the configuration information for the P\+LL. \\
+\hline
+{\em U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct} & pointer to a \hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def} structure that contains the configuration information for the B\+US prescalers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & Error\+Status enumeration value\+:
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: Max frequency configuration done
+\item E\+R\+R\+OR\+: Max frequency configuration not done 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_t_i_l_s___e_f___s_y_s_t_e_m_ga5af902d59c4c2d9dc5e189df0bc71ecd}\label{group___u_t_i_l_s___e_f___s_y_s_t_e_m_ga5af902d59c4c2d9dc5e189df0bc71ecd}} 
+\index{S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}!L\+L\+\_\+\+Set\+System\+Core\+Clock@{L\+L\+\_\+\+Set\+System\+Core\+Clock}}
+\index{L\+L\+\_\+\+Set\+System\+Core\+Clock@{L\+L\+\_\+\+Set\+System\+Core\+Clock}!S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+Set\+System\+Core\+Clock()}{LL\_SetSystemCoreClock()}}
+{\footnotesize\ttfamily void L\+L\+\_\+\+Set\+System\+Core\+Clock (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+C\+L\+K\+Frequency }\end{DoxyParamCaption})}
+
+
+
+This function sets directly System\+Core\+Clock C\+M\+S\+IS variable. 
+
+\begin{DoxyNote}{Note}
+Variable can be calculated also through System\+Core\+Clock\+Update function. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em H\+C\+L\+K\+Frequency} & H\+C\+LK frequency in Hz (can be calculated thanks to R\+CC helper macro) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

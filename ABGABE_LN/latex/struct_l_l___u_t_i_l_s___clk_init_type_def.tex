@@ -1,0 +1,45 @@
+\hypertarget{struct_l_l___u_t_i_l_s___clk_init_type_def}{}\section{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def Struct Reference}
+\label{struct_l_l___u_t_i_l_s___clk_init_type_def}\index{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def@{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}}
+
+
+U\+T\+I\+LS System, A\+HB and A\+PB buses clock configuration structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+ll\+\_\+utils.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def_a082c91ea9f270509aca7ae6ec42c2a54}{A\+H\+B\+C\+L\+K\+Divider}
+\item 
+uint32\+\_\+t \hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def_a994aca51c40decfc340e045da1a6ca19}{A\+P\+B1\+C\+L\+K\+Divider}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+T\+I\+LS System, A\+HB and A\+PB buses clock configuration structure definition. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_l_l___u_t_i_l_s___clk_init_type_def_a082c91ea9f270509aca7ae6ec42c2a54}\label{struct_l_l___u_t_i_l_s___clk_init_type_def_a082c91ea9f270509aca7ae6ec42c2a54}} 
+\index{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def@{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}!A\+H\+B\+C\+L\+K\+Divider@{A\+H\+B\+C\+L\+K\+Divider}}
+\index{A\+H\+B\+C\+L\+K\+Divider@{A\+H\+B\+C\+L\+K\+Divider}!L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def@{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{A\+H\+B\+C\+L\+K\+Divider}{AHBCLKDivider}}
+{\footnotesize\ttfamily uint32\+\_\+t A\+H\+B\+C\+L\+K\+Divider}
+
+The A\+HB clock (H\+C\+LK) divider. This clock is derived from the system clock (S\+Y\+S\+C\+LK). This parameter can be a value of R\+C\+C\+\_\+\+L\+L\+\_\+\+E\+C\+\_\+\+S\+Y\+S\+C\+L\+K\+\_\+\+D\+IV
+
+This feature can be modified afterwards using unitary function L\+L\+\_\+\+R\+C\+C\+\_\+\+Set\+A\+H\+B\+Prescaler(). \mbox{\Hypertarget{struct_l_l___u_t_i_l_s___clk_init_type_def_a994aca51c40decfc340e045da1a6ca19}\label{struct_l_l___u_t_i_l_s___clk_init_type_def_a994aca51c40decfc340e045da1a6ca19}} 
+\index{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def@{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}!A\+P\+B1\+C\+L\+K\+Divider@{A\+P\+B1\+C\+L\+K\+Divider}}
+\index{A\+P\+B1\+C\+L\+K\+Divider@{A\+P\+B1\+C\+L\+K\+Divider}!L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def@{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{A\+P\+B1\+C\+L\+K\+Divider}{APB1CLKDivider}}
+{\footnotesize\ttfamily uint32\+\_\+t A\+P\+B1\+C\+L\+K\+Divider}
+
+The A\+P\+B1 clock (P\+C\+L\+K1) divider. This clock is derived from the A\+HB clock (H\+C\+LK). This parameter can be a value of R\+C\+C\+\_\+\+L\+L\+\_\+\+E\+C\+\_\+\+A\+P\+B1\+\_\+\+D\+IV
+
+This feature can be modified afterwards using unitary function L\+L\+\_\+\+R\+C\+C\+\_\+\+Set\+A\+P\+B1\+Prescaler(). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__ll__utils_8h}{stm32f0xx\+\_\+ll\+\_\+utils.\+h}\end{DoxyCompactItemize}

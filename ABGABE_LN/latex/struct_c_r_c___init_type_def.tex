@@ -1,0 +1,81 @@
+\hypertarget{struct_c_r_c___init_type_def}{}\section{C\+R\+C\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_c_r_c___init_type_def}\index{C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}}
+
+
+C\+RC Init Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+crc.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{struct_c_r_c___init_type_def_a310c3780f74e347a909fd5629011d4ed}{Default\+Polynomial\+Use}
+\item 
+uint8\+\_\+t \hyperlink{struct_c_r_c___init_type_def_a995114f44b6488f784f24a9faa184813}{Default\+Init\+Value\+Use}
+\item 
+uint32\+\_\+t \hyperlink{struct_c_r_c___init_type_def_a8eba50c4d083261700ecd9fdf9906124}{Generating\+Polynomial}
+\item 
+uint32\+\_\+t \hyperlink{struct_c_r_c___init_type_def_aba709d1ebebac9b3385fb61d6eeb79a2}{C\+R\+C\+Length}
+\item 
+uint32\+\_\+t \hyperlink{struct_c_r_c___init_type_def_ac60396fcb8285f785650dc65530d9077}{Init\+Value}
+\item 
+uint32\+\_\+t \hyperlink{struct_c_r_c___init_type_def_ae78b0467ba2913d30b23dd7e30c2f87e}{Input\+Data\+Inversion\+Mode}
+\item 
+uint32\+\_\+t \hyperlink{struct_c_r_c___init_type_def_a70287496add23b9e3dbaaf370a83040a}{Output\+Data\+Inversion\+Mode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+RC Init Structure definition. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_c_r_c___init_type_def_aba709d1ebebac9b3385fb61d6eeb79a2}\label{struct_c_r_c___init_type_def_aba709d1ebebac9b3385fb61d6eeb79a2}} 
+\index{C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}!C\+R\+C\+Length@{C\+R\+C\+Length}}
+\index{C\+R\+C\+Length@{C\+R\+C\+Length}!C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{C\+R\+C\+Length}{CRCLength}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+R\+C\+Length}
+
+This parameter is a value of \hyperlink{group___c_r_c_ex___polynomial___sizes}{Polynomial sizes to configure the IP} and indicates C\+RC length. Value can be either one of C\+R\+C\+\_\+\+P\+O\+L\+Y\+L\+E\+N\+G\+T\+H\+\_\+32B (32-\/bit C\+RC) C\+R\+C\+\_\+\+P\+O\+L\+Y\+L\+E\+N\+G\+T\+H\+\_\+16B (16-\/bit C\+RC) C\+R\+C\+\_\+\+P\+O\+L\+Y\+L\+E\+N\+G\+T\+H\+\_\+8B (8-\/bit C\+RC) C\+R\+C\+\_\+\+P\+O\+L\+Y\+L\+E\+N\+G\+T\+H\+\_\+7B (7-\/bit C\+RC) \mbox{\Hypertarget{struct_c_r_c___init_type_def_a995114f44b6488f784f24a9faa184813}\label{struct_c_r_c___init_type_def_a995114f44b6488f784f24a9faa184813}} 
+\index{C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}!Default\+Init\+Value\+Use@{Default\+Init\+Value\+Use}}
+\index{Default\+Init\+Value\+Use@{Default\+Init\+Value\+Use}!C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Default\+Init\+Value\+Use}{DefaultInitValueUse}}
+{\footnotesize\ttfamily uint8\+\_\+t Default\+Init\+Value\+Use}
+
+This parameter is a value of \hyperlink{group___c_r_c___default___init_value___use}{Indicates whether or not default init value is used} and indicates if default init value is used. If set to D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+\_\+\+V\+A\+L\+U\+E\+\_\+\+E\+N\+A\+B\+LE, resort to default 0x\+F\+F\+F\+F\+F\+F\+FF value. In that case, there is no need to set Init\+Value field. If otherwise set to D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+\_\+\+V\+A\+L\+U\+E\+\_\+\+D\+I\+S\+A\+B\+LE, Init\+Value field must be set \mbox{\Hypertarget{struct_c_r_c___init_type_def_a310c3780f74e347a909fd5629011d4ed}\label{struct_c_r_c___init_type_def_a310c3780f74e347a909fd5629011d4ed}} 
+\index{C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}!Default\+Polynomial\+Use@{Default\+Polynomial\+Use}}
+\index{Default\+Polynomial\+Use@{Default\+Polynomial\+Use}!C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Default\+Polynomial\+Use}{DefaultPolynomialUse}}
+{\footnotesize\ttfamily uint8\+\_\+t Default\+Polynomial\+Use}
+
+This parameter is a value of \hyperlink{group___c_r_c___default___polynomial}{Indicates whether or not default polynomial is used} and indicates if default polynomial is used. If set to D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+L\+Y\+N\+O\+M\+I\+A\+L\+\_\+\+E\+N\+A\+B\+LE, resort to default X$^\wedge$32 + X$^\wedge$26 + X$^\wedge$23 + X$^\wedge$22 + X$^\wedge$16 + X$^\wedge$12 + X$^\wedge$11 + X$^\wedge$10 +\+X$^\wedge$8 + X$^\wedge$7 + X$^\wedge$5 + X$^\wedge$4 + X$^\wedge$2+ X +1. In that case, there is no need to set Generating\+Polynomial field. If otherwise set to D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+L\+Y\+N\+O\+M\+I\+A\+L\+\_\+\+D\+I\+S\+A\+B\+LE, Generating\+Polynomial and C\+R\+C\+Length fields must be set \mbox{\Hypertarget{struct_c_r_c___init_type_def_a8eba50c4d083261700ecd9fdf9906124}\label{struct_c_r_c___init_type_def_a8eba50c4d083261700ecd9fdf9906124}} 
+\index{C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}!Generating\+Polynomial@{Generating\+Polynomial}}
+\index{Generating\+Polynomial@{Generating\+Polynomial}!C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Generating\+Polynomial}{GeneratingPolynomial}}
+{\footnotesize\ttfamily uint32\+\_\+t Generating\+Polynomial}
+
+Set C\+RC generating polynomial. 7, 8, 16 or 32-\/bit long value for a polynomial degree respectively equal to 7, 8, 16 or 32. This field is written in normal representation, e.\+g., for a polynomial of degree 7, X$^\wedge$7 + X$^\wedge$6 + X$^\wedge$5 + X$^\wedge$2 + 1 is written 0x65. No need to specify it if Default\+Polynomial\+Use is set to D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+L\+Y\+N\+O\+M\+I\+A\+L\+\_\+\+E\+N\+A\+B\+LE \mbox{\Hypertarget{struct_c_r_c___init_type_def_ac60396fcb8285f785650dc65530d9077}\label{struct_c_r_c___init_type_def_ac60396fcb8285f785650dc65530d9077}} 
+\index{C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}!Init\+Value@{Init\+Value}}
+\index{Init\+Value@{Init\+Value}!C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Init\+Value}{InitValue}}
+{\footnotesize\ttfamily uint32\+\_\+t Init\+Value}
+
+Init value to initiate C\+RC computation. No need to specify it if Default\+Init\+Value\+Use is set to D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+\_\+\+V\+A\+L\+U\+E\+\_\+\+E\+N\+A\+B\+LE \mbox{\Hypertarget{struct_c_r_c___init_type_def_ae78b0467ba2913d30b23dd7e30c2f87e}\label{struct_c_r_c___init_type_def_ae78b0467ba2913d30b23dd7e30c2f87e}} 
+\index{C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}!Input\+Data\+Inversion\+Mode@{Input\+Data\+Inversion\+Mode}}
+\index{Input\+Data\+Inversion\+Mode@{Input\+Data\+Inversion\+Mode}!C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Input\+Data\+Inversion\+Mode}{InputDataInversionMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Input\+Data\+Inversion\+Mode}
+
+This parameter is a value of \hyperlink{group___c_r_c_ex___input___data___inversion}{Input Data Inversion Modes} and specifies input data inversion mode. Can be either one of the following values C\+R\+C\+\_\+\+I\+N\+P\+U\+T\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+N\+O\+NE no input data inversion C\+R\+C\+\_\+\+I\+N\+P\+U\+T\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+Y\+TE byte-\/wise inversion, 0x1\+A2\+B3\+C4D becomes 0x58\+D43\+C\+B2 C\+R\+C\+\_\+\+I\+N\+P\+U\+T\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+A\+L\+F\+W\+O\+RD halfword-\/wise inversion, 0x1\+A2\+B3\+C4D becomes 0x\+D458\+B23C C\+R\+C\+\_\+\+I\+N\+P\+U\+T\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+W\+O\+RD word-\/wise inversion, 0x1\+A2\+B3\+C4D becomes 0x\+B23\+C\+D458 \mbox{\Hypertarget{struct_c_r_c___init_type_def_a70287496add23b9e3dbaaf370a83040a}\label{struct_c_r_c___init_type_def_a70287496add23b9e3dbaaf370a83040a}} 
+\index{C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}!Output\+Data\+Inversion\+Mode@{Output\+Data\+Inversion\+Mode}}
+\index{Output\+Data\+Inversion\+Mode@{Output\+Data\+Inversion\+Mode}!C\+R\+C\+\_\+\+Init\+Type\+Def@{C\+R\+C\+\_\+\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{Output\+Data\+Inversion\+Mode}{OutputDataInversionMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Output\+Data\+Inversion\+Mode}
+
+This parameter is a value of \hyperlink{group___c_r_c_ex___output___data___inversion}{Output Data Inversion Modes} and specifies output data (i.\+e. C\+RC) inversion mode. Can be either C\+R\+C\+\_\+\+O\+U\+T\+P\+U\+T\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+LE no C\+RC inversion, or C\+R\+C\+\_\+\+O\+U\+T\+P\+U\+T\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE C\+RC 0x11223344 is converted into 0x22\+C\+C4488 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+A\+L\+\_\+\+Driver/\+Inc/\hyperlink{stm32f0xx__hal__crc_8h}{stm32f0xx\+\_\+hal\+\_\+crc.\+h}\end{DoxyCompactItemize}

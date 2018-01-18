@@ -1,0 +1,105 @@
+\hypertarget{stm32f0xx__hal__tsc_8c}{}\section{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+tsc.c File Reference}
+\label{stm32f0xx__hal__tsc_8c}\index{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+tsc.\+c@{H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+tsc.\+c}}
+
+
+This file provides firmware functions to manage the following functionalities of the Touch Sensing Controller (T\+SC) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal.\+h\char`\"{}}\newline
+
+
+\subsection{Detailed Description}
+This file provides firmware functions to manage the following functionalities of the Touch Sensing Controller (T\+SC) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/\+November-\/2016
+\begin{DoxyItemize}
+\item Initialization and De\+Initialization
+\item Channel I\+Os, Shield I\+Os and Sampling I\+Os configuration
+\item Start and Stop an acquisition
+\item Read acquisition result
+\item Interrupts and flags management
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb}================================================================================
+                       ##### TSC specific features #####
+================================================================================
+  [..]
+      (+)  Proven and robust surface charge transfer acquisition principle
+
+      (+)  Supports up to 3 capacitive sensing channels per group
+
+      (+)  Capacitive sensing channels can be acquired in parallel offering a very good
+           response time
+
+      (+)  Spread spectrum feature to improve system robustness in noisy environments
+
+      (+)  Full hardware management of the charge transfer acquisition sequence
+
+      (+)  Programmable charge transfer frequency
+
+      (+)  Programmable sampling capacitor I/O pin
+
+      (+)  Programmable channel I/O pin
+
+      (+)  Programmable max count value to avoid long acquisition when a channel is faulty
+
+      (+)  Dedicated end of acquisition and max count error flags with interrupt capability
+
+      (+)  One sampling capacitor for up to 3 capacitive sensing channels to reduce the system
+           components
+      (+)  Compatible with proximity, touchkey, linear and rotary touch sensor implementation
+
+                          ##### How to use this driver #####
+================================================================================
+  [..]
+    (#) Enable the TSC interface clock using __HAL_RCC_TSC_CLK_ENABLE() macro.
+
+    (#) GPIO pins configuration
+      (++) Enable the clock for the TSC GPIOs using __HAL_RCC_GPIOx_CLK_ENABLE() macro.
+      (++) Configure the TSC pins used as sampling IOs in alternate function output Open-Drain mode,
+           and TSC pins used as channel/shield IOs in alternate function output Push-Pull mode
+           using HAL_GPIO_Init() function.
+      (++) Configure the alternate function on all the TSC pins using HAL_xxxx() function.
+
+    (#) Interrupts configuration
+      (++) Configure the NVIC (if the interrupt model is used) using HAL_xxx() function.
+
+    (#) TSC configuration
+      (++) Configure all TSC parameters and used TSC IOs using HAL_TSC_Init() function.
+
+  *** Acquisition sequence ***
+  ===================================
+  [..]
+    (+) Discharge all IOs using HAL_TSC_IODischarge() function.
+    (+) Wait a certain time allowing a good discharge of all capacitors. This delay depends
+        of the sampling capacitor and electrodes design.
+    (+) Select the channel IOs to be acquired using HAL_TSC_IOConfig() function.
+    (+) Launch the acquisition using either HAL_TSC_Start() or HAL_TSC_Start_IT() function.
+        If the synchronized mode is selected, the acquisition will start as soon as the signal
+        is received on the synchro pin.
+    (+) Wait the end of acquisition using either HAL_TSC_PollForAcquisition() or
+        HAL_TSC_GetState() function or using WFI instruction for example.
+    (+) Check the group acquisition status using HAL_TSC_GroupGetStatus() function.
+    (+) Read the acquisition value using HAL_TSC_GroupGetValue() function.\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+H\+T(c) 2016 S\+T\+Microelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of S\+T\+Microelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 

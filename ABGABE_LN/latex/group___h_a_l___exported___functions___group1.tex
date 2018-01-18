@@ -1,0 +1,91 @@
+\hypertarget{group___h_a_l___exported___functions___group1}{}\section{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}
+\label{group___h_a_l___exported___functions___group1}\index{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1@{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4}\label{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4}} 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f}\label{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f}} 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} {\bfseries H\+A\+L\+\_\+\+De\+Init} (void)
+\item 
+void \hyperlink{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}{H\+A\+L\+\_\+\+Msp\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the Global M\+SP. \end{DoxyCompactList}\item 
+void \hyperlink{group___h_a_l___exported___functions___group1_gadd10d026ef02d00e32e80c9eab9db830}{H\+A\+L\+\_\+\+Msp\+De\+Init} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initializes the Global M\+SP. \end{DoxyCompactList}\item 
+\hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}{H\+A\+L\+\_\+\+Init\+Tick} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the R\+T\+C\+\_\+\+A\+L\+A\+R\+MA as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}\label{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}} 
+\index{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1@{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}!H\+A\+L\+\_\+\+Init\+Tick@{H\+A\+L\+\_\+\+Init\+Tick}}
+\index{H\+A\+L\+\_\+\+Init\+Tick@{H\+A\+L\+\_\+\+Init\+Tick}!H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1@{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Init\+Tick()}{HAL\_InitTick()}}
+{\footnotesize\ttfamily \hyperlink{stm32f0xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Tick\+Priority }\end{DoxyParamCaption})}
+
+
+
+This function configures the R\+T\+C\+\_\+\+A\+L\+A\+R\+MA as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. 
+
+\begin{DoxyNote}{Note}
+This function is called automatically at the beginning of program after reset by H\+A\+L\+\_\+\+Init() or at any time when clock is configured, by H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+Clock\+Config(). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em H\+AL} & status\\
+\hline
+\end{DoxyRetVals}
+This function configures the R\+T\+C\+\_\+\+A\+L\+A\+R\+MA as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority.
+
+\begin{DoxyNote}{Note}
+This function is called automatically at the beginning of program after reset by H\+A\+L\+\_\+\+Init() or at any time when clock is configured, by H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+Clock\+Config(). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em H\+AL} & status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_gadd10d026ef02d00e32e80c9eab9db830}\label{group___h_a_l___exported___functions___group1_gadd10d026ef02d00e32e80c9eab9db830}} 
+\index{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1@{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}!H\+A\+L\+\_\+\+Msp\+De\+Init@{H\+A\+L\+\_\+\+Msp\+De\+Init}}
+\index{H\+A\+L\+\_\+\+Msp\+De\+Init@{H\+A\+L\+\_\+\+Msp\+De\+Init}!H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1@{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Msp\+De\+Init()}{HAL\_MspDeInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+De\+Initializes the Global M\+SP. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}\label{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}} 
+\index{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1@{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}!H\+A\+L\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+Msp\+Init}}
+\index{H\+A\+L\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+Msp\+Init}!H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1@{H\+A\+L\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Msp\+Init()}{HAL\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the Global M\+SP. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
